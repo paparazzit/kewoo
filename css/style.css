@@ -1504,19 +1504,43 @@ TUTOR PROFILE PAGE
 
 .certificate .container .wrapper {
   width: 70%;
-  border: 1px solid black;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   flex-wrap: wrap;
   flex-direction: row; }
   .certificate .container .wrapper div {
-    width: 48%; }
+    width: 49%;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row; }
     .certificate .container .wrapper div label {
-      width: 150px;
-      display: inline-block; }
-      .certificate .container .wrapper div label input {
-        width: 250px; }
+      display: inline-block;
+      font-size: 1.2rem;
+      width: 25%;
+      min-width: 100px; }
+    .certificate .container .wrapper div input {
+      font-size: 1.2rem;
+      padding: 7px 10px;
+      border: 1px solid #5a6d73;
+      border-radius: 4px;
+      width: 75%; }
+      .certificate .container .wrapper div input:focus {
+        border: 1px solid #b497cf;
+        border-radius: 8px;
+        outline: none; }
+      .certificate .container .wrapper div input::placeholder {
+        font-size: 1.2rem;
+        color: rgba(0, 0, 0, 0.5); }
+  .certificate .container .wrapper .add_more {
+    width: 100%; }
+    .certificate .container .wrapper .add_more label {
+      width: 12.25%; }
+    .certificate .container .wrapper .add_more input {
+      width: 87.75%; }
 
 /*******************
     RESPONSIVE

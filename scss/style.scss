@@ -1515,16 +1515,45 @@ TUTOR PROFILE PAGE
 	.container {
 		.wrapper {
 			width: 70%;
-			border: 1px solid black;
-			@include flex(center, flex-start, wrap, row);
+			@include flex(center, space-between, wrap, row);
 			div {
-				width: 48%;
+				width: 49%;
+				margin-bottom: 40px;
+				@include flex(center, flex-start, wrap, row);
+
 				label {
-					width: 150px;
 					display: inline-block;
-					input {
-						width: 250px;
+					font-size: 1.2rem;
+					// margin-right: 40px;
+					width: 25%;
+					min-width: 100px;
+				}
+				input {
+					font-size: 1.2rem;
+					padding: 7px 10px;
+					border: 1px solid $line_color;
+					border-radius: 4px;
+					width: 75%;
+
+					&:focus {
+						border: 1px solid $accents;
+						border-radius: 8px;
+						outline: none;
 					}
+					&::placeholder {
+						font-size: 1.2rem;
+						color: rgba($black, 0.5);
+					}
+				}
+			}
+			.add_more {
+				width: 100%;
+				// border: 1px solid black;
+				label {
+					width: 12.25%;
+				}
+				input {
+					width: 87.75%;
 				}
 			}
 		}
