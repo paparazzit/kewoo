@@ -1,0 +1,1117 @@
+@media (max-width: $breakPoint_1) {
+	.tutor_profile_view {
+		.container {
+			.tutor-card {
+				.tutor-card-img {
+					width: 23%;
+				}
+			}
+		}
+	}
+	.proposition {
+		padding-bottom: 80px;
+
+		.container {
+			.right-side {
+				h2 {
+					font-size: 1.7rem;
+					height: 15%;
+					text-align: center;
+				}
+				.wrapper {
+					height: 85%;
+					@include flex(center, space-evenly, wrap, row);
+					article {
+						@include flex(center, space-between, nowrap, row);
+						.text {
+							width: 85%;
+							h4 {
+								font-size: 1.1rem;
+								padding-bottom: 15px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $breakPoint_2) {
+	.become_tutor {
+		.container {
+			.row {
+				.rigth {
+					padding: 20px;
+
+					.section-group {
+						h2 {
+							font-size: 1.8rem;
+						}
+						p {
+							padding: 7px 0 0 0;
+						}
+					}
+					.become_tutor_text {
+						padding: 10px 0;
+						p {
+							font-size: 0.95rem;
+						}
+					}
+					.becom_tutor_stats {
+						p {
+							font-size: 0.95rem;
+						}
+					}
+					.decription-btns {
+						padding-top: 35px;
+						.btn {
+							@include btn-primary($black, 1rem);
+							padding: 15px 35px;
+						}
+						.faq {
+							font-size: 0.95rem;
+						}
+					}
+				}
+			}
+		}
+	}
+	.find_your_tutor {
+		.container {
+			.input_search {
+				.search-term {
+					width: 350px;
+				}
+			}
+		}
+	}
+	.tutor_profile_view {
+		.container {
+			.tutor-card {
+				.tutor-card-img {
+					width: 23%;
+				}
+				.tutor-card-text {
+					width: 65%;
+					.tutor-card-header {
+						.tutor-headline-group {
+							.tutor-headline {
+								margin-bottom: 10px;
+								h3 {
+									margin-right: 10px;
+									font-size: 1.6rem;
+								}
+							}
+						}
+					}
+					.tutor-card-bio {
+						margin-top: 10px;
+						width: 100%;
+						font-size: 0.95rem;
+						color: $footer;
+						p {
+							line-height: 1.3;
+						}
+						a {
+							color: $accents;
+						}
+					}
+				}
+				.tutor-card-ctr {
+					width: 10%;
+
+					padding: 0 0 20px 0;
+					.price {
+						font-size: 1.6rem;
+
+						font-weight: 400;
+						span {
+							font-size: 1.4rem;
+						}
+					}
+					.availability {
+						text-decoration: underline;
+						color: $footer;
+						margin-bottom: 10px;
+					}
+					.btn-trial {
+						@include btn-primary($black, 0.9rem);
+						height: 35px;
+						width: 140px;
+						line-height: 35px;
+					}
+					.btn-book-lesson {
+						@include btn-primary($black, 0.9rem);
+						height: 35px;
+						width: 140px;
+						line-height: 35px;
+						background: $white;
+						border: 1px solid $black;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $breakPoint_3) {
+	//////////////////////////////
+	////////map//////////////////
+	/////////////////////////////
+
+	.map-section {
+		.map-container {
+			.map-wrapper {
+				.map-box {
+					.map-marker {
+						transform: scale(0.85);
+					}
+				}
+			}
+		}
+	}
+	.become_tutor {
+		.container {
+			.row {
+				.left {
+					align-self: stretch;
+					.left-img {
+						height: 100%;
+						width: 100%;
+
+						img {
+							object-fit: none;
+							object-position: center;
+							width: none !important;
+						}
+					}
+				}
+
+				.rigth {
+					.become_tutor_text {
+						width: 100%;
+						padding: 10px 0;
+						p {
+							font-size: 0.95rem;
+						}
+					}
+					.becom_tutor_stats {
+						p {
+							font-size: 0.85rem;
+						}
+					}
+					.decription-btns {
+						@include flex(center, center, wrap, row);
+						padding-top: 30px;
+						.btn {
+							@include btn-primary($black, 0.95rem);
+						}
+						.faq {
+							font-size: 0.9rem;
+							margin-top: 15px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.how {
+		padding: 100px 0;
+		.container {
+			.row {
+				width: 95%;
+				.description {
+					width: 40%;
+					margin: 0;
+					padding: 0 20px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $breakPoint_4) {
+	.featured-banner {
+		background-color: $accents;
+		padding: 3px 0;
+		text-align: center;
+		color: $white;
+		letter-spacing: 1px;
+		font-size: 0.9rem;
+		border-bottom-right-radius: 10px;
+		border-bottom-left-radius: 10px;
+		position: absolute;
+		width: 100%;
+		bottom: 0px;
+	}
+	header {
+		padding: 50px 30px;
+		hgroup {
+			h1 {
+				font-weight: 500;
+				font-size: 2rem;
+				span {
+					color: $btn-primary;
+				}
+			}
+			label {
+				width: none !important;
+				position: relative;
+				display: flex;
+				@include flex(center, start, wrap, row);
+				margin: 30px 0;
+				p {
+					font-size: 0.9rem;
+				}
+				input {
+					width: 60%;
+					height: 70px;
+					border: none;
+					font-size: 1rem;
+
+					border-bottom-left-radius: 8px;
+					border-top-left-radius: 8px;
+					padding: 0 10px;
+				}
+				&::placeholder {
+					font-size: 1rem;
+				}
+				button {
+					width: 40%;
+					@include btn-primary($black, 1rem);
+					border-radius: 0px;
+					height: none;
+					border-bottom-right-radius: 8px;
+					border-top-right-radius: 8px;
+				}
+			}
+		}
+	}
+
+	.how {
+		.container {
+			.row {
+				.description {
+					width: 40%;
+					margin: 0;
+					padding: 0 20px;
+				}
+				.description_img {
+					width: 40%;
+				}
+			}
+			.decription-btns {
+				@include flex(center, center, nowrap, row);
+				margin: 0 auto;
+				padding-top: 50px;
+				.btn {
+					@include btn-primary($black, 1.2rem);
+					padding: 15px 40px;
+					display: inline-block;
+					margin-right: 20px;
+				}
+				.faq {
+					color: $accents;
+					line-height: 0;
+					font-size: 1rem;
+
+					@include flex(center, center, nowrap, row);
+					img {
+						height: 20px;
+						width: 20px;
+						display: block;
+						margin-right: 5px;
+					}
+				}
+			}
+		}
+	}
+	/******************
+		TESTIMONIALS
+	******************/
+	.testimonials {
+		padding-bottom: 80px;
+		.container .owl-carousel {
+			.item {
+				@include flex(start, center, nowrap, row);
+				height: 100%;
+				.item_left {
+					align-self: stretch;
+
+					img {
+						height: 100%;
+
+						object-fit: cover;
+						object-position: center;
+					}
+				}
+				.item_right {
+					height: 100%;
+					width: 65%;
+					height: 100%;
+					padding-left: 40px;
+					position: relative;
+					align-self: center;
+
+					.wrapper {
+						padding-top: 20px;
+						padding-bottom: 20px;
+
+						.item-text {
+							width: 92%;
+							margin-top: 30px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.row {
+		@include flex(center, center, wrap, row);
+		.btn {
+			@include btn-primary($black, 1.2rem);
+			padding: 15px 40px;
+			display: inline-block;
+			margin-right: 20px;
+		}
+	}
+
+	.tutor_profile_view {
+		.container {
+			.tutor-card {
+				.tutor-card-img {
+					display: none;
+				}
+				.tutor-card-text {
+					width: 88%;
+					.tutor-card-header {
+						.tutor-headline-group {
+							order: 2;
+						}
+						.tutor-img-round {
+							width: 120px;
+							height: 120px;
+							margin: 0 20px 10px 0;
+							display: block;
+							img {
+								border-radius: 10px;
+								width: 100%;
+								display: block;
+							}
+						}
+					}
+					.tutor-card-bio {
+						margin-top: 10px;
+						width: 98%;
+					}
+				}
+				.tutor-card-ctr {
+					width: 12%;
+					min-width: 150px;
+					@include flex(flex-start, center, wrap, column);
+					.availability {
+						margin-bottom: 20px;
+					}
+					.btn-trial {
+						margin-bottom: 20px;
+					}
+				}
+			}
+		}
+	}
+
+	// FOOTER
+	footer {
+		.container {
+			width: 85%;
+			.row {
+				@include flex(start, space-between, wrap, row);
+				margin: 50px 0 50px 0;
+				article {
+					width: 25%;
+					padding: 0 15px;
+					&:first-child {
+						padding: 0 15px 0 0;
+					}
+				}
+				h4 {
+					margin-bottom: 10px;
+					font-size: 1.5rem;
+
+					letter-spacing: 1.3px;
+					line-height: 1;
+				}
+				ul {
+					li {
+						margin-bottom: 10px;
+					}
+				}
+			}
+		}
+	}
+	.find_your_tutor {
+		.container {
+			.search_options {
+				.filter_opt {
+					width: 50%;
+					&:nth-child(2) {
+						border-radius: 0px 10px 10px 0;
+						border-right: none;
+					}
+					&:nth-child(3) {
+						border-radius: 10px 0 0 10px;
+					}
+				}
+			}
+			.input_search {
+				.search-term {
+					margin-top: 20px;
+				}
+				p {
+					margin-top: 20px;
+				}
+				.custom-select {
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+
+	.statistics {
+		padding: 40px 0;
+		.container {
+			.row {
+				article {
+					width: 220px;
+					padding: 0px 15px;
+
+					h2 {
+						font-size: 4rem;
+					}
+					p {
+						font-size: 1rem;
+					}
+				}
+			}
+		}
+	}
+
+	.proposition {
+		.container {
+			.left-side {
+				display: none;
+			}
+			.right-side {
+				padding: 30px 20px 30px 20px;
+				width: 100%;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+
+				h2 {
+					font-size: 1.7rem;
+				}
+				.wrapper {
+					@include flex(center, space-between, wrap, row);
+					width: 80%;
+
+					height: unset;
+					article {
+						margin-bottom: 20px;
+						@include flex(center, space-between, nowrap, row);
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $breakPoint_5) {
+	/******************** 
+    NAV
+********************/
+	nav {
+		position: relative;
+		box-shadow: 0 0 8px rgba(0, 0, 0, 0.418);
+
+		.container {
+			@include flex(center, space-between, nowrap, row);
+			width: 100%;
+			padding: 0 30px;
+			position: relative;
+
+			.drop-down {
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 155%;
+				width: 100%;
+				height: 0;
+				overflow: hidden;
+				padding: 0 30px;
+				@include flex(flex-end, center, nowrap, column);
+				z-index: 100;
+				background-color: $backgorund-primary;
+				border-bottom-left-radius: 10px;
+				border-bottom-right-radius: 10px;
+				transition: 0.4s all ease;
+
+				ul {
+					@include flex(center, space-between, nowrap, row);
+					padding: 0;
+					list-style-type: none;
+				}
+				.nav-links {
+					width: unset;
+					display: block;
+					text-align: right;
+
+					li {
+						margin: 15px 0;
+						a {
+							font-size: 1.3rem;
+						}
+					}
+				}
+				hr {
+					display: block;
+					width: 100%;
+					border-right: none;
+					border-left: none;
+					border-top: none;
+					border-bottom: 1px solid $line_color;
+					margin: 10px 0;
+				}
+				.langs {
+					li {
+						margin-top: 15px;
+						&:last-child {
+							&::after {
+								display: none;
+							}
+						}
+					}
+				}
+			}
+			.active {
+				height: 40vh;
+				padding: 20px 30px;
+				transition-delay: 0.4s;
+			}
+			.toggle-bar {
+				width: 20px;
+				height: 20px;
+				cursor: pointer;
+				transition: 0.4s all ease-in-out;
+				display: block;
+			}
+		}
+	}
+
+	//////////////////////////////
+	////////map//////////////////
+	/////////////////////////////
+
+	.map-section {
+		.map-container {
+			.map-wrapper {
+				.map-box {
+					.map-marker {
+						transform: scale(0.75);
+					}
+				}
+			}
+		}
+	}
+	.become_tutor {
+		.container {
+			.row {
+				.left {
+					display: none;
+				}
+				.rigth {
+					width: 85%;
+					text-align: center;
+					@include flex(center, center, wrap, column);
+					.becom_tutor_stats {
+						text-align: left;
+						.section-group {
+							@include flex(center, center, wrap, column);
+							h2 {
+								font-size: 2.2rem;
+							}
+						}
+						.decription-btns {
+							@include flex(center, center, wrap, row);
+							padding-top: 30px;
+							.btn {
+								@include btn-primary($black, 0.95rem);
+								margin-top: 10px;
+							}
+							.faq {
+								font-size: 0.9rem;
+								margin-top: 10px;
+								padding-bottom: 0;
+							}
+						}
+						.section-group {
+							@include flex(center, center, wrap, column);
+							h2 {
+								font-size: 2.2rem;
+							}
+						}
+						.decription-btns {
+							@include flex(center, center, wrap, row);
+							padding-top: 30px;
+							.btn {
+								@include btn-primary($black, 0.95rem);
+								margin-top: 10px;
+							}
+							.faq {
+								font-size: 0.9rem;
+								margin-top: 10px;
+								padding-bottom: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.how {
+		.container {
+			.row {
+				// width: 95%;
+				// margin-bottom: 40px;
+				.description {
+					width: 70%;
+					margin: 0;
+					padding: 0 20px;
+					p {
+						margin-bottom: 0px;
+					}
+				}
+				.description_img {
+					width: 60%;
+					margin: 30px auto;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $breakPoint_6) {
+	.map-section {
+		.map-container {
+			.map-wrapper {
+				.map-box {
+					.map-marker {
+						transform: scale(0.75);
+						&:nth-child(odd) {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.how {
+		.container {
+			.row {
+				margin-top: 0;
+				margin-bottom: 30px;
+				.number {
+					height: 70px;
+					width: 70px;
+					line-height: 70px;
+					font-size: 2.3rem;
+					margin-bottom: 20px;
+				}
+				.description {
+					width: 100%;
+					p {
+						font-size: 0.9rem;
+					}
+				}
+				.description_img {
+					width: 80%;
+					img {
+						width: 100%;
+						display: block;
+					}
+				}
+			}
+			.decription-btns {
+				width: 95%;
+				@include flex(center, center, wrap, row);
+				margin: 0 auto;
+				padding-top: 10px;
+				.btn {
+					@include btn-primary($black, 1.2rem);
+					padding: 15px 40px;
+					display: inline-block;
+					margin-right: 20px;
+					margin-bottom: 20px;
+				}
+				.faq {
+					color: $accents;
+					margin-right: 20px;
+					line-height: 0;
+					font-size: 1rem;
+
+					@include flex(center, center, nowrap, row);
+					img {
+						height: 20px;
+						width: 20px;
+						display: block;
+						margin-right: 5px;
+					}
+				}
+			}
+		}
+	}
+
+	.map-section {
+		.map-container {
+			.flex-icons {
+				padding-top: 30px;
+				article {
+					flex: 0 0 100%;
+					margin-bottom: 25px;
+				}
+			}
+		}
+	}
+
+	/******************
+		TESTIMONIALS
+	******************/
+	.testimonials {
+		.container {
+			.owl-carousel {
+				.item {
+					.item_left {
+						display: none;
+					}
+					.item_right {
+						height: 100%;
+						width: 80%;
+						height: 100%;
+						padding-left: 40px;
+						position: relative;
+						align-self: center;
+
+						.wrapper {
+							padding-top: 20px;
+							padding-bottom: 20px;
+							.item-header {
+								@include flex(center, flex-start, nowrap, row);
+								img {
+									width: 90px;
+									height: 90px;
+								}
+							}
+							.item-text {
+								width: 92%;
+								margin-top: 30px;
+							}
+						}
+					}
+				}
+			}
+		}
+		.row {
+			@include flex(center, center, wrap, row);
+			.btn {
+				@include btn-primary($black, 1.2rem);
+				padding: 15px 40px;
+				display: inline-block;
+				margin-right: 20px;
+			}
+		}
+	}
+	.tutor_profile_view {
+		.container {
+			.tutor-card {
+				@include flex(stretch, space-between, wrap, row);
+
+				.tutor-card-ctr {
+					width: 100%;
+					padding: 0 20px 10px 20px;
+					@include flex(center, space-between, wrap, row);
+					.availability {
+						margin-bottom: 0px;
+						margin-right: 5px;
+						margin-left: 5px;
+					}
+					.btn-trial {
+						width: 130px;
+						margin-bottom: 0px;
+						margin-right: 5px;
+						margin-left: 5px;
+					}
+					.btn-book-lesson {
+						width: 130px;
+						margin-right: 5px;
+						margin-left: 5px;
+					}
+				}
+			}
+		}
+	}
+	/***************
+   FOOTER
+***************/
+	footer {
+		.container {
+			a {
+				letter-spacing: 1px;
+			}
+			.row {
+				@include flex(start, space-between, wrap, row);
+				margin: 50px 0 0px 0;
+				article {
+					width: 100%;
+					margin-bottom: 50px;
+					padding: 0;
+					ul {
+						@include flex(center, flex-start, wrap, row);
+						li {
+							margin-right: 20px;
+							a {
+								font-size: 0.9rem;
+							}
+						}
+					}
+				}
+			}
+			.bottomLine {
+				@include flex(center, flex-start, wrap, row);
+				.copyR {
+					width: 100%;
+				}
+				.desingBy {
+					text-align: left;
+					width: 100%;
+					margin-top: 10px;
+				}
+				.trustPilot {
+					@include flex(center, flex-start, wrap, row);
+					.trust-logo {
+						width: 90px;
+						margin-right: 10px;
+					}
+					.trust-rate-stars {
+						img {
+							width: 15px;
+							margin: 0 2px;
+						}
+						margin-right: 10px;
+					}
+					.trust-rate {
+						margin-left: 0px;
+					}
+				}
+			}
+		}
+	}
+	// PORPOSITION
+
+	.proposition {
+		.container {
+			.right-side {
+				padding: 30px 20px 30px 20px;
+				width: 100%;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+
+				h2 {
+					font-size: 1.7rem;
+				}
+				.wrapper {
+					@include flex(center, space-between, wrap, row);
+					width: 100%;
+
+					height: unset;
+					article {
+						margin-bottom: 25px;
+						@include flex(center, center, wrap, row);
+						.text {
+							width: 100%;
+							text-align: center;
+						}
+						.flex-icon {
+							margin-bottom: 10px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $breakPoint_6_b) {
+	header {
+		padding: 50px 10px;
+		padding: 0;
+		background-position: 80% top;
+		height: 70vh;
+		hgroup {
+			h1 {
+				font-weight: 500;
+				font-size: 1.8rem;
+				span {
+					color: $btn-primary;
+				}
+			}
+			p {
+				display: none;
+			}
+			label {
+				width: 100%;
+				position: relative;
+				display: block;
+				margin: 20px 0;
+				p {
+					font-size: 0.9rem;
+				}
+				input {
+					width: 100%;
+					height: 50px;
+					border: none;
+					font-size: 1rem;
+
+					border-radius: 8px;
+					padding: 0 10px;
+					margin-bottom: 20px;
+				}
+				&::placeholder {
+					font-size: 1rem;
+				}
+				button {
+					width: 250px;
+					@include btn-primary($black, 1rem);
+					height: 50px;
+					border-radius: 0px;
+					height: none;
+					border-radius: 8px;
+				}
+			}
+		}
+	}
+
+	.faq {
+		padding-bottom: 80px;
+		.container {
+			.wrapper {
+				padding: 0px 20px 30px 20px;
+				.faq-buttons {
+					@include flex(center, center, wrap, column);
+					button {
+						@include btn-primary($footer, 1.1rem);
+						padding: 15px 30px;
+						border-radius: 6px;
+						margin-right: 0px;
+						margin-top: 20px;
+					}
+					.faq-socials {
+						img {
+							margin-right: 20px;
+							height: 35px;
+							&:last-child {
+								margin-right: 0;
+							}
+						}
+						margin-top: 20px;
+					}
+				}
+			}
+		}
+	}
+
+	.find_your_tutor {
+		.container {
+			.search_options {
+				.filter_opt {
+					width: 90%;
+					border-radius: 10px !important;
+					border: none;
+				}
+			}
+			.input_search {
+				@include flex(center, center, wrap, row);
+				.search-term {
+					margin-top: 20px;
+				}
+				p {
+					margin-top: 20px;
+				}
+				.custom-select {
+					margin-top: 20px;
+					padding: 0;
+				}
+			}
+		}
+	}
+}
+@media (max-width: $breakPoint_7) {
+	.map-section {
+		.map-container {
+			.map-wrapper {
+				.map-box {
+					.map-marker {
+						transform: scale(0.65);
+					}
+				}
+			}
+		}
+	}
+	.how {
+		.container {
+			.row {
+				.description_img {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	.tutor_profile_view {
+		.container {
+			.tutor-card {
+				@include flex(stretch, space-between, wrap, row);
+
+				.tutor-card-ctr {
+					width: 100%;
+					padding: 0 20px 10px 20px;
+					@include flex(center, space-between, wrap, row);
+					.price {
+						width: 45%;
+					}
+					.availability {
+						width: 45%;
+						margin-bottom: 10px;
+						margin-right: 0px;
+						margin-left: 0px;
+					}
+					.btn-trial {
+						width: 45%;
+						margin-bottom: 10px;
+						margin-right: 0px;
+						margin-left: 0px;
+					}
+					.btn-book-lesson {
+						width: 45%;
+						margin-right: 0px;
+						margin-left: 0px;
+						margin-bottom: 10px;
+					}
+				}
+			}
+		}
+	}
+}

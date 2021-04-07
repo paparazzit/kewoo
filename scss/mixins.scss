@@ -1,0 +1,29 @@
+// MIXINs
+@mixin flex($align, $justify, $wrap, $direction) {
+	display: flex;
+	align-items: $align;
+	justify-content: $justify;
+	flex-wrap: $wrap;
+	flex-direction: $direction;
+}
+@mixin btn-primary($color, $fsize) {
+	color: $color;
+	background: $btn-primary;
+	font-size: $fsize;
+	border-radius: 10px;
+	border: none;
+}
+
+@mixin hgroup {
+	text-align: center;
+	h2 {
+		color: $accents;
+		font-weight: 500;
+		font-size: 2rem;
+		letter-spacing: 1.5px;
+	}
+	p {
+		letter-spacing: 1.2px;
+		padding: 20px 0;
+	}
+}

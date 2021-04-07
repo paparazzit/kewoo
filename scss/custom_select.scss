@@ -1,0 +1,76 @@
+.custom-select {
+	padding: 10px 10px 20px 10px;
+	width: 100%;
+	color: rgba($black, 0.5);
+	.select-box {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		width: 100%;
+		.options-container {
+			order: 1;
+			position: absolute;
+			padding: 0 10px;
+			background-color: $white;
+			color: $footer;
+			width: 105%;
+			opacity: 1;
+			max-height: 0;
+			transition: all 0.4s;
+
+			overflow: hidden;
+			top: calc(100% + 18px);
+			left: 50%;
+			transform: translateX(-50%);
+			z-index: 100;
+			// border-right: 1px solid $footer;
+			// border-color: rgba($footer, 0.3);
+
+			.option {
+				cursor: pointer;
+				padding: 10px;
+				width: 100%;
+				color: rgba($black, 0.5);
+
+				.radio {
+					display: none;
+				}
+				&:hover {
+					background-color: $accents;
+					color: $white;
+				}
+			}
+			&.active {
+				max-height: 240px;
+				opacity: 1;
+				padding: 0px;
+				z-index: 100;
+				// border-right: 1px solid rgba($footer, 0.3);
+				+ .selected::after {
+					transform: translateY(-50%) rotate(90deg);
+				}
+			}
+		}
+		.selected {
+			order: 0;
+			cursor: pointer;
+			&::after {
+				display: block;
+				content: "";
+				height: 0;
+				width: 0;
+				border-top: 10px solid $footer;
+				border-right: 10px solid transparent;
+				border-left: 10px solid transparent;
+				position: absolute;
+				right: 10px;
+				top: 50%;
+				transform: translateY(-50%);
+				transition: 0.3s all ease-in-out;
+			}
+		}
+		label {
+			cursor: pointer;
+		}
+	}
+}
