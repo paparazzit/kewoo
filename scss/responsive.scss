@@ -318,6 +318,25 @@
 			}
 		}
 	}
+
+	// MY CALSSES
+	.my_classes {
+		.container {
+			.wrapper {
+				width: 100%;
+
+				.calendar_table {
+					table {
+						tr {
+							td {
+								padding: 10px 7px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 @media (max-width: $breakPoint_4) {
@@ -616,7 +635,7 @@
 	}
 
 	.tutor_profile_header {
-		height: 50vh;
+		// height: 50vh;
 		.container {
 			.tutor-profile-view {
 				.tutor-profile-card {
@@ -861,7 +880,7 @@
 		background-image: url(/img/search_opt/search_opt_bg.png);
 		background-position: center;
 		background-size: cover;
-		height: 50vh;
+		// height: 50vh;
 		position: relative;
 		.container {
 			position: absolute;
@@ -1015,6 +1034,54 @@
 							max-height: 300px;
 							padding: 30px 20px 20px 20px;
 							// border: 1px solid black;
+						}
+					}
+				}
+			}
+		}
+	}
+	.payment_method {
+		.container {
+			.wrapper {
+				width: 100%;
+				@include flex(flex-start, flex-start, wrap, row);
+				p {
+					&:first-child {
+						margin-right: 40px;
+						margin-bottom: 20px;
+					}
+				}
+				.paymant-inputs {
+					@include flex(center, space-between, wrap, row);
+					width: 100%;
+
+					input {
+						width: 48%;
+						min-width: 200px;
+						margin-bottom: 20px;
+						padding: 10px;
+						border-radius: 5px;
+						border: 1px solid rgba($line_color, 0.5);
+						&::placeholder {
+							color: rgba($black, 0.5);
+						}
+					}
+					button {
+						width: 48%;
+						min-width: 200px;
+					}
+				}
+				.preffered_paymet {
+					margin-top: 20px;
+					width: 100%;
+					span {
+						cursor: pointer;
+						margin: 0 10px;
+						&:first-child {
+							margin-left: 20px;
+						}
+						&.preffered_payment_active {
+							color: $accents;
 						}
 					}
 				}
@@ -1484,6 +1551,31 @@
 			}
 		}
 	}
+	// MY CALSSES
+	.my_classes {
+		.container {
+			.wrapper {
+				width: 100%;
+
+				.calendar_table {
+					table {
+						tr {
+							@include flex(center, center, wrap, column);
+							td {
+								padding: 10px 7px;
+								font-size: 0.9rem;
+							}
+							border: 1px solid rgba($line_color, 0.3);
+							border-bottom: none;
+							&:last-child {
+								border-bottom: 1px solid rgba($line_color, 0.3);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 @media (max-width: $breakPoint_7) {
 	.map-section {
@@ -1545,6 +1637,16 @@
 	.tutor_profile_header {
 		.container {
 			bottom: -70%;
+		}
+	}
+	.pricing {
+		.container {
+			.wrapper {
+				.row {
+					@include flex(center, flex-start, wrap, row);
+					width: 100%;
+				}
+			}
 		}
 	}
 }

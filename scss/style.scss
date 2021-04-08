@@ -1,6 +1,6 @@
 // FONT
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,100;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap");
 
 // COLORS
 
@@ -1246,14 +1246,14 @@ TUTOR PROFILE PAGE
 	background-image: url(/img/search_opt/search_opt_bg.png);
 	background-position: center;
 	background-size: cover;
-	height: 40vh;
+	height: 35vh;
 	position: relative;
 	.container {
 		position: absolute;
 		border-radius: 10px;
 		left: 50%;
 		transform: translateX(-50%);
-		bottom: -55%;
+		top: 30%;
 
 		.tutor-profile-view {
 			width: 100%;
@@ -1470,6 +1470,144 @@ TUTOR PROFILE PAGE
 		}
 	}
 }
+// PRICING
+
+.pricing {
+	.container {
+		.wrapper {
+			.row {
+				@include flex(center, flex-start, nowrap, row);
+				width: 100%;
+
+				p {
+					width: 280px;
+					min-width: 150px;
+					margin-bottom: 15px;
+					// border: 1px solid black;
+				}
+				input {
+					margin-bottom: 15px;
+					min-width: 220px;
+					padding: 7px 10px;
+					border: 1px solid rgba($line_color, 0.5);
+					border-radius: 5px;
+				}
+			}
+			.recommendation {
+				margin-top: 30px;
+				margin-bottom: 20px;
+				@include flex(center, flex-start, wrap, row);
+				input {
+					margin-right: 20px;
+				}
+				label {
+					width: 85%;
+					margin-bottom: 10px;
+					span {
+						font-weight: 500;
+					}
+				}
+				p {
+					padding-left: 33px;
+					font-style: italic;
+					color: rgba($footer, 0.8);
+					width: 85%;
+				}
+			}
+		}
+		.video_wrapper {
+			@include flex(flex-start, flex-start, wrap, row);
+
+			.video_link {
+				width: 20%;
+			}
+			.tutor_video {
+				position: relative;
+
+				width: 60%;
+				display: block;
+				.video_box {
+					display: block;
+
+					video {
+						width: 100%;
+						display: block;
+						pointer-events: none;
+					}
+				}
+				img {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%) scale(0.95);
+					cursor: pointer;
+					opacity: 0.7;
+					transition: $transition;
+					&:hover {
+						transform: translate(-50%, -50%) scale(1);
+						opacity: 1;
+					}
+					&.hide_ply_btn {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+// MY CALSSES
+.my_classes {
+	.container {
+		.wrapper {
+			width: 60%;
+			.year_mounth {
+				margin-bottom: 30px;
+
+				p {
+					#next {
+						margin-left: 15px;
+					}
+					#prev {
+						margin-right: 15px;
+					}
+					.year,
+					.mounth {
+						margin-right: 5px;
+						margin-left: 5px;
+					}
+				}
+			}
+			.calendar_table {
+				table {
+					border-collapse: collapse;
+					margin-bottom: 30px;
+					width: 100%;
+					tr {
+						background-color: $backgorund-primary;
+						td {
+							padding: 10px 15px;
+							border: none;
+						}
+						.student {
+							font-weight: 500;
+						}
+						.time {
+							color: rgba($footer, 0.7);
+						}
+						&:nth-child(odd) {
+							background-color: $white;
+						}
+					}
+				}
+			}
+
+			> p {
+				margin-bottom: 30px;
+			}
+		}
+	}
+}
 // Featureing
 
 .featuring {
@@ -1533,6 +1671,57 @@ TUTOR PROFILE PAGE
 		}
 	}
 }
+
+// PAYMENT METHOD
+.payment_method {
+	.container {
+		.wrapper {
+			width: 100%;
+			@include flex(flex-start, flex-start, wrap, row);
+			p {
+				&:first-child {
+					margin-right: 40px;
+					margin-bottom: 20px;
+				}
+			}
+			.paymant-inputs {
+				@include flex(center, space-between, wrap, row);
+				width: 60%;
+
+				input {
+					width: 48%;
+					min-width: 200px;
+					margin-bottom: 20px;
+					padding: 10px;
+					border-radius: 5px;
+					border: 1px solid rgba($line_color, 0.5);
+					&::placeholder {
+						color: rgba($black, 0.5);
+					}
+				}
+				button {
+					width: 48%;
+					min-width: 200px;
+				}
+			}
+			.preffered_paymet {
+				margin-top: 20px;
+				width: 100%;
+				span {
+					cursor: pointer;
+					margin: 0 10px;
+					&:first-child {
+						margin-left: 20px;
+					}
+					&.preffered_payment_active {
+						color: $accents;
+					}
+				}
+			}
+		}
+	}
+}
+
 // ABOUT ME
 
 .about_me {

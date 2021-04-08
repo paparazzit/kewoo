@@ -164,3 +164,39 @@ function remove_about_me_content() {
 		about_me.style.display = "none";
 	});
 }
+
+// PAYMENT METHOD
+
+var preffered_payment = document.querySelectorAll(".preffered_paymet span");
+preffered_payment.forEach((prefered_item) => {
+	prefered_item.addEventListener("click", () => {
+		removePaymentActive();
+		prefered_item.classList.toggle("preffered_payment_active");
+	});
+});
+
+function removePaymentActive() {
+	preffered_payment.forEach((prefered_item) => {
+		prefered_item.classList.remove("preffered_payment_active");
+	});
+}
+
+// PLAY VIDEO
+
+var play_btn = document.querySelector(".play_btn");
+var video = document.querySelector("video");
+
+play_btn.addEventListener("click", () => {
+	video.play();
+	play_btn.classList.add("hide_ply_btn");
+	video.style.pointerEvents = "all";
+});
+
+video.addEventListener("click", () => {
+	video.pause();
+	play_btn.classList.remove("hide_ply_btn");
+});
+
+video.onended = () => {
+	play_btn.classList.remove("hide_ply_btn");
+};
