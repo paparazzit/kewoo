@@ -143,14 +143,24 @@ tutorNavToggle.addEventListener("click", () => {
 // ABOUT ME
 
 var about_me_btns = document.querySelectorAll(".lang_btn");
+var about_me_content = document.querySelectorAll(".about_me_content");
 
 about_me_btns.forEach((button) => {
-	button.addEventListener("click", () => {
+	button.addEventListener("click", (b) => {
 		event.preventDefault();
 		about_me_btns.forEach((button) => {
 			button.classList.remove("active_lang");
 		});
-
+		var data_lang = button.getAttribute("data-lang");
+		var languageInput = document.querySelector(`#${data_lang}`);
+		remove_about_me_content();
 		button.classList.toggle("active_lang");
+		languageInput.style.display = "block";
 	});
 });
+
+function remove_about_me_content() {
+	about_me_content.forEach((about_me) => {
+		about_me.style.display = "none";
+	});
+}

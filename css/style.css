@@ -1555,7 +1555,11 @@ TUTOR PROFILE PAGE
         font-family: "Roboto", sans-serif;
         font-size: 0.95rem;
         color: rgba(90, 109, 115, 0.7);
-        line-height: 1.5; }
+        line-height: 1.2; }
+  .about_me .container .wrapper #lang_2 {
+    display: none; }
+  .about_me .container .wrapper #lang_3 {
+    display: none; }
 
 .certificate .container .wrapper {
   width: 70%;

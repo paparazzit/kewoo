@@ -1571,9 +1571,15 @@ TUTOR PROFILE PAGE
 						font-family: $font_family;
 						font-size: 0.95rem;
 						color: rgba($line_color, 0.7);
-						line-height: 1.5;
+						line-height: 1.2;
 					}
 				}
+			}
+			#lang_2 {
+				display: none;
+			}
+			#lang_3 {
+				display: none;
 			}
 		}
 	}
