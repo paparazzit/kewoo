@@ -116,3 +116,41 @@ window.addEventListener("click", function (event) {
 		c.classList.remove("active");
 	});
 });
+
+// TUTOR NAV TOGGLE
+
+var tutorNavToggle = document.querySelector(".tutor-nav-toggle");
+var tutorNavUl = document.querySelector(".tutor-profile-nav ul");
+var tutorNavLinks = document.querySelectorAll(".tutor-profile-nav ul li");
+var tutorProfileView = document.querySelector(".tutor-profile-view");
+
+tutorNavToggle.addEventListener("click", () => {
+	tutorNavUl.classList.toggle("active-tutor-nav");
+
+	tutorNavLinks.forEach(function (l) {
+		l.classList.toggle("show");
+		l.addEventListener("click", () => {
+			event.preventDefault();
+
+			tutorNavLinks.forEach(function (el) {
+				el.classList.remove("show");
+			});
+			tutorNavUl.classList.remove("active-tutor-nav");
+		});
+	});
+});
+
+// ABOUT ME
+
+var about_me_btns = document.querySelectorAll(".lang_btn");
+
+about_me_btns.forEach((button) => {
+	button.addEventListener("click", () => {
+		event.preventDefault();
+		about_me_btns.forEach((button) => {
+			button.classList.remove("active_lang");
+		});
+
+		button.classList.toggle("active_lang");
+	});
+});

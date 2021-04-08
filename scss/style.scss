@@ -1297,6 +1297,7 @@ TUTOR PROFILE PAGE
 					// border: 1px solid yellowgreen;
 					padding: 30px 20px 30px 20px;
 					@include flex(stretch, space-between, wrap, row);
+
 					.my_profile {
 						width: 100%;
 						text-align: right;
@@ -1305,8 +1306,7 @@ TUTOR PROFILE PAGE
 						letter-spacing: 1.2px;
 					}
 					.tutor-card-headline {
-						width: 270px;
-						// border: 1px solid black;
+						width: 26%;
 						position: relative;
 						padding-right: 15px;
 
@@ -1335,15 +1335,20 @@ TUTOR PROFILE PAGE
 							right: 0;
 						}
 					}
+					.tutor-img-mob {
+						display: none;
+					}
 					.tutor-card-description {
 						position: relative;
 						width: 70%;
+
 						// border: 1px solid black;
 						@include flex(center, flex-start, wrap, row);
 						padding-left: 20px;
 						div {
 							@include flex(center, flex-start, wrap, row);
 							margin-right: 50px;
+							margin-bottom: 20px;
 							img {
 								margin-left: 15px;
 								width: 15px;
@@ -1355,24 +1360,37 @@ TUTOR PROFILE PAGE
 			}
 			.tutor-profile-nav {
 				@include flex(center, space-between, wrap, row);
-				padding: 20px 50px;
+				padding: 20px 40px 10px 40px;
+				.tutor-nav-toggle {
+					margin: 0 auto;
+					display: none;
+					pointer-events: none;
+					span {
+						border-top: 10px solid $white;
+						border-bottom: none;
+						border-left: 10px solid transparent;
+						border-right: 10px solid transparent;
+						margin: 0 auto;
+						display: inline-block;
+					}
+				}
 				ul {
 					width: 100%;
 					@include flex(flex-start, space-between, wrap, row);
 					li {
 						width: 14.28%;
+						margin-bottom: 10px;
+
 						a {
 							color: $white;
 						}
-					}
-					&:first-child {
-						margin-bottom: 20px;
 					}
 				}
 			}
 		}
 	}
 }
+
 .tutor_section {
 	padding-bottom: 80px;
 	.container {
@@ -1425,10 +1443,14 @@ TUTOR PROFILE PAGE
 					padding: 5px 20px;
 					border: 1px solid rgba($line_color, 0.5);
 					border-radius: 4px;
+
 					&:focus {
 						border: 1px solid $accents;
 						outline: none;
 					}
+				}
+				a {
+					margin-left: 30px;
 				}
 			}
 			> a {
@@ -1511,6 +1533,53 @@ TUTOR PROFILE PAGE
 		}
 	}
 }
+// ABOUT ME
+
+.about_me {
+	.container {
+		.wrapper {
+			width: 70%;
+			@include flex(center, flex-start, wrap, row);
+			.about_me_buttons {
+				width: 100%;
+				margin-bottom: 20px;
+				@include flex(center, space-between, wrap, row);
+				button {
+					width: 32%;
+					border-radius: 5px;
+					background-color: $white;
+					border: 1px solid rgba($line_color, 0.5);
+					color: rgba($line_color, 0.5);
+					&.active_lang {
+						background-color: $btn-primary;
+						border: none;
+						color: $line_color;
+					}
+				}
+			}
+			.about_me_content {
+				width: 100%;
+				textarea {
+					appearance: none;
+					width: 100%;
+					border: 1px solid rgba($line_color, 0.5);
+					padding: 20px;
+					font-family: $font_family;
+					color: rgba($line_color, 0.8);
+
+					&::placeholder {
+						font-family: $font_family;
+						font-size: 0.95rem;
+						color: rgba($line_color, 0.7);
+						line-height: 1.5;
+					}
+				}
+			}
+		}
+	}
+}
+// CERTIFICATE
+
 .certificate {
 	.container {
 		.wrapper {
@@ -1523,13 +1592,13 @@ TUTOR PROFILE PAGE
 
 				label {
 					display: inline-block;
-					font-size: 1.2rem;
+					font-size: 1rem;
 					// margin-right: 40px;
 					width: 25%;
 					min-width: 100px;
 				}
 				input {
-					font-size: 1.2rem;
+					font-size: 1rem;
 					padding: 7px 10px;
 					border: 1px solid $line_color;
 					border-radius: 4px;

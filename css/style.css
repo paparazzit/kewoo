@@ -1331,7 +1331,7 @@ TUTOR PROFILE PAGE
             font-size: 1.1rem;
             letter-spacing: 1.2px; }
           .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline {
-            width: 270px;
+            width: 26%;
             position: relative;
             padding-right: 15px; }
             .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline h3 {
@@ -1353,6 +1353,8 @@ TUTOR PROFILE PAGE
               background-color: #5a6d73;
               top: 15%;
               right: 0; }
+          .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-img-mob {
+            display: none; }
           .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description {
             position: relative;
             width: 70%;
@@ -1368,7 +1370,8 @@ TUTOR PROFILE PAGE
               justify-content: flex-start;
               flex-wrap: wrap;
               flex-direction: row;
-              margin-right: 50px; }
+              margin-right: 50px;
+              margin-bottom: 20px; }
               .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div img {
                 margin-left: 15px;
                 width: 15px;
@@ -1379,7 +1382,18 @@ TUTOR PROFILE PAGE
         justify-content: space-between;
         flex-wrap: wrap;
         flex-direction: row;
-        padding: 20px 50px; }
+        padding: 20px 40px 10px 40px; }
+        .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav .tutor-nav-toggle {
+          margin: 0 auto;
+          display: none;
+          pointer-events: none; }
+          .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav .tutor-nav-toggle span {
+            border-top: 10px solid #fff;
+            border-bottom: none;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            margin: 0 auto;
+            display: inline-block; }
         .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav ul {
           width: 100%;
           display: flex;
@@ -1388,11 +1402,10 @@ TUTOR PROFILE PAGE
           flex-wrap: wrap;
           flex-direction: row; }
           .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav ul li {
-            width: 14.28%; }
+            width: 14.28%;
+            margin-bottom: 10px; }
             .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav ul li a {
               color: #fff; }
-          .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav ul:first-child {
-            margin-bottom: 20px; }
 
 .tutor_section {
   padding-bottom: 80px; }
@@ -1445,6 +1458,8 @@ TUTOR PROFILE PAGE
       .edit_my_profile .container form div input:focus {
         border: 1px solid #b497cf;
         outline: none; }
+    .edit_my_profile .container form div a {
+      margin-left: 30px; }
   .edit_my_profile .container form > a {
     font-weight: 300;
     margin-bottom: 20px;
@@ -1502,6 +1517,46 @@ TUTOR PROFILE PAGE
       font-family: "Roboto", sans-serif;
       color: rgba(0, 0, 0, 0.5); }
 
+.about_me .container .wrapper {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-direction: row; }
+  .about_me .container .wrapper .about_me_buttons {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row; }
+    .about_me .container .wrapper .about_me_buttons button {
+      width: 32%;
+      border-radius: 5px;
+      background-color: #fff;
+      border: 1px solid rgba(90, 109, 115, 0.5);
+      color: rgba(90, 109, 115, 0.5); }
+      .about_me .container .wrapper .about_me_buttons button.active_lang {
+        background-color: #fedc40;
+        border: none;
+        color: #5a6d73; }
+  .about_me .container .wrapper .about_me_content {
+    width: 100%; }
+    .about_me .container .wrapper .about_me_content textarea {
+      appearance: none;
+      width: 100%;
+      border: 1px solid rgba(90, 109, 115, 0.5);
+      padding: 20px;
+      font-family: "Roboto", sans-serif;
+      color: rgba(90, 109, 115, 0.8); }
+      .about_me .container .wrapper .about_me_content textarea::placeholder {
+        font-family: "Roboto", sans-serif;
+        font-size: 0.95rem;
+        color: rgba(90, 109, 115, 0.7);
+        line-height: 1.5; }
+
 .certificate .container .wrapper {
   width: 70%;
   display: flex;
@@ -1519,11 +1574,11 @@ TUTOR PROFILE PAGE
     flex-direction: row; }
     .certificate .container .wrapper div label {
       display: inline-block;
-      font-size: 1.2rem;
+      font-size: 1rem;
       width: 25%;
       min-width: 100px; }
     .certificate .container .wrapper div input {
-      font-size: 1.2rem;
+      font-size: 1rem;
       padding: 7px 10px;
       border: 1px solid #5a6d73;
       border-radius: 4px;
@@ -1650,7 +1705,74 @@ TUTOR PROFILE PAGE
       width: 140px;
       line-height: 35px;
       background: #fff;
-      border: 1px solid black; } }
+      border: 1px solid black; }
+
+  /*******************
+  TUTOR PROFILE PAGE
+  *******************/
+  .tutor_profile_header .container .tutor-profile-view .tutor-profile-card {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row; }
+    .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-img {
+      width: 20%; }
+    .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content {
+      width: 80%;
+      padding: 30px 20px 30px 20px;
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      flex-direction: row; }
+      .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile {
+        font-size: 0.95rem; }
+      .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline {
+        width: 26%;
+        position: relative;
+        padding-right: 15px; }
+        .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline h3 {
+          font-size: 2.1rem;
+          font-weight: 400; }
+      .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description {
+        position: relative;
+        width: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding-left: 20px; }
+        .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+          flex-direction: row;
+          margin-right: 50px;
+          margin-bottom: 20px; }
+          .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div p {
+            font-size: 0.9rem; }
+          .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div img {
+            margin-left: 15px;
+            width: 15px;
+            height: 15px; }
+  .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav {
+    padding: 15px 40px; }
+    .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav ul {
+      width: 100%; }
+      .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav ul li {
+        width: 14.28%; }
+        .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav ul li a {
+          font-size: 0.9rem; }
+      .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav ul:first-child {
+        margin-bottom: 15px; }
+
+  .certificate .container .wrapper {
+    width: 90%; }
+    .certificate .container .wrapper div label {
+      margin-bottom: 20px; } }
 @media (max-width: 1200px) {
   .map-section .map-container .map-wrapper .map-box .map-marker {
     transform: scale(0.85); }
@@ -1938,7 +2060,68 @@ TUTOR PROFILE PAGE
         align-items: center;
         justify-content: space-between;
         flex-wrap: nowrap;
-        flex-direction: row; } }
+        flex-direction: row; }
+
+  .tutor_profile_header {
+    height: 50vh; }
+    .tutor_profile_header .container .tutor-profile-view .tutor-profile-card {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      flex-direction: row; }
+      .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-img {
+        width: 25%; }
+      .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content {
+        width: 75%;
+        padding: 30px 10px 20px 20px; }
+        .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile {
+          font-size: 0.9rem; }
+        .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline {
+          width: 35%; }
+          .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline h3 {
+            font-size: 1.9rem; }
+        .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description {
+          position: relative;
+          width: 65%;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+          flex-direction: row;
+          padding-left: 20px; }
+          .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            flex-direction: row;
+            margin-right: 30px;
+            margin-bottom: 20px; }
+            .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div p {
+              font-size: 0.9rem; }
+            .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div img {
+              margin-left: 15px;
+              width: 15px;
+              height: 15px; }
+    .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      flex-direction: row;
+      padding: 20px 50px; }
+      .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav ul {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-direction: row; }
+        .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav ul li {
+          width: 28.5%; }
+          .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav ul li a {
+            color: #fff; } }
 @media (max-width: 860px) {
   	/******************** 
       NAV
@@ -2089,7 +2272,154 @@ TUTOR PROFILE PAGE
       margin-bottom: 0px; }
   .how .container .row .description_img {
     width: 60%;
-    margin: 30px auto; } }
+    margin: 30px auto; }
+
+  .tutor_profile_header {
+    padding-bottom: 50px;
+    margin-bottom: 300px;
+    background-image: url(/img/search_opt/search_opt_bg.png);
+    background-position: center;
+    background-size: cover;
+    height: 50vh;
+    position: relative; }
+    .tutor_profile_header .container {
+      position: absolute;
+      border-radius: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -60%; }
+      .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-img {
+        display: none; }
+      .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content {
+        display: flex;
+        align-items: stretch;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 100%;
+        padding: 25px; }
+        .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile {
+          font-size: 1rem;
+          margin-bottom: -1rem; }
+        .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline {
+          width: 100%;
+          margin-bottom: 0px;
+          margin-left: 0px;
+          text-align: left;
+          padding-right: 0; }
+          .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline h3 {
+            font-size: 1.8rem; }
+          .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline::after {
+            width: 100%;
+            height: 1px;
+            display: inline-block;
+            position: absolute;
+            content: "";
+            background-color: #5a6d73;
+            top: unset;
+            display: none;
+            right: 0; }
+          .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline .availability {
+            margin-bottom: 10px; }
+        .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-img-mob {
+          display: block;
+          margin-bottom: 10px;
+          position: relative; }
+          .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-img-mob img {
+            width: 150px;
+            height: auto;
+            border-radius: 10px;
+            display: block; }
+            .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-img-mob img:nth-child(2) {
+              position: absolute;
+              width: 25px;
+              height: 25px;
+              top: 5px;
+              right: 5px;
+              cursor: pointer;
+              transition: 0.4s ease-in-out;
+              border: 1px solid transparent; }
+              .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-img-mob img:nth-child(2):hover {
+                transform: scale(1.1);
+                border: 1px solid #b497cf; }
+        .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description {
+          position: relative;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+          flex-direction: row;
+          padding-left: 0px; }
+          .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            flex-direction: row;
+            margin-right: 15px;
+            margin-bottom: 10px; }
+            .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div p {
+              font-size: 0.9rem; }
+            .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div img {
+              margin-left: 5px;
+              width: 15px;
+              height: 15px; }
+          .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description::before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: #5a6d73;
+            margin-bottom: 10px; }
+      .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding: 10px 50px;
+        position: relative; }
+        .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav .tutor-nav-toggle {
+          margin: 0 auto;
+          display: block;
+          cursor: pointer;
+          pointer-events: all; }
+          .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav .tutor-nav-toggle span {
+            border-top: 10px solid #fff;
+            border-bottom: none;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            margin: 0 auto;
+            display: inline-block; }
+        .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav ul {
+          background-color: #b497cf;
+          max-height: 0;
+          overflow-y: hidden;
+          width: 100%;
+          transition: 0.4s all ease-in-out;
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+          flex-wrap: wrap;
+          flex-direction: row;
+          position: absolute;
+          top: 80%;
+          left: 0;
+          padding: 0px 20px;
+          border-bottom-left-radius: 10px;
+          border-bottom-right-radius: 10px; }
+          .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav ul li {
+            width: 45%;
+            opacity: 0;
+            transition: 0.4s ease-in-out; }
+            .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav ul li a {
+              color: #fff; }
+            .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav ul li.show {
+              opacity: 1; }
+          .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav ul.active-tutor-nav {
+            max-height: 300px;
+            padding: 30px 20px 20px 20px; } }
 @media (max-width: 768px) {
   .map-section .map-container .map-wrapper .map-box .map-marker {
     transform: scale(0.75); }
@@ -2308,7 +2638,73 @@ TUTOR PROFILE PAGE
           width: 100%;
           text-align: center; }
         .proposition .container .right-side .wrapper article .flex-icon {
-          margin-bottom: 10px; } }
+          margin-bottom: 10px; }
+
+  .tutor_section .container h3 {
+    font-size: 1.5rem; }
+  .tutor_section .container .wrapper {
+    width: 100%;
+    padding: 20px; }
+    .tutor_section .container .wrapper button {
+      font-size: 0.9rem; }
+    .tutor_section .container .wrapper textarea {
+      min-width: 100%; }
+
+  .edit_my_profile .container form {
+    padding: 30px 30px 20px 30px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column; }
+    .edit_my_profile .container form div {
+      margin-bottom: 20px; }
+      .edit_my_profile .container form div label {
+        margin-bottom: 10px; }
+      .edit_my_profile .container form div input {
+        margin-bottom: 10px;
+        margin-right: 30px; }
+      .edit_my_profile .container form div a {
+        margin-left: 0px;
+        white-space: nowrap; }
+    .edit_my_profile .container form button {
+      align-self: flex-start; }
+
+  .certificate .container .wrapper div {
+    width: 49%;
+    margin-bottom: 30px;
+    min-width: 200px; }
+    .certificate .container .wrapper div input {
+      font-size: 0.95rem;
+      width: 98%; }
+      .certificate .container .wrapper div input:focus {
+        border: 1px solid #b497cf;
+        border-radius: 8px;
+        outline: none; }
+      .certificate .container .wrapper div input::placeholder {
+        font-size: 0.95rem;
+        color: rgba(0, 0, 0, 0.5); }
+  .certificate .container .wrapper .add_more {
+    width: 100%; }
+    .certificate .container .wrapper .add_more label {
+      width: 12.25%; }
+    .certificate .container .wrapper .add_more input {
+      width: 100%; }
+
+  .featuring .container .wrapper p {
+    font-size: 0.95rem; }
+  .featuring .container .wrapper button {
+    margin: 50px 0;
+    color: #b497cf;
+    padding: 10px 15px; }
+    .featuring .container .wrapper button span {
+      color: black;
+      font-weight: 500;
+      font-size: 0.95rem; }
+  .featuring .container .wrapper .renewal {
+    margin-top: 30px; }
+    .featuring .container .wrapper .renewal span {
+      font-weight: 600; } }
 @media (max-width: 590px) {
   header {
     padding: 50px 10px;
@@ -2433,6 +2829,9 @@ TUTOR PROFILE PAGE
         width: 45%;
         margin-right: 0px;
         margin-left: 0px;
-        margin-bottom: 10px; } }
+        margin-bottom: 10px; }
+
+  .tutor_profile_header .container {
+    bottom: -70%; } }
 
 /*# sourceMappingURL=style.css.map */
