@@ -242,6 +242,39 @@
 			}
 		}
 	}
+	.apps,
+	.expert {
+		.container {
+			.wrapper {
+				p {
+					width: 20%;
+					margin-right: 40px;
+					min-width: unset;
+				}
+				textarea {
+					max-width: 50%;
+				}
+			}
+		}
+	}
+
+	.payment_method {
+		.container {
+			.wrapper {
+				.inputs {
+					width: 75%;
+
+					input {
+						min-width: 180px;
+					}
+				}
+				.label,
+				.request_review {
+					width: 20%;
+				}
+			}
+		}
+	}
 }
 
 @media (max-width: $breakPoint_3) {
@@ -698,6 +731,50 @@
 			}
 		}
 	}
+	.apps,
+	.expert {
+		.container {
+			.wrapper {
+				p {
+					width: 30%;
+					margin-right: 40px;
+					min-width: unset;
+				}
+				textarea {
+					width: 70%;
+				}
+			}
+		}
+	}
+
+	.payment_method {
+		.container {
+			.wrapper {
+				.inputs {
+					width: 100%;
+
+					input {
+						min-width: 150px;
+					}
+				}
+				.label,
+				.request_review {
+					width: 50%;
+					p {
+						br {
+							display: none;
+						}
+					}
+				}
+				.request_review {
+					width: 25%;
+					min-width: 180px;
+				}
+				.share_infos {
+				}
+			}
+		}
+	}
 }
 
 @media (max-width: $breakPoint_5) {
@@ -1048,7 +1125,7 @@
 				p {
 					&:first-child {
 						margin-right: 40px;
-						margin-bottom: 20px;
+						// margin-bottom: 20px;
 					}
 				}
 				.paymant-inputs {
@@ -1442,6 +1519,39 @@
 					span {
 						font-weight: 600;
 					}
+				}
+			}
+		}
+	}
+
+	.payment_method {
+		.container {
+			.wrapper {
+				.inputs {
+					width: 100%;
+
+					input {
+						width: 100%;
+						margin-right: 0px !important;
+					}
+					button {
+						width: 100%;
+						margin-right: 0;
+					}
+				}
+				.label,
+				.request_review {
+					width: 100%;
+					margin-left: 40px;
+
+					br {
+						display: none;
+					}
+				}
+				.share_infos {
+					width: 80%;
+
+					margin-left: 40px;
 				}
 			}
 		}
