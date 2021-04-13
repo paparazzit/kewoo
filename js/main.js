@@ -200,3 +200,18 @@ video.addEventListener("click", () => {
 video.onended = () => {
 	play_btn.classList.remove("hide_ply_btn");
 };
+
+// MY MESSAGES
+
+var single_mail = document.querySelectorAll(".single_mail");
+var current_mail = null;
+single_mail.forEach((mail) => {
+	mail.addEventListener("click", () => {
+		var mail_view_classs = mail.getAttribute("data-mail");
+		var my_mail = mail.childNodes[9];
+		var mail_options = mail.childNodes[7].childNodes[2];
+		my_mail.classList.toggle("open");
+		mail_options.classList.toggle("show_options");
+		console.log(mail_options);
+	});
+});

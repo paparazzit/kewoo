@@ -1392,7 +1392,7 @@ TUTOR PROFILE PAGE
 }
 
 .tutor_section {
-	padding-bottom: 80px;
+	padding-bottom: 20px;
 	.container {
 		background-color: $white;
 		border-radius: 10px;
@@ -1470,9 +1470,390 @@ TUTOR PROFILE PAGE
 		}
 	}
 }
+// MY MESSAGES
+
+.my_messages {
+	.container {
+		.wrapper {
+			padding: 0px 0;
+			@include flex(stretch, space-between, wrap, row);
+			.mail_panel {
+				padding-top: 20px;
+				width: 20%;
+				min-width: 150px;
+				max-width: 250px;
+				@include flex(stretch, space-between, wrap, row);
+				padding-right: 15px;
+				.mail_nav {
+					@include flex(flex-start, space-between, wrap, column);
+					width: 100%;
+					ul {
+						width: 100%;
+
+						li {
+							width: 100%;
+							margin-bottom: 5px;
+							border-top-right-radius: 5px;
+							border-bottom-right-radius: 5px;
+							a {
+								width: 100px;
+								margin-left: auto;
+								margin-right: 20%;
+								display: block;
+								padding: 10px 0;
+								font-weight: 500;
+							}
+							&.active {
+								background-color: $accents;
+								a {
+									color: $white;
+								}
+							}
+						}
+					}
+				}
+				.mail_slider {
+					align-self: flex-end;
+					width: 100%;
+					padding: 20px 0;
+					.mail_count {
+						width: 60%;
+
+						text-align: center;
+						margin: 0 auto;
+					}
+					.mail_slider_nav {
+						width: 50px;
+
+						margin: 7px auto 0 auto;
+						@include flex(center, space-between, nowrap, row);
+					}
+				}
+			}
+			.mail_box {
+				// border: 1px solid black;
+				width: 80%;
+				max-height: 600px;
+				@include flex(flex-start, flex-start, nowrap, column);
+				overflow-y: hidden;
+				.single_mail {
+					width: 100%;
+
+					padding: 10px 20px;
+					@include flex(flex-start, space-between, wrap, row);
+					&:nth-child(odd) {
+						background-color: lighten($backgorund-primary, 3%);
+					}
+					.sender {
+						@include flex(center, flex-start, nowrap, row);
+						// border: 1px solid black;
+						width: 50%;
+
+						input {
+							margin-right: 20px;
+						}
+						.sender_name {
+							margin-right: 5px;
+						}
+						.mail_title {
+							margin-left: 5px;
+						}
+					}
+					.mail_time_options {
+						width: 50%;
+						color: rgba($line_color, 0.5);
+						font-size: 0.9rem;
+						@include flex(flex-end, flex-end, nowrap, row);
+						.mail_options {
+							margin-left: 15px;
+							display: none;
+							span {
+								width: 4px;
+								height: 4px;
+								background-color: rgba($line_color, 0.5);
+								display: block;
+								border-radius: 50%;
+								&:nth-child(2) {
+									margin: 2px 0;
+								}
+							}
+							&.show_options {
+								display: block;
+							}
+						}
+					}
+
+					.mail_view {
+						width: 100%;
+						overflow-y: hidden;
+						max-height: 0;
+
+						.mail_content {
+							.mail_body {
+								margin: 30px 0;
+							}
+						}
+						button {
+							border-radius: 3px;
+							padding: 10px 50px;
+						}
+						&.open {
+							max-height: unset;
+							padding: 40px 30px 20px 35px;
+							border-top: 1px solid rgba($line_color, 0.5);
+							margin-top: 20px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// CALENDAR
+
+.my_calendar {
+	.container {
+		padding: 20px 0 0 0;
+		.wrapper {
+			padding: 0;
+			@include flex(stretch, space-between, wrap, row);
+			.calendar_panel {
+				width: 20%;
+				min-width: 200px;
+				border-right: 1px solid rgba($line_color, 0.5);
+				> div {
+					padding: 25px 25px;
+					border-bottom: 1px solid rgba($line_color, 0.5);
+					p {
+						font-size: 0.95rem;
+						line-height: 1.3;
+						span {
+							color: $accents;
+							font-size: 1rem;
+							font-weight: 500;
+						}
+					}
+					&:last-child {
+						border-bottom: none;
+					}
+				}
+				.reminder,
+				.local_time,
+				.legend {
+					p {
+						color: lighten($footer, 10%);
+						line-height: 1.3;
+					}
+				}
+				.holidays {
+					h4 {
+						font-size: 1.1rem;
+						font-weight: 400;
+						padding-bottom: 25px;
+					}
+					p {
+						line-height: 1.3;
+						color: lighten($footer, 10%);
+						span {
+							color: lighten($footer, 10%);
+							font-weight: 400;
+						}
+					}
+					.available {
+						@include flex(center, center, wrap, column);
+						margin: 25px 0 0 0;
+						.from {
+							display: none;
+						}
+						input {
+							margin: 5px 0;
+							width: 100%;
+							border: 1px solid rgba($line_color, 0.5);
+							padding: 5px;
+							border-radius: 4px;
+							&:focus {
+								border: 1px solid $accents;
+								outline: none;
+							}
+							&::placeholder {
+								font-size: 1rem;
+								text-align: center;
+								opacity: 1;
+								font-family: $font_family;
+							}
+						}
+						a {
+							margin-top: 10px;
+							text-decoration: underline;
+						}
+					}
+				}
+				.legend {
+					> div {
+						margin-top: 15px;
+						@include flex(center, space-between, wrap, row);
+						p {
+							margin-bottom: 5px;
+							span {
+								display: inline-block;
+								content: "";
+								width: 10px;
+								height: 10px;
+								border-radius: 50%;
+								background-color: $accents;
+								margin-right: 8px;
+								line-height: 1.3;
+							}
+							&:last-child {
+								span {
+									background-color: $footer;
+								}
+							}
+						}
+					}
+				}
+			}
+			.calendar_view {
+				width: 80%;
+				@include flex(flex-start, flex-start, nowrap, column);
+				.calendar_slider {
+					border-bottom: 1px solid rgba($line_color, 0.5);
+					width: 100%;
+					text-align: center;
+					@include flex(center, center, nowrap, row);
+					height: 7%;
+
+					p {
+						span {
+							&.prev,
+							&.next {
+								margin: 0 20px;
+							}
+							&.current_mounth,
+							&.current_year {
+								margin: 0 2px;
+							}
+						}
+					}
+				}
+
+				.days {
+					width: 100%;
+					height: 7%;
+
+					@include flex(center, space-between, nowrap, row);
+
+					> div {
+						@include flex(center, center, nowrap, row);
+						width: calc(100% / 7);
+						text-align: center;
+						height: 100%;
+						border-bottom: 1px solid rgba($line_color, 0.5);
+						border-right: 1px solid rgba($line_color, 0.5);
+						padding: 10px 0;
+
+						&:last-child {
+							border-right: none;
+						}
+					}
+				}
+				.dates {
+					// align-self: stretch;
+					@include flex(stretch, space-between, wrap, row);
+					width: 100%;
+					height: 86%;
+
+					.date {
+						width: calc(100% / 7);
+						overflow-y: hidden;
+						position: relative;
+						padding: 10px;
+						border-bottom: 1px solid rgba($line_color, 0.5);
+						border-right: 1px solid rgba($line_color, 0.5);
+						overflow-y: hidden;
+						&.unavailable {
+							background-color: $footer;
+							border-bottom: 1px solid lighten($line_color, 40%);
+							border-right: 1px solid lighten($line_color, 40%);
+							.current_date {
+								color: $btn-primary;
+							}
+						}
+
+						&.booked {
+							background-color: $accents;
+							border-bottom: 1px solid lighten($line_color, 40%);
+							border-right: 1px solid lighten($line_color, 40%);
+							.current_date {
+								color: $white;
+							}
+							.date_agenda {
+								position: absolute;
+								width: 100%;
+								height: 100%;
+								top: 0;
+								left: 0;
+								padding: 35px 10px 10px 10px;
+
+								ul {
+									color: $white;
+								}
+								&::after {
+									display: block;
+									content: "";
+									width: 100%;
+									height: 100%;
+									background: linear-gradient(
+										to top,
+										$accents,
+										rgba(0, 0, 0, 0) 60%
+									);
+									position: absolute;
+									top: 0;
+									left: 0;
+								}
+							}
+						}
+						&:nth-child(7),
+						&:nth-child(14),
+						&:nth-child(21),
+						&:nth-child(28),
+						&:last-child {
+							border-right: none;
+						}
+						&:nth-child(29),
+						&:nth-child(30),
+						&:nth-child(31),
+						&:nth-child(32),
+						&:nth-child(33),
+						&:nth-child(34),
+						&:nth-child(35) {
+							border-bottom: none;
+						}
+						&:last-child {
+							border-bottom-right-radius: 10px;
+						}
+						.current_date {
+							color: rgba($line_color, 0.8);
+						}
+						&.inactive {
+							background-color: lighten($gray, 4%);
+							.current_date {
+								color: rgba($line_color, 0.8);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 // PRICING
 
 .pricing {
+	padding-bottom: 60px;
 	.container {
 		.wrapper {
 			.row {
@@ -1531,10 +1912,9 @@ TUTOR PROFILE PAGE
 				.video_box {
 					display: block;
 
-					video {
+					iframe {
 						width: 100%;
 						display: block;
-						pointer-events: none;
 					}
 				}
 				img {
