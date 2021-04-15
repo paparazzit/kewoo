@@ -935,6 +935,20 @@
 	//////////////////////////////
 	////////map//////////////////
 	/////////////////////////////
+	@keyframes markeri {
+		0% {
+			opacity: 0;
+			transform: scale(0);
+		}
+		90% {
+			opacity: 0.8;
+			transform: scale(1);
+		}
+		100% {
+			opacity: 1;
+			transform: scale(0.75);
+		}
+	}
 
 	.map-section {
 		.map-container {
@@ -1265,6 +1279,65 @@
 			}
 		}
 	}
+	// TUTOR DETAILS
+	.tutor_details_header {
+		.tutor-profile {
+			.container {
+				.tutor-profile-view {
+					.tutor-profile-card {
+						.tutor-img {
+						}
+						.tutor-content {
+							justify-content: space-between;
+							.my_profile {
+								flex-direction: column;
+								justify-content: flex-start;
+								align-items: flex-end;
+								order: 2;
+								width: 65%;
+								button {
+									span {
+										font-weight: 600;
+									}
+									margin-bottom: 15px;
+								}
+								> div {
+									.rate {
+										margin-top: 15px;
+										img {
+											width: 23px;
+											height: 23px;
+										}
+									}
+									.views {
+										color: rgba($line_color, 0.5);
+										font-size: 0.9rem;
+									}
+								}
+							}
+							.tutor-card-headline {
+								order: 3;
+								@include flex(stretch, space-between, wrap, column);
+								.tutor_for {
+									font-size: 1.25em;
+									margin: 10px 0 20px 0;
+									align-self: flex-start;
+								}
+							}
+							.tutor-img-mob {
+								order: 1;
+							}
+							.tutor-card-description {
+								order: 4;
+							}
+						}
+					}
+					.tutor-profile-nav {
+					}
+				}
+			}
+		}
+	}
 }
 
 @media (max-width: $breakPoint_6) {
@@ -1427,6 +1500,59 @@
 			}
 		}
 	}
+
+	/******************
+ TUTOR DETAILS
+******************/
+	.tutor_details_header {
+		.tutor-profile {
+			.container {
+				.tutor-profile-view {
+					.tutor-profile-card {
+					}
+					.tutor-profile-nav {
+						ul {
+							justify-content: space-between;
+							li {
+								width: 33%;
+								text-align: left;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.pricing_students {
+		.container {
+			.wrapper {
+				@include flex(flex-end, space-between, wrap, row);
+				.pricing_packs {
+					width: 100%;
+					margin-bottom: 30px;
+				}
+				.pricing_btns {
+					@include flex(flex-end, flex-end, wrap, column);
+					button {
+						width: 260px;
+						padding: 10px 0;
+						margin-bottom: 15px;
+						&:nth-child(2) {
+							background-color: $white;
+							border: 1px solid rgba($line_color, 0.5);
+						}
+						&:last-child {
+							margin-bottom: 0;
+							background-color: $white;
+							border: 1px solid rgba($line_color, 0.5);
+						}
+					}
+				}
+			}
+		}
+	}
+
 	/***************
    FOOTER
 ***************/
@@ -1782,7 +1908,10 @@
 		background-position: 80% top;
 		height: 70vh;
 		hgroup {
+			padding: 20px;
+
 			h1 {
+				padding: 0px;
 				font-weight: 500;
 				font-size: 1.8rem;
 				span {
@@ -1790,36 +1919,36 @@
 				}
 			}
 			p {
-				display: none;
+				font-size: 0.85rem;
 			}
 			label {
 				width: 100%;
 				position: relative;
 				display: block;
 				margin: 20px 0;
-				p {
-					font-size: 0.9rem;
-				}
+
+				@include flex(center, center, nowrap, row);
+
 				input {
-					width: 100%;
+					width: 60%;
 					height: 50px;
 					border: none;
-					font-size: 1rem;
-
-					border-radius: 8px;
+					font-size: 0.9rem;
 					padding: 0 10px;
-					margin-bottom: 20px;
+					&::placeholder {
+						font-size: 0.75rem;
+					}
 				}
-				&::placeholder {
-					font-size: 1rem;
-				}
+
 				button {
-					width: 250px;
+					width: 40%;
 					@include btn-primary($black, 1rem);
 					height: 50px;
-					border-radius: 0px;
-					height: none;
-					border-radius: 8px;
+					font-size: 0.8rem;
+					border-top-right-radius: 8px;
+					border-bottom-right-radius: 8px;
+					border-top-left-radius: 0;
+					border-bottom-left-radius: 0;
 				}
 			}
 		}
@@ -1907,6 +2036,70 @@
 							border-bottom: none;
 							&:last-child {
 								border-bottom: 1px solid rgba($line_color, 0.3);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// TUTOR DETAILS
+	.tutor_details_header {
+		.tutor-profile {
+			.container {
+				.tutor-profile-view {
+					.tutor-profile-card {
+						.tutor-img {
+						}
+						.tutor-content {
+							justify-content: space-between;
+							padding: 10px;
+							.my_profile {
+								flex-direction: column;
+								justify-content: flex-start;
+								align-items: flex-end;
+								order: 2;
+								width: 50%;
+								button {
+									font-size: 0.85rem;
+									line-height: 1.5;
+									span {
+										font-weight: 600;
+									}
+									margin-bottom: 15px;
+								}
+								> div {
+									.rate {
+										margin: 5px 0;
+										img {
+											width: 18px;
+											height: 18px;
+										}
+									}
+									.views {
+										color: rgba($line_color, 0.5);
+										font-size: 0.85rem;
+									}
+								}
+							}
+							.tutor-card-headline {
+								order: 3;
+								@include flex(stretch, space-between, wrap, column);
+								h3 {
+									font-size: 1.5rem;
+								}
+								.tutor_for {
+									font-size: 1.1em;
+									margin: 10px 0 20px 0;
+									align-self: flex-start;
+								}
+							}
+							.tutor-img-mob {
+								order: 1;
+							}
+							.tutor-card-description {
+								order: 4;
 							}
 						}
 					}

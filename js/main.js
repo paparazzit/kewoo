@@ -49,6 +49,7 @@ $("#testimonials").owlCarousel({
 		},
 	},
 });
+
 // Map marker vertical and horizontal ajustments using data-atributes
 $(".map-marker").each(function () {
 	var $this = $(this),
@@ -81,14 +82,14 @@ $(".tutor-card").each(function () {
 	}
 });
 
-// CUSTOM OPTION SELECT
+// CUSTOM OPTION SELECT --- find your tutor page slelctors
 const selected = document.querySelectorAll(".selected");
 const optionsList = document.querySelectorAll(".option");
 var optionsContainer = document.querySelectorAll(".options-container");
 
 selected.forEach(function (s) {
 	s.addEventListener("click", function () {
-		// event.stopPropagation();
+		event.stopPropagation();
 		optionsContainer.forEach(function (container) {
 			container.classList.remove("active");
 		});
@@ -96,7 +97,7 @@ selected.forEach(function (s) {
 		s.previousElementSibling.classList.toggle("active");
 		console.log(s.previousElementSibling);
 		console.log(s);
-		s.focus();
+		// s.focus();
 	});
 });
 
@@ -115,6 +116,37 @@ window.addEventListener("click", function (event) {
 	optionsContainer.forEach(function (c) {
 		c.classList.remove("active");
 	});
+});
+
+// MAP
+
+window.addEventListener("load", () => {
+	var page_name = location.pathname.substring(1);
+	console.log(page_name);
+
+	if (page_name === "index.html" || page_name === "index.html") {
+		const intersect = document.querySelector("#moja_mapa");
+		const options = {
+			root: null,
+			rootMargin: "-20px 0px",
+		};
+
+		const observer = new IntersectionObserver(function (entries, observer) {
+			entries.forEach((entry) => {
+				var map_markers = entry.target.children;
+				if (!entry.isIntersecting) {
+					return;
+				}
+				for (var i = 0; i < map_markers.length; i++) {
+					map_markers[i].classList.add("intersecting");
+				}
+
+				observer.unobserve(entry.target);
+			});
+		}, options);
+
+		observer.observe(intersect);
+	}
 });
 
 // TUTOR NAV TOGGLE
@@ -181,37 +213,46 @@ function removePaymentActive() {
 	});
 }
 
-// PLAY VIDEO
-
-var play_btn = document.querySelector(".play_btn");
-var video = document.querySelector("video");
-
-play_btn.addEventListener("click", () => {
-	video.play();
-	play_btn.classList.add("hide_ply_btn");
-	video.style.pointerEvents = "all";
-});
-
-video.addEventListener("click", () => {
-	video.pause();
-	play_btn.classList.remove("hide_ply_btn");
-});
-
-video.onended = () => {
-	play_btn.classList.remove("hide_ply_btn");
-};
-
 // MY MESSAGES
+// Mail nav panel
+var mail_nav = document.querySelectorAll(".mail_nav ul li a");
+var mail_view_all = document.querySelectorAll(".box_view");
+// mail nav buttons
+mail_nav.forEach((button) => {
+	button.addEventListener("click", (e) => {
+		hideMailViews();
+		removeActivMailNav();
+		e.preventDefault();
+		var mail_views = document.querySelector(`.${button.getAttribute("href")}`);
+		button.parentElement.classList.add("active");
+		mail_views.classList.remove("hide");
+	});
+});
 
+// Open mail messages
 var single_mail = document.querySelectorAll(".single_mail");
 var current_mail = null;
 single_mail.forEach((mail) => {
 	mail.addEventListener("click", () => {
-		var mail_view_classs = mail.getAttribute("data-mail");
 		var my_mail = mail.childNodes[9];
 		var mail_options = mail.childNodes[7].childNodes[2];
 		my_mail.classList.toggle("open");
 		mail_options.classList.toggle("show_options");
-		console.log(mail_options);
 	});
 });
+
+// Get mail_views
+
+function hideMailViews() {
+	mail_view_all.forEach((show_box) => {
+		show_box.classList.add("hide");
+	});
+}
+// remove active on mail nav buttons
+function removeActivMailNav() {
+	mail_nav.forEach((b) => {
+		b.parentElement.classList.remove("active");
+	});
+}
+
+// MAP animation

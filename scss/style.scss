@@ -15,6 +15,23 @@
 @import "general";
 @import "custom_select";
 
+// ANIMATTION
+
+@keyframes markeri {
+	0% {
+		opacity: 0;
+		transform: scale(0);
+	}
+	90% {
+		opacity: 0.8;
+		transform: scale(1.2);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
 // ELEMENTS
 .card-text {
 	@include flex(start, start, wrap, row);
@@ -280,9 +297,11 @@ header {
 				.map-marker {
 					position: absolute;
 					display: block;
-
+					opacity: 0;
+					transform: scale(0);
 					width: 10px;
 					height: 3px;
+					transition: $transition;
 
 					.marker-inner {
 						position: relative;
@@ -324,6 +343,10 @@ header {
 							border-radius: 8px;
 							margin: 3px auto;
 						}
+					}
+					&.intersecting {
+						animation: markeri 0.8s ease-in-out forwards;
+						animation-delay: calc(0.1s * var(--i));
 					}
 				}
 			}
@@ -1530,81 +1553,98 @@ TUTOR PROFILE PAGE
 					}
 				}
 			}
-			.mail_box {
-				// border: 1px solid black;
-				width: 80%;
-				max-height: 600px;
-				@include flex(flex-start, flex-start, nowrap, column);
-				overflow-y: hidden;
-				.single_mail {
-					width: 100%;
+			.mail {
+				&__box {
+					// border: 1px solid black;
 
-					padding: 10px 20px;
-					@include flex(flex-start, space-between, wrap, row);
-					&:nth-child(odd) {
-						background-color: lighten($backgorund-primary, 3%);
-					}
-					.sender {
-						@include flex(center, flex-start, nowrap, row);
-						// border: 1px solid black;
-						width: 50%;
+					width: 80%;
+					max-height: 600px;
+					@include flex(flex-start, flex-start, nowrap, column);
+					overflow-y: hidden;
+					.single_mail {
+						width: 100%;
 
-						input {
-							margin-right: 20px;
+						padding: 10px 20px;
+						@include flex(flex-start, space-between, wrap, row);
+						&:nth-child(odd) {
+							background-color: lighten($backgorund-primary, 3%);
 						}
-						.sender_name {
-							margin-right: 5px;
+						.sender {
+							@include flex(center, flex-start, nowrap, row);
+							// border: 1px solid black;
+							width: 50%;
+
+							input {
+								margin-right: 20px;
+							}
+							.sender_name {
+								margin-right: 5px;
+							}
+							.mail_title {
+								margin-left: 5px;
+							}
 						}
-						.mail_title {
-							margin-left: 5px;
-						}
-					}
-					.mail_time_options {
-						width: 50%;
-						color: rgba($line_color, 0.5);
-						font-size: 0.9rem;
-						@include flex(flex-end, flex-end, nowrap, row);
-						.mail_options {
-							margin-left: 15px;
-							display: none;
-							span {
-								width: 4px;
-								height: 4px;
-								background-color: rgba($line_color, 0.5);
-								display: block;
-								border-radius: 50%;
-								&:nth-child(2) {
-									margin: 2px 0;
+						.mail_time_options {
+							width: 50%;
+							color: rgba($line_color, 0.5);
+							font-size: 0.9rem;
+							@include flex(flex-end, flex-end, nowrap, row);
+							.mail_options {
+								margin-left: 15px;
+								display: none;
+								span {
+									width: 4px;
+									height: 4px;
+									background-color: rgba($line_color, 0.5);
+									display: block;
+									border-radius: 50%;
+									&:nth-child(2) {
+										margin: 2px 0;
+									}
+								}
+								&.show_options {
+									display: block;
 								}
 							}
-							&.show_options {
-								display: block;
-							}
 						}
-					}
 
-					.mail_view {
-						width: 100%;
-						overflow-y: hidden;
-						max-height: 0;
+						.mail_view {
+							width: 100%;
+							overflow-y: hidden;
+							max-height: 0;
 
-						.mail_content {
-							.mail_body {
-								margin: 30px 0;
+							.mail_content {
+								.mail_body {
+									margin: 30px 0;
+								}
 							}
-						}
-						button {
-							border-radius: 3px;
-							padding: 10px 50px;
-						}
-						&.open {
-							max-height: unset;
-							padding: 40px 30px 20px 35px;
-							border-top: 1px solid rgba($line_color, 0.5);
-							margin-top: 20px;
+							button {
+								border-radius: 3px;
+								padding: 10px 50px;
+							}
+							&.open {
+								max-height: unset;
+								padding: 40px 30px 20px 35px;
+								border-top: 1px solid rgba($line_color, 0.5);
+								margin-top: 20px;
+							}
 						}
 					}
 				}
+			}
+			.sent {
+				&__box {
+					@extend .mail__box;
+				}
+			}
+			.bin {
+				&__box {
+					@extend .mail__box;
+				}
+			}
+
+			.hide {
+				display: none !important;
 			}
 		}
 	}
@@ -2274,6 +2314,132 @@ TUTOR PROFILE PAGE
 		}
 	}
 }
+.button_wrapper {
+	padding: 80px 0;
+	text-align: center;
+	button {
+		@include btn-primary($footer, 1rem);
+		padding: 15px 40px;
+		border-radius: 4px;
+	}
+}
+
+/******************
+ TUTOR DETAILS
+******************/
+.tutor_details_header {
+	@extend .tutor_profile_header;
+	.tutor-profile {
+		.container {
+			.tutor-profile-view {
+				.tutor-profile-card {
+					.tutor-img {
+					}
+					.tutor-content {
+						.my_profile {
+							@include flex(flex-start, space-between, wrap, row);
+							button {
+								@include btn-primary($footer, 0.9rem);
+								padding: 10px 30px;
+								border-radius: 4px;
+
+								span {
+									font-weight: 600;
+								}
+							}
+							> div {
+								.rate {
+									margin-top: 15px;
+									img {
+										width: 23px;
+										height: 23px;
+									}
+								}
+								.views {
+									color: rgba($line_color, 0.5);
+									font-size: 0.9rem;
+								}
+							}
+						}
+						.tutor-card-headline {
+							@include flex(stretch, space-between, wrap, column);
+							.tutor_for {
+								font-size: 1.25em;
+								margin: 10px 0 20px 0;
+								align-self: flex-start;
+							}
+						}
+					}
+				}
+				.tutor-profile-nav {
+					ul {
+						justify-content: center;
+						li {
+							width: 12.5%;
+							text-align: center;
+							min-width: 150px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.pricing_students {
+	.container {
+		.wrapper {
+			@include flex(flex-end, space-between, wrap, row);
+			.pricing_packs {
+				width: 40%;
+				min-width: 300px;
+				.price_tag {
+					@include flex(center, space-between, wrap, row);
+					margin-bottom: 30px;
+					margin-right: 20px;
+					.price {
+						width: 50%;
+						text-align: right;
+						color: $accents;
+					}
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+			.pricing_btns {
+				@include flex(flex-end, flex-end, wrap, column);
+				button {
+					width: 260px;
+					padding: 10px 0;
+					margin-bottom: 15px;
+					&:nth-child(2) {
+						background-color: $white;
+						border: 1px solid rgba($line_color, 0.5);
+					}
+					&:last-child {
+						margin-bottom: 0;
+						background-color: $white;
+						border: 1px solid rgba($line_color, 0.5);
+					}
+				}
+			}
+		}
+	}
+}
+.video_students {
+	.container {
+		.wrapper {
+			padding: 40px 0;
+			.tutor_video {
+				.video_box {
+					text-align: center;
+				}
+			}
+		}
+	}
+}
+
 /*******************
     RESPONSIVE
 ********************/
