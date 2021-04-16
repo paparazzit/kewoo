@@ -442,6 +442,33 @@
 			}
 		}
 	}
+
+	.booking {
+		.container {
+			.wrapper {
+				.calendar_panel {
+					flex-direction: row !important;
+
+					@include flex(center, space-evenly, nowrap, column);
+					.reservations {
+						border: none;
+						@include flex(flex-start, space-between, wrap, column);
+					}
+					.local_time {
+						@include flex(center, center, nowrap, column);
+
+						border: none;
+						margin-top: unset;
+						border-right: 1px solid $gray;
+						align-self: stretch;
+					}
+					.legend {
+						border-top: none;
+					}
+				}
+			}
+		}
+	}
 }
 
 @media (max-width: $breakPoint_4) {
@@ -1899,6 +1926,51 @@
 			}
 		}
 	}
+
+	.booking {
+		.container {
+			.wrapper {
+				padding-bottom: 10px;
+				.calendar_panel {
+					flex-direction: row !important;
+
+					@include flex(center, space-evenly, nowrap, column);
+					.reservations {
+						border: none;
+						@include flex(flex-start, space-between, wrap, column);
+					}
+					.local_time {
+						@include flex(center, center, nowrap, column);
+
+						border: none;
+						margin-top: unset;
+						border-right: 1px solid $gray;
+						align-self: stretch;
+					}
+					.legend {
+						border-top: none;
+					}
+				}
+				.calendar_view {
+					.days {
+						.current_day {
+							p {
+								span {
+									display: inline-block;
+									font-size: 0.85rem;
+								}
+							}
+						}
+					}
+					.time_table {
+						> div {
+							font-size: 0.85rem;
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 @media (max-width: $breakPoint_6_b) {
@@ -2176,6 +2248,30 @@
 				.row {
 					@include flex(center, flex-start, wrap, row);
 					width: 100%;
+				}
+			}
+		}
+	}
+
+	.payment {
+		.container {
+			.wrapper {
+				.tutor_payment_text {
+					width: 50%;
+					p {
+						font-size: 0.85rem;
+						margin-right: 5px;
+					}
+				}
+				.tutor_payment_info {
+					width: 50%;
+
+					p {
+						font-size: 0.85rem;
+						span {
+							margin-right: 15px;
+						}
+					}
 				}
 			}
 		}

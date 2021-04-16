@@ -1633,82 +1633,84 @@ TUTOR PROFILE PAGE
   .my_messages .container .wrapper .hide {
     display: none !important; }
 
-.my_calendar .container {
+.my_calendar .container, .booking .container {
   padding: 20px 0 0 0; }
-  .my_calendar .container .wrapper {
+  .my_calendar .container .wrapper, .booking .container .wrapper {
     padding: 0;
     display: flex;
     align-items: stretch;
     justify-content: space-between;
     flex-wrap: wrap;
     flex-direction: row; }
-    .my_calendar .container .wrapper .calendar_panel {
+    .my_calendar .container .wrapper .calendar_panel, .booking .container .wrapper .calendar_panel {
       width: 20%;
       min-width: 200px;
       border-right: 1px solid rgba(90, 109, 115, 0.5); }
-      .my_calendar .container .wrapper .calendar_panel > div {
+      .my_calendar .container .wrapper .calendar_panel > div, .booking .container .wrapper .calendar_panel > div {
         padding: 25px 25px;
         border-bottom: 1px solid rgba(90, 109, 115, 0.5); }
-        .my_calendar .container .wrapper .calendar_panel > div p {
+        .my_calendar .container .wrapper .calendar_panel > div p, .booking .container .wrapper .calendar_panel > div p {
           font-size: 0.95rem;
           line-height: 1.3; }
-          .my_calendar .container .wrapper .calendar_panel > div p span {
+          .my_calendar .container .wrapper .calendar_panel > div p span, .booking .container .wrapper .calendar_panel > div p span {
             color: #b497cf;
             font-size: 1rem;
             font-weight: 500; }
-        .my_calendar .container .wrapper .calendar_panel > div:last-child {
+        .my_calendar .container .wrapper .calendar_panel > div:last-child, .booking .container .wrapper .calendar_panel > div:last-child {
           border-bottom: none; }
-      .my_calendar .container .wrapper .calendar_panel .reminder p,
+      .my_calendar .container .wrapper .calendar_panel .reminder p, .booking .container .wrapper .calendar_panel .reminder p,
       .my_calendar .container .wrapper .calendar_panel .local_time p,
-      .my_calendar .container .wrapper .calendar_panel .legend p {
+      .booking .container .wrapper .calendar_panel .local_time p,
+      .my_calendar .container .wrapper .calendar_panel .legend p,
+      .booking .container .wrapper .calendar_panel .legend p {
         color: #58696e;
         line-height: 1.3; }
-      .my_calendar .container .wrapper .calendar_panel .holidays h4 {
+      .my_calendar .container .wrapper .calendar_panel .holidays h4, .booking .container .wrapper .calendar_panel .holidays h4 {
         font-size: 1.1rem;
         font-weight: 400;
         padding-bottom: 25px; }
-      .my_calendar .container .wrapper .calendar_panel .holidays p {
+      .my_calendar .container .wrapper .calendar_panel .holidays p, .booking .container .wrapper .calendar_panel .holidays p {
         line-height: 1.3;
         color: #58696e; }
-        .my_calendar .container .wrapper .calendar_panel .holidays p span {
+        .my_calendar .container .wrapper .calendar_panel .holidays p span, .booking .container .wrapper .calendar_panel .holidays p span {
           color: #58696e;
           font-weight: 400; }
-      .my_calendar .container .wrapper .calendar_panel .holidays .available {
+      .my_calendar .container .wrapper .calendar_panel .holidays .available, .booking .container .wrapper .calendar_panel .holidays .available {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
         flex-direction: column;
         margin: 25px 0 0 0; }
-        .my_calendar .container .wrapper .calendar_panel .holidays .available .from {
+        .my_calendar .container .wrapper .calendar_panel .holidays .available .from, .booking .container .wrapper .calendar_panel .holidays .available .from {
           display: none; }
-        .my_calendar .container .wrapper .calendar_panel .holidays .available input {
+        .my_calendar .container .wrapper .calendar_panel .holidays .available input, .booking .container .wrapper .calendar_panel .holidays .available input {
           margin: 5px 0;
           width: 100%;
           border: 1px solid rgba(90, 109, 115, 0.5);
           padding: 5px;
           border-radius: 4px; }
-          .my_calendar .container .wrapper .calendar_panel .holidays .available input:focus {
+          .my_calendar .container .wrapper .calendar_panel .holidays .available input:focus, .booking .container .wrapper .calendar_panel .holidays .available input:focus {
             border: 1px solid #b497cf;
             outline: none; }
-          .my_calendar .container .wrapper .calendar_panel .holidays .available input::placeholder {
+          .my_calendar .container .wrapper .calendar_panel .holidays .available input::placeholder, .booking .container .wrapper .calendar_panel .holidays .available input::placeholder {
             font-size: 1rem;
             text-align: center;
             opacity: 1;
             font-family: "Roboto", sans-serif; }
-        .my_calendar .container .wrapper .calendar_panel .holidays .available a {
+        .my_calendar .container .wrapper .calendar_panel .holidays .available a, .booking .container .wrapper .calendar_panel .holidays .available a {
           margin-top: 10px;
           text-decoration: underline; }
-      .my_calendar .container .wrapper .calendar_panel .legend > div {
+      .my_calendar .container .wrapper .calendar_panel .legend > div, .booking .container .wrapper .calendar_panel .legend > div {
         margin-top: 15px;
         display: flex;
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
         flex-direction: row; }
-        .my_calendar .container .wrapper .calendar_panel .legend > div p {
+        .my_calendar .container .wrapper .calendar_panel .legend > div p, .booking .container .wrapper .calendar_panel .legend > div p {
           margin-bottom: 5px; }
-          .my_calendar .container .wrapper .calendar_panel .legend > div p span {
+          .my_calendar .container .wrapper .calendar_panel .legend > div p span, .booking .container .wrapper .calendar_panel .legend > div p span {
             display: inline-block;
             content: "";
             width: 10px;
@@ -1717,16 +1719,16 @@ TUTOR PROFILE PAGE
             background-color: #b497cf;
             margin-right: 8px;
             line-height: 1.3; }
-          .my_calendar .container .wrapper .calendar_panel .legend > div p:last-child span {
+          .my_calendar .container .wrapper .calendar_panel .legend > div p:last-child span, .booking .container .wrapper .calendar_panel .legend > div p:last-child span {
             background-color: #414e52; }
-    .my_calendar .container .wrapper .calendar_view {
+    .my_calendar .container .wrapper .calendar_view, .booking .container .wrapper .calendar_view {
       width: 80%;
       display: flex;
       align-items: flex-start;
       justify-content: flex-start;
       flex-wrap: nowrap;
       flex-direction: column; }
-      .my_calendar .container .wrapper .calendar_view .calendar_slider {
+      .my_calendar .container .wrapper .calendar_view .calendar_slider, .booking .container .wrapper .calendar_view .calendar_slider {
         border-bottom: 1px solid rgba(90, 109, 115, 0.5);
         width: 100%;
         text-align: center;
@@ -1736,11 +1738,11 @@ TUTOR PROFILE PAGE
         flex-wrap: nowrap;
         flex-direction: row;
         height: 7%; }
-        .my_calendar .container .wrapper .calendar_view .calendar_slider p span.prev, .my_calendar .container .wrapper .calendar_view .calendar_slider p span.next {
+        .my_calendar .container .wrapper .calendar_view .calendar_slider p span.prev, .booking .container .wrapper .calendar_view .calendar_slider p span.prev, .my_calendar .container .wrapper .calendar_view .calendar_slider p span.next, .booking .container .wrapper .calendar_view .calendar_slider p span.next {
           margin: 0 20px; }
-        .my_calendar .container .wrapper .calendar_view .calendar_slider p span.current_mounth, .my_calendar .container .wrapper .calendar_view .calendar_slider p span.current_year {
+        .my_calendar .container .wrapper .calendar_view .calendar_slider p span.current_mounth, .booking .container .wrapper .calendar_view .calendar_slider p span.current_mounth, .my_calendar .container .wrapper .calendar_view .calendar_slider p span.current_year, .booking .container .wrapper .calendar_view .calendar_slider p span.current_year {
           margin: 0 2px; }
-      .my_calendar .container .wrapper .calendar_view .days {
+      .my_calendar .container .wrapper .calendar_view .days, .booking .container .wrapper .calendar_view .days {
         width: 100%;
         height: 7%;
         display: flex;
@@ -1748,7 +1750,7 @@ TUTOR PROFILE PAGE
         justify-content: space-between;
         flex-wrap: nowrap;
         flex-direction: row; }
-        .my_calendar .container .wrapper .calendar_view .days > div {
+        .my_calendar .container .wrapper .calendar_view .days > div, .booking .container .wrapper .calendar_view .days > div {
           display: flex;
           align-items: center;
           justify-content: center;
@@ -1760,9 +1762,9 @@ TUTOR PROFILE PAGE
           border-bottom: 1px solid rgba(90, 109, 115, 0.5);
           border-right: 1px solid rgba(90, 109, 115, 0.5);
           padding: 10px 0; }
-          .my_calendar .container .wrapper .calendar_view .days > div:last-child {
+          .my_calendar .container .wrapper .calendar_view .days > div:last-child, .booking .container .wrapper .calendar_view .days > div:last-child {
             border-right: none; }
-      .my_calendar .container .wrapper .calendar_view .dates {
+      .my_calendar .container .wrapper .calendar_view .dates, .booking .container .wrapper .calendar_view .dates {
         display: flex;
         align-items: stretch;
         justify-content: space-between;
@@ -1770,7 +1772,7 @@ TUTOR PROFILE PAGE
         flex-direction: row;
         width: 100%;
         height: 86%; }
-        .my_calendar .container .wrapper .calendar_view .dates .date {
+        .my_calendar .container .wrapper .calendar_view .dates .date, .booking .container .wrapper .calendar_view .dates .date {
           width: calc(100% / 7);
           overflow-y: hidden;
           position: relative;
@@ -1778,28 +1780,28 @@ TUTOR PROFILE PAGE
           border-bottom: 1px solid rgba(90, 109, 115, 0.5);
           border-right: 1px solid rgba(90, 109, 115, 0.5);
           overflow-y: hidden; }
-          .my_calendar .container .wrapper .calendar_view .dates .date.unavailable {
+          .my_calendar .container .wrapper .calendar_view .dates .date.unavailable, .booking .container .wrapper .calendar_view .dates .date.unavailable {
             background-color: #414e52;
             border-bottom: 1px solid #c6d0d3;
             border-right: 1px solid #c6d0d3; }
-            .my_calendar .container .wrapper .calendar_view .dates .date.unavailable .current_date {
+            .my_calendar .container .wrapper .calendar_view .dates .date.unavailable .current_date, .booking .container .wrapper .calendar_view .dates .date.unavailable .current_date {
               color: #fedc40; }
-          .my_calendar .container .wrapper .calendar_view .dates .date.booked {
+          .my_calendar .container .wrapper .calendar_view .dates .date.booked, .booking .container .wrapper .calendar_view .dates .date.booked {
             background-color: #b497cf;
             border-bottom: 1px solid #c6d0d3;
             border-right: 1px solid #c6d0d3; }
-            .my_calendar .container .wrapper .calendar_view .dates .date.booked .current_date {
+            .my_calendar .container .wrapper .calendar_view .dates .date.booked .current_date, .booking .container .wrapper .calendar_view .dates .date.booked .current_date {
               color: #fff; }
-            .my_calendar .container .wrapper .calendar_view .dates .date.booked .date_agenda {
+            .my_calendar .container .wrapper .calendar_view .dates .date.booked .date_agenda, .booking .container .wrapper .calendar_view .dates .date.booked .date_agenda {
               position: absolute;
               width: 100%;
               height: 100%;
               top: 0;
               left: 0;
               padding: 35px 10px 10px 10px; }
-              .my_calendar .container .wrapper .calendar_view .dates .date.booked .date_agenda ul {
+              .my_calendar .container .wrapper .calendar_view .dates .date.booked .date_agenda ul, .booking .container .wrapper .calendar_view .dates .date.booked .date_agenda ul {
                 color: #fff; }
-              .my_calendar .container .wrapper .calendar_view .dates .date.booked .date_agenda::after {
+              .my_calendar .container .wrapper .calendar_view .dates .date.booked .date_agenda::after, .booking .container .wrapper .calendar_view .dates .date.booked .date_agenda::after {
                 display: block;
                 content: "";
                 width: 100%;
@@ -1808,17 +1810,17 @@ TUTOR PROFILE PAGE
                 position: absolute;
                 top: 0;
                 left: 0; }
-          .my_calendar .container .wrapper .calendar_view .dates .date:nth-child(7), .my_calendar .container .wrapper .calendar_view .dates .date:nth-child(14), .my_calendar .container .wrapper .calendar_view .dates .date:nth-child(21), .my_calendar .container .wrapper .calendar_view .dates .date:nth-child(28), .my_calendar .container .wrapper .calendar_view .dates .date:last-child {
+          .my_calendar .container .wrapper .calendar_view .dates .date:nth-child(7), .booking .container .wrapper .calendar_view .dates .date:nth-child(7), .my_calendar .container .wrapper .calendar_view .dates .date:nth-child(14), .booking .container .wrapper .calendar_view .dates .date:nth-child(14), .my_calendar .container .wrapper .calendar_view .dates .date:nth-child(21), .booking .container .wrapper .calendar_view .dates .date:nth-child(21), .my_calendar .container .wrapper .calendar_view .dates .date:nth-child(28), .booking .container .wrapper .calendar_view .dates .date:nth-child(28), .my_calendar .container .wrapper .calendar_view .dates .date:last-child, .booking .container .wrapper .calendar_view .dates .date:last-child {
             border-right: none; }
-          .my_calendar .container .wrapper .calendar_view .dates .date:nth-child(29), .my_calendar .container .wrapper .calendar_view .dates .date:nth-child(30), .my_calendar .container .wrapper .calendar_view .dates .date:nth-child(31), .my_calendar .container .wrapper .calendar_view .dates .date:nth-child(32), .my_calendar .container .wrapper .calendar_view .dates .date:nth-child(33), .my_calendar .container .wrapper .calendar_view .dates .date:nth-child(34), .my_calendar .container .wrapper .calendar_view .dates .date:nth-child(35) {
+          .my_calendar .container .wrapper .calendar_view .dates .date:nth-child(29), .booking .container .wrapper .calendar_view .dates .date:nth-child(29), .my_calendar .container .wrapper .calendar_view .dates .date:nth-child(30), .booking .container .wrapper .calendar_view .dates .date:nth-child(30), .my_calendar .container .wrapper .calendar_view .dates .date:nth-child(31), .booking .container .wrapper .calendar_view .dates .date:nth-child(31), .my_calendar .container .wrapper .calendar_view .dates .date:nth-child(32), .booking .container .wrapper .calendar_view .dates .date:nth-child(32), .my_calendar .container .wrapper .calendar_view .dates .date:nth-child(33), .booking .container .wrapper .calendar_view .dates .date:nth-child(33), .my_calendar .container .wrapper .calendar_view .dates .date:nth-child(34), .booking .container .wrapper .calendar_view .dates .date:nth-child(34), .my_calendar .container .wrapper .calendar_view .dates .date:nth-child(35), .booking .container .wrapper .calendar_view .dates .date:nth-child(35) {
             border-bottom: none; }
-          .my_calendar .container .wrapper .calendar_view .dates .date:last-child {
+          .my_calendar .container .wrapper .calendar_view .dates .date:last-child, .booking .container .wrapper .calendar_view .dates .date:last-child {
             border-bottom-right-radius: 10px; }
-          .my_calendar .container .wrapper .calendar_view .dates .date .current_date {
+          .my_calendar .container .wrapper .calendar_view .dates .date .current_date, .booking .container .wrapper .calendar_view .dates .date .current_date {
             color: rgba(90, 109, 115, 0.8); }
-          .my_calendar .container .wrapper .calendar_view .dates .date.inactive {
+          .my_calendar .container .wrapper .calendar_view .dates .date.inactive, .booking .container .wrapper .calendar_view .dates .date.inactive {
             background-color: #e3e3e3; }
-            .my_calendar .container .wrapper .calendar_view .dates .date.inactive .current_date {
+            .my_calendar .container .wrapper .calendar_view .dates .date.inactive .current_date, .booking .container .wrapper .calendar_view .dates .date.inactive .current_date {
               color: rgba(90, 109, 115, 0.8); }
 
 .pricing {
@@ -2054,14 +2056,14 @@ TUTOR PROFILE PAGE
   margin-bottom: 40px;
   padding-bottom: 0px; }
 
-.about_me .container .wrapper {
+.about_me .container .wrapper, .about_me_students .container .wrapper {
   width: 70%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
   flex-direction: row; }
-  .about_me .container .wrapper .about_me_buttons {
+  .about_me .container .wrapper .about_me_buttons, .about_me_students .container .wrapper .about_me_buttons {
     width: 100%;
     margin-bottom: 20px;
     display: flex;
@@ -2069,33 +2071,33 @@ TUTOR PROFILE PAGE
     justify-content: space-between;
     flex-wrap: wrap;
     flex-direction: row; }
-    .about_me .container .wrapper .about_me_buttons button {
+    .about_me .container .wrapper .about_me_buttons button, .about_me_students .container .wrapper .about_me_buttons button {
       width: 32%;
       border-radius: 5px;
       background-color: #fff;
       border: 1px solid rgba(90, 109, 115, 0.5);
       color: rgba(90, 109, 115, 0.5); }
-      .about_me .container .wrapper .about_me_buttons button.active_lang {
+      .about_me .container .wrapper .about_me_buttons button.active_lang, .about_me_students .container .wrapper .about_me_buttons button.active_lang {
         background-color: #fedc40;
         border: none;
         color: #5a6d73; }
-  .about_me .container .wrapper .about_me_content {
+  .about_me .container .wrapper .about_me_content, .about_me_students .container .wrapper .about_me_content {
     width: 100%; }
-    .about_me .container .wrapper .about_me_content textarea {
+    .about_me .container .wrapper .about_me_content textarea, .about_me_students .container .wrapper .about_me_content textarea {
       appearance: none;
       width: 100%;
       border: 1px solid rgba(90, 109, 115, 0.5);
       padding: 20px;
       font-family: "Roboto", sans-serif;
       color: rgba(90, 109, 115, 0.8); }
-      .about_me .container .wrapper .about_me_content textarea::placeholder {
+      .about_me .container .wrapper .about_me_content textarea::placeholder, .about_me_students .container .wrapper .about_me_content textarea::placeholder {
         font-family: "Roboto", sans-serif;
         font-size: 0.95rem;
         color: rgba(90, 109, 115, 0.7);
         line-height: 1.2; }
-  .about_me .container .wrapper #lang_2 {
+  .about_me .container .wrapper #lang_2, .about_me_students .container .wrapper #lang_2 {
     display: none; }
-  .about_me .container .wrapper #lang_3 {
+  .about_me .container .wrapper #lang_3, .about_me_students .container .wrapper #lang_3 {
     display: none; }
 
 .certificate .container .wrapper {
@@ -2241,7 +2243,177 @@ TUTOR PROFILE PAGE
 .video_students .container .wrapper {
   padding: 40px 0; }
   .video_students .container .wrapper .tutor_video .video_box {
-    text-align: center; }
+    text-align: center;
+    display: none; }
+
+.specialities_students .container .wrapper, .apps_students .container .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 40px 40px 20px 40px; }
+  .specialities_students .container .wrapper p, .apps_students .container .wrapper p {
+    margin-bottom: 20px; }
+    .specialities_students .container .wrapper p:first-child, .apps_students .container .wrapper p:first-child {
+      width: 300px; }
+  .specialities_students .container .wrapper .specailities_list span, .apps_students .container .wrapper .specailities_list span {
+    color: #b497cf;
+    margin: 0 10px; }
+    .specialities_students .container .wrapper .specailities_list span:first-child, .apps_students .container .wrapper .specailities_list span:first-child {
+      margin-left: 0; }
+
+.about_me_students .container .wrapper .about_me_content {
+  margin-top: 20px; }
+  .about_me_students .container .wrapper .about_me_content p {
+    line-height: 1.8; }
+    .about_me_students .container .wrapper .about_me_content p span {
+      margin-bottom: 30px;
+      display: inline-block; }
+
+.booking .container .wrapper {
+  padding-bottom: 10px; }
+  .booking .container .wrapper .calendar_panel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: column; }
+    .booking .container .wrapper .calendar_panel > div {
+      width: 100%; }
+    .booking .container .wrapper .calendar_panel .reservations {
+      border: none;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      flex-direction: column; }
+      .booking .container .wrapper .calendar_panel .reservations p {
+        margin-bottom: 30px; }
+    .booking .container .wrapper .calendar_panel .local_time {
+      border: none;
+      margin-top: auto; }
+      .booking .container .wrapper .calendar_panel .local_time p {
+        color: rgba(90, 109, 115, 0.7); }
+        .booking .container .wrapper .calendar_panel .local_time p span {
+          color: inherit;
+          font-weight: 400;
+          font-style: italic;
+          font-size: 0.95rem; }
+    .booking .container .wrapper .calendar_panel .legend {
+      border-top: 1px solid rgba(90, 109, 115, 0.5); }
+      .booking .container .wrapper .calendar_panel .legend > div p span {
+        background-color: #fedc40; }
+      .booking .container .wrapper .calendar_panel .legend > div p:last-child span {
+        background-color: #b497cf; }
+  .booking .container .wrapper .calendar_view {
+    overflow-x: auto; }
+    .booking .container .wrapper .calendar_view .calendar_slider {
+      padding: 5px 0;
+      min-width: 480px; }
+    .booking .container .wrapper .calendar_view .days {
+      display: flex;
+      align-items: stretch;
+      justify-content: stretch;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      min-width: 480px; }
+      .booking .container .wrapper .calendar_view .days .time {
+        align-self: stretch;
+        width: 10%;
+        min-height: 100% !important;
+        position: sticky;
+        left: 0;
+        background-color: white;
+        border-bottom: 1px solid #d9d9d9 !important;
+        border-right: 1px solid #d9d9d9 !important; }
+        .booking .container .wrapper .calendar_view .days .time p {
+          visibility: hidden; }
+      .booking .container .wrapper .calendar_view .days .current_day {
+        width: 12.857% !important;
+        border-bottom: 1px solid #d9d9d9 !important;
+        border-right: 1px solid #d9d9d9 !important; }
+        .booking .container .wrapper .calendar_view .days .current_day:first-child {
+          border-left: 1px solid #d9d9d9 !important; }
+    .booking .container .wrapper .calendar_view .times_table {
+      width: 100%;
+      min-width: 480px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      flex-direction: row; }
+      .booking .container .wrapper .calendar_view .times_table .time {
+        width: 10%;
+        text-align: center;
+        border-bottom: 1px solid #d9d9d9;
+        border-right: 1px solid #d9d9d9;
+        padding: 5px 0;
+        position: sticky;
+        left: 0;
+        background-color: white; }
+      .booking .container .wrapper .calendar_view .times_table .book_time {
+        width: 12.857%;
+        border-bottom: 1px solid #d9d9d9;
+        border-right: 1px solid #d9d9d9;
+        padding: 5px 0;
+        text-align: center;
+        background-color: #b497cf;
+        cursor: pointer; }
+        .booking .container .wrapper .calendar_view .times_table .book_time.booked_time {
+          background-color: #fedc40; }
+
+.payment .container .wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-direction: row; }
+  .payment .container .wrapper .tutor_payment_text {
+    width: 40%;
+    align-self: stretch;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row; }
+    .payment .container .wrapper .tutor_payment_text p {
+      width: 100%;
+      line-height: 1.5; }
+      .payment .container .wrapper .tutor_payment_text p:last-child {
+        align-self: flex-end; }
+  .payment .container .wrapper .tutor_payment_info {
+    align-self: stretch; }
+    .payment .container .wrapper .tutor_payment_info p {
+      margin-bottom: 20px;
+      line-height: 1.5; }
+      .payment .container .wrapper .tutor_payment_info p span {
+        color: #b497cf;
+        margin-right: 40px; }
+      .payment .container .wrapper .tutor_payment_info p:last-child {
+        margin-bottom: 0;
+        margin-top: 40px; }
+
+.get_in_touch .container .wrapper .get_in_touch_options > p {
+  margin-bottom: 40px;
+  display: inline-block; }
+.get_in_touch .container .wrapper .get_in_touch_options .row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 70%;
+  min-width: 330px;
+  margin-bottom: 20px; }
+  .get_in_touch .container .wrapper .get_in_touch_options .row p {
+    width: 50%; }
+    .get_in_touch .container .wrapper .get_in_touch_options .row p:nth-child(2) {
+      color: #b497cf; }
+  .get_in_touch .container .wrapper .get_in_touch_options .row > div {
+    width: 50%; }
+    .get_in_touch .container .wrapper .get_in_touch_options .row > div img {
+      margin-right: 10px; }
 
 /*******************
     RESPONSIVE
@@ -2491,13 +2663,13 @@ TUTOR PROFILE PAGE
     .my_classes .container .wrapper .calendar_table table tr td {
       padding: 10px 7px; }
 
-  .my_calendar .container .wrapper {
+  .my_calendar .container .wrapper, .booking .container .wrapper {
     display: flex;
     align-items: stretch;
     justify-content: space-between;
     flex-wrap: wrap;
     flex-direction: column; }
-    .my_calendar .container .wrapper .calendar_panel {
+    .my_calendar .container .wrapper .calendar_panel, .booking .container .wrapper .calendar_panel {
       width: 100%;
       border-right: none;
       border-bottom: 1px solid rgba(90, 109, 115, 0.5);
@@ -2506,20 +2678,20 @@ TUTOR PROFILE PAGE
       justify-content: space-between;
       flex-wrap: wrap;
       flex-direction: row; }
-      .my_calendar .container .wrapper .calendar_panel > div {
+      .my_calendar .container .wrapper .calendar_panel > div, .booking .container .wrapper .calendar_panel > div {
         width: 25%;
         border-bottom: none;
         border-right: 1px solid rgba(90, 109, 115, 0.5);
         padding: 15px; }
-        .my_calendar .container .wrapper .calendar_panel > div p {
+        .my_calendar .container .wrapper .calendar_panel > div p, .booking .container .wrapper .calendar_panel > div p {
           font-size: 0.9rem; }
-      .my_calendar .container .wrapper .calendar_panel .holidays {
+      .my_calendar .container .wrapper .calendar_panel .holidays, .booking .container .wrapper .calendar_panel .holidays {
         order: 5;
         width: 100%;
         border-bottom: none;
         border-top: 1px solid rgba(90, 109, 115, 0.5);
         border-right: none; }
-        .my_calendar .container .wrapper .calendar_panel .holidays .available {
+        .my_calendar .container .wrapper .calendar_panel .holidays .available, .booking .container .wrapper .calendar_panel .holidays .available {
           display: flex;
           align-items: center;
           justify-content: space-evenly;
@@ -2528,29 +2700,56 @@ TUTOR PROFILE PAGE
           width: 80%;
           margin: 10px auto;
           min-width: 300px; }
-          .my_calendar .container .wrapper .calendar_panel .holidays .available p:first-child {
+          .my_calendar .container .wrapper .calendar_panel .holidays .available p:first-child, .booking .container .wrapper .calendar_panel .holidays .available p:first-child {
             width: 100%;
             text-align: center;
             margin-bottom: 20px; }
-          .my_calendar .container .wrapper .calendar_panel .holidays .available p span {
+          .my_calendar .container .wrapper .calendar_panel .holidays .available p span, .booking .container .wrapper .calendar_panel .holidays .available p span {
             display: none; }
-          .my_calendar .container .wrapper .calendar_panel .holidays .available .from {
+          .my_calendar .container .wrapper .calendar_panel .holidays .available .from, .booking .container .wrapper .calendar_panel .holidays .available .from {
             display: inline-block; }
-          .my_calendar .container .wrapper .calendar_panel .holidays .available input {
+          .my_calendar .container .wrapper .calendar_panel .holidays .available input, .booking .container .wrapper .calendar_panel .holidays .available input {
             width: 40%; }
-          .my_calendar .container .wrapper .calendar_panel .holidays .available a {
+          .my_calendar .container .wrapper .calendar_panel .holidays .available a, .booking .container .wrapper .calendar_panel .holidays .available a {
             width: 100%;
             text-align: center; }
-      .my_calendar .container .wrapper .calendar_panel .legend {
+      .my_calendar .container .wrapper .calendar_panel .legend, .booking .container .wrapper .calendar_panel .legend {
         border-right: none; }
-    .my_calendar .container .wrapper .calendar_view {
+    .my_calendar .container .wrapper .calendar_view, .booking .container .wrapper .calendar_view {
       width: 100%; }
-      .my_calendar .container .wrapper .calendar_view .calendar_slider {
+      .my_calendar .container .wrapper .calendar_view .calendar_slider, .booking .container .wrapper .calendar_view .calendar_slider {
         padding: 8px 0; }
-      .my_calendar .container .wrapper .calendar_view .date {
+      .my_calendar .container .wrapper .calendar_view .date, .booking .container .wrapper .calendar_view .date {
         min-height: 80px; }
-        .my_calendar .container .wrapper .calendar_view .date:nth-child(29) {
-          border-bottom-left-radius: 10px; } }
+        .my_calendar .container .wrapper .calendar_view .date:nth-child(29), .booking .container .wrapper .calendar_view .date:nth-child(29) {
+          border-bottom-left-radius: 10px; }
+
+  .booking .container .wrapper .calendar_panel {
+    flex-direction: row !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    flex-direction: column; }
+    .booking .container .wrapper .calendar_panel .reservations {
+      border: none;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      flex-direction: column; }
+    .booking .container .wrapper .calendar_panel .local_time {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      border: none;
+      margin-top: unset;
+      border-right: 1px solid #d9d9d9;
+      align-self: stretch; }
+    .booking .container .wrapper .calendar_panel .legend {
+      border-top: none; } }
 @media (max-width: 1050px) {
   .featured-banner {
     background-color: #b497cf;
@@ -3646,47 +3845,81 @@ TUTOR PROFILE PAGE
         width: 100%;
         justify-content: flex-start; }
 
-  .my_calendar .container .wrapper {
+  .my_calendar .container .wrapper, .booking .container .wrapper {
     padding: 0; }
-    .my_calendar .container .wrapper .calendar_panel > div {
+    .my_calendar .container .wrapper .calendar_panel > div, .booking .container .wrapper .calendar_panel > div {
       width: 50%;
       border-bottom: none;
       border-right: 1px solid rgba(90, 109, 115, 0.5);
       border-bottom: 1px solid rgba(90, 109, 115, 0.5);
       padding: 15px; }
-      .my_calendar .container .wrapper .calendar_panel > div p {
+      .my_calendar .container .wrapper .calendar_panel > div p, .booking .container .wrapper .calendar_panel > div p {
         font-size: 0.9rem; }
-      .my_calendar .container .wrapper .calendar_panel > div:nth-child(2) {
+      .my_calendar .container .wrapper .calendar_panel > div:nth-child(2), .booking .container .wrapper .calendar_panel > div:nth-child(2) {
         border-right: none; }
-      .my_calendar .container .wrapper .calendar_panel > div:nth-child(3), .my_calendar .container .wrapper .calendar_panel > div:nth-child(4) {
+      .my_calendar .container .wrapper .calendar_panel > div:nth-child(3), .booking .container .wrapper .calendar_panel > div:nth-child(3), .my_calendar .container .wrapper .calendar_panel > div:nth-child(4), .booking .container .wrapper .calendar_panel > div:nth-child(4) {
         border-bottom: none; }
-    .my_calendar .container .wrapper .calendar_panel .holidays .available {
+    .my_calendar .container .wrapper .calendar_panel .holidays .available, .booking .container .wrapper .calendar_panel .holidays .available {
       display: flex;
       align-items: center;
       justify-content: space-evenly;
       flex-wrap: wrap;
       flex-direction: column; }
-      .my_calendar .container .wrapper .calendar_panel .holidays .available input {
+      .my_calendar .container .wrapper .calendar_panel .holidays .available input, .booking .container .wrapper .calendar_panel .holidays .available input {
         width: 80%;
         min-width: 180px; }
-    .my_calendar .container .wrapper .calendar_view .days p span {
+    .my_calendar .container .wrapper .calendar_view .days p span, .booking .container .wrapper .calendar_view .days p span {
       display: none; }
-    .my_calendar .container .wrapper .calendar_view .dates .date {
+    .my_calendar .container .wrapper .calendar_view .dates .date, .booking .container .wrapper .calendar_view .dates .date {
       padding: 5px; }
-      .my_calendar .container .wrapper .calendar_view .dates .date .current_date {
+      .my_calendar .container .wrapper .calendar_view .dates .date .current_date, .booking .container .wrapper .calendar_view .dates .date .current_date {
         font-size: 0.9rem; }
-      .my_calendar .container .wrapper .calendar_view .dates .date .date_agenda {
+      .my_calendar .container .wrapper .calendar_view .dates .date .date_agenda, .booking .container .wrapper .calendar_view .dates .date .date_agenda {
         padding: 25px 5px 5px 5px !important; }
-        .my_calendar .container .wrapper .calendar_view .dates .date .date_agenda ul li {
+        .my_calendar .container .wrapper .calendar_view .dates .date .date_agenda ul li, .booking .container .wrapper .calendar_view .dates .date .date_agenda ul li {
           font-size: 0.8rem; }
-        .my_calendar .container .wrapper .calendar_view .dates .date .date_agenda::after {
+        .my_calendar .container .wrapper .calendar_view .dates .date .date_agenda::after, .booking .container .wrapper .calendar_view .dates .date .date_agenda::after {
           display: block;
           content: "";
           width: 100%;
           height: 100%;
           position: absolute;
           top: 0;
-          left: 0; } }
+          left: 0; }
+
+  .booking .container .wrapper {
+    padding-bottom: 10px; }
+    .booking .container .wrapper .calendar_panel {
+      flex-direction: row !important;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-wrap: nowrap;
+      flex-direction: column; }
+      .booking .container .wrapper .calendar_panel .reservations {
+        border: none;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-direction: column; }
+      .booking .container .wrapper .calendar_panel .local_time {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        border: none;
+        margin-top: unset;
+        border-right: 1px solid #d9d9d9;
+        align-self: stretch; }
+      .booking .container .wrapper .calendar_panel .legend {
+        border-top: none; }
+    .booking .container .wrapper .calendar_view .days .current_day p span {
+      display: inline-block;
+      font-size: 0.85rem; }
+    .booking .container .wrapper .calendar_view .time_table > div {
+      font-size: 0.85rem; } }
 @media (max-width: 590px) {
   header {
     padding: 50px 10px;
@@ -3893,6 +4126,18 @@ TUTOR PROFILE PAGE
     justify-content: flex-start;
     flex-wrap: wrap;
     flex-direction: row;
-    width: 100%; } }
+    width: 100%; }
+
+  .payment .container .wrapper .tutor_payment_text {
+    width: 50%; }
+    .payment .container .wrapper .tutor_payment_text p {
+      font-size: 0.85rem;
+      margin-right: 5px; }
+  .payment .container .wrapper .tutor_payment_info {
+    width: 50%; }
+    .payment .container .wrapper .tutor_payment_info p {
+      font-size: 0.85rem; }
+      .payment .container .wrapper .tutor_payment_info p span {
+        margin-right: 15px; } }
 
 /*# sourceMappingURL=style.css.map */

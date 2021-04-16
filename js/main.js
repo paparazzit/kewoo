@@ -128,7 +128,7 @@ window.addEventListener("load", () => {
 		const intersect = document.querySelector("#moja_mapa");
 		const options = {
 			root: null,
-			rootMargin: "-20px 0px",
+			rootMargin: "-200px 0px",
 		};
 
 		const observer = new IntersectionObserver(function (entries, observer) {
@@ -255,4 +255,19 @@ function removeActivMailNav() {
 	});
 }
 
-// MAP animation
+// STUDENT_TIME TABLE
+
+var book_time = document.querySelectorAll(".book_time");
+
+book_time.forEach((time) => {
+	time.innerHTML = "Book";
+
+	time.addEventListener("click", () => {
+		time.classList.toggle("booked_time");
+		if (time.classList.contains("booked_time")) {
+			time.innerHTML = "Booked";
+		} else {
+			time.innerHTML = "Book";
+		}
+	});
+});

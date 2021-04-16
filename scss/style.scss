@@ -2434,12 +2434,239 @@ TUTOR PROFILE PAGE
 			.tutor_video {
 				.video_box {
 					text-align: center;
+					display: none;
+				}
+			}
+		}
+	}
+}
+.specialities_students {
+	.container {
+		.wrapper {
+			@include flex(center, flex-start, wrap, row);
+			padding: 40px 40px 20px 40px;
+			p {
+				margin-bottom: 20px;
+				&:first-child {
+					width: 300px;
+				}
+			}
+			.specailities_list {
+				span {
+					color: $accents;
+					margin: 0 10px;
+					&:first-child {
+						margin-left: 0;
+					}
 				}
 			}
 		}
 	}
 }
 
+.about_me_students {
+	@extend .about_me;
+	.container {
+		.wrapper {
+			.about_me_content {
+				margin-top: 20px;
+				p {
+					line-height: 1.8;
+					span {
+						margin-bottom: 30px;
+						display: inline-block;
+					}
+				}
+			}
+		}
+	}
+}
+.apps_students {
+	@extend .specialities_students;
+}
+
+.booking {
+	@extend .my_calendar;
+	.container {
+		.wrapper {
+			padding-bottom: 10px;
+			.calendar_panel {
+				> div {
+					width: 100%;
+				}
+				@include flex(center, space-between, nowrap, column);
+				.reservations {
+					border: none;
+					@include flex(flex-start, space-between, wrap, column);
+
+					p {
+						margin-bottom: 30px;
+					}
+				}
+				.local_time {
+					p {
+						color: rgba($line_color, 0.7);
+						span {
+							color: inherit;
+							font-weight: 400;
+							font-style: italic;
+							font-size: 0.95rem;
+						}
+					}
+					border: none;
+					margin-top: auto;
+				}
+				.legend {
+					border-top: 1px solid rgba($line_color, 0.5);
+					> div {
+						p {
+							span {
+								background-color: $btn-primary;
+							}
+							&:last-child {
+								span {
+									background-color: $accents;
+								}
+							}
+						}
+					}
+				}
+			}
+			.calendar_view {
+				overflow-x: auto;
+
+				.calendar_slider {
+					padding: 5px 0;
+					min-width: 480px;
+				}
+				.days {
+					@include flex(stretch, stretch, nowrap, row);
+					min-width: 480px;
+					.time {
+						align-self: stretch;
+						width: 10%;
+						min-height: 100% !important;
+						position: sticky;
+						left: 0;
+						background-color: white;
+						border-bottom: 1px solid $gray !important;
+						border-right: 1px solid $gray !important;
+						p {
+							visibility: hidden;
+						}
+					}
+					.current_day {
+						width: 12.857% !important;
+						border-bottom: 1px solid $gray !important;
+						border-right: 1px solid $gray !important;
+						&:first-child {
+							border-left: 1px solid $gray !important;
+						}
+					}
+				}
+				.times_table {
+					width: 100%;
+					min-width: 480px;
+					@include flex(center, space-between, nowrap, row);
+
+					.time {
+						width: 10%;
+						text-align: center;
+						border-bottom: 1px solid $gray;
+						border-right: 1px solid $gray;
+						padding: 5px 0;
+						position: sticky;
+						left: 0;
+						background-color: white;
+					}
+					.book_time {
+						width: 12.857%;
+						border-bottom: 1px solid $gray;
+						border-right: 1px solid $gray;
+						padding: 5px 0;
+						text-align: center;
+						background-color: $accents;
+						cursor: pointer;
+
+						&.booked_time {
+							background-color: $btn-primary;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.payment {
+	.container {
+		.wrapper {
+			@include flex(flex-start, flex-start, wrap, row);
+
+			.tutor_payment_text {
+				width: 40%;
+				align-self: stretch;
+				// min-width: 250px;
+				@include flex(flex-start, flex-start, wrap, row);
+
+				p {
+					width: 100%;
+					line-height: 1.5;
+					&:last-child {
+						align-self: flex-end;
+					}
+				}
+			}
+			.tutor_payment_info {
+				align-self: stretch;
+
+				p {
+					margin-bottom: 20px;
+					line-height: 1.5;
+					span {
+						color: $accents;
+						margin-right: 40px;
+					}
+					&:last-child {
+						margin-bottom: 0;
+						margin-top: 40px;
+					}
+				}
+			}
+		}
+	}
+}
+.get_in_touch {
+	.container {
+		.wrapper {
+			.get_in_touch_options {
+				> p {
+					margin-bottom: 40px;
+					display: inline-block;
+				}
+				.row {
+					@include flex(center, flex-start, wrap, row);
+					width: 70%;
+					min-width: 330px;
+					margin-bottom: 20px;
+
+					p {
+						width: 50%;
+						&:nth-child(2) {
+							color: $accents;
+						}
+					}
+					> div {
+						width: 50%;
+
+						img {
+							margin-right: 10px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
 /*******************
     RESPONSIVE
 ********************/
