@@ -2667,6 +2667,147 @@ TUTOR PROFILE PAGE
 		}
 	}
 }
+.review {
+	.container {
+		.wrapper {
+			.review-box {
+				@include flex(flex-end, center, nowrap, column);
+				img {
+					width: 20px;
+					height: 20px;
+				}
+				padding-bottom: 30px;
+				border-bottom: 1px solid rgba($line_color, 0.5);
+			}
+			.row {
+				@include flex(center, space-between, wrap, row);
+				padding: 20px 0;
+				// border: 1px solid black;
+				border-bottom: 1px solid rgba($line_color, 0.5);
+
+				.tutor-left {
+					width: 10%;
+					min-width: 200px;
+					max-width: 350px;
+					// border: 1px solid black;
+					@include flex(center, space-between, wrap, row);
+					img {
+						width: 80px;
+						height: 80px;
+						border-radius: 50%;
+					}
+					.review_count {
+						font-size: 0.9rem;
+						color: rgba($line_color, 0.7);
+					}
+				}
+				.review_msg {
+					width: 50%;
+					min-width: 320px;
+					// border: 1px solid black;
+					padding-left: 30px;
+					color: $accents;
+				}
+			}
+			button {
+				margin-top: 40px;
+			}
+		}
+	}
+}
+.details {
+	.container {
+		.wrapper {
+			form {
+				border: 1px solid black;
+				@include flex(flex-start, center, wrap, column);
+				.row {
+					@include flex(center, flex-start, wrap, row);
+					margin: 8px 0;
+					// border: 1px solid black;
+					width: 60%;
+					label {
+						width: 40%;
+						min-width: 230px;
+					}
+					button {
+						background: $white;
+						border: 1px solid rgba($line_color, 0.5);
+						&.active_button {
+							background: $btn-primary;
+							border: none;
+						}
+					}
+					button,
+					input,
+					.select-box {
+						width: 28%;
+						min-width: 170px;
+					}
+					.lesson {
+						margin-right: 4%;
+					}
+					input,
+					select {
+						padding: 5px 20px;
+						border: 1px solid rgba($line_color, 0.5);
+						border-radius: 3px;
+					}
+					input {
+						font-family: $font_family;
+						font-size: 0.95rem;
+						&:focus {
+							outline: none;
+							border: 1px solid $accents;
+						}
+					}
+					.select-box {
+						position: relative;
+						margin-right: 4%;
+						select {
+							width: 100%;
+							color: $line_color;
+							appearance: none;
+							-moz-appearance: none;
+							-webkit-appearance: none;
+							option {
+								color: $line_color;
+							}
+						}
+						span {
+							position: absolute;
+							right: 10px;
+							top: 50%;
+							transform: translateY(-50%);
+							border-bottom: none;
+							border-top: 8px solid rgba($line_color, 0.5);
+							border-right: 8px solid transparent;
+							border-left: 8px solid transparent;
+							pointer-events: none;
+						}
+					}
+
+					&:first-child {
+						margin-bottom: 30px;
+					}
+				}
+			}
+		}
+	}
+}
+
+// FAQ
+.faq {
+	.container {
+		.wrapper {
+			article {
+				.book_a_lesson {
+					line-height: 3;
+				}
+			}
+		}
+	}
+}
 /*******************
     RESPONSIVE
 ********************/

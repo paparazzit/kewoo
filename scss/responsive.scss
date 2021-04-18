@@ -1971,6 +1971,43 @@
 			}
 		}
 	}
+	.review {
+		.container {
+			.wrapper {
+				.row {
+					@include flex(center, space-between, wrap, column);
+					padding: 20px 0;
+					// border: 1px solid black;
+					border-bottom: 1px solid rgba($line_color, 0.5);
+					.tutor-left {
+						width: 10%;
+						min-width: 200px;
+						max-width: 350px;
+						// border: 1px solid black;
+						@include flex(center, space-between, wrap, row);
+						img {
+							width: 80px;
+							height: 80px;
+							border-radius: 50%;
+						}
+						.review_count {
+							font-size: 0.9rem;
+							color: rgba($line_color, 0.7);
+						}
+					}
+					.review_msg {
+						width: 50%;
+						min-width: 320px;
+						// border: 1px solid black;
+						text-align: center;
+						padding-left: 0px;
+						margin: 10px 0;
+						color: $accents;
+					}
+				}
+			}
+		}
+	}
 }
 
 @media (max-width: $breakPoint_6_b) {
