@@ -33,37 +33,45 @@
 }
 
 // ELEMENTS
-.card-text {
-	@include flex(start, start, wrap, row);
-	background: $white;
-	padding: 20px;
-	border-bottom-right-radius: 15px;
-	border-bottom-left-radius: 15px;
-	.text-left {
-		@include flex(start, center, wrap, column);
-		flex: 0 0 75%;
-		.tutor {
-			font-size: 1.5rem;
-		}
-		.tutor-lang {
-			@include flex(center, start, wrap, row);
-			width: 100%;
-			margin: 10px 0;
-
-			img {
-				width: 10px;
-				height: 10px;
-			}
-			p {
-				padding-left: 10px;
-			}
-		}
+.card {
+	.card-img {
 	}
-	.text-rigth {
+	.card-text {
 		@include flex(start, start, wrap, row);
-		flex: 0 0 25%;
-		.rate {
-			flex: 0 0 15%;
+		background: $white;
+		padding: 15px;
+		border-bottom-right-radius: 15px;
+		border-bottom-left-radius: 15px;
+
+		.tutor_headline {
+			@include flex(flex-start, space-between, wrap, row);
+			width: 100%;
+			.tutor_description {
+				width: 60%;
+				.tutor_name {
+					width: 100%;
+					font-size: 1.4rem;
+				}
+				.tutor_lang {
+					margin: 10px 0;
+					@include flex(center, flex-start, wrap, row);
+					width: 100%;
+
+					img {
+						width: 18px;
+						height: 18px;
+						margin-right: 10px;
+					}
+				}
+			}
+			.left {
+				width: 40%;
+				@include flex(center, center, nowrap, column);
+				.price {
+					color: $accents;
+					font-size: 1.3rem;
+				}
+			}
 		}
 	}
 }
@@ -1265,18 +1273,18 @@ TUTOR PROFILE PAGE
 *******************/
 .tutor_profile_header {
 	padding-bottom: 50px;
-	margin-bottom: 280px;
+	margin-bottom: 150px;
 	background-image: url(/img/search_opt/search_opt_bg.png);
 	background-position: center;
 	background-size: cover;
-	height: 35vh;
+	height: 350px;
 	position: relative;
 	.container {
 		position: absolute;
 		border-radius: 10px;
 		left: 50%;
 		transform: translateX(-50%);
-		top: 30%;
+		top: 20%;
 
 		.tutor-profile-view {
 			width: 100%;
@@ -1337,13 +1345,14 @@ TUTOR PROFILE PAGE
 							font-size: 2.4rem;
 							font-weight: 400;
 						}
-						.rate {
-							margin: 15px 0;
-							img {
-								width: 15px;
-								height: 15px;
-							}
-						}
+						// .tutor_rate {
+						// 	margin: 15px 0;
+						// 	border: 1px solid black !important;
+						// 	svg {
+						// 		width: 25px !important;
+						// 		height: 25px !important;
+						// 	}
+						// }
 						.availability {
 							font-size: 0.9rem;
 						}
@@ -1807,11 +1816,12 @@ TUTOR PROFILE PAGE
 					.date {
 						width: calc(100% / 7);
 						overflow-y: hidden;
-						position: relative;
+						position: static;
 						padding: 10px;
 						border-bottom: 1px solid rgba($line_color, 0.5);
 						border-right: 1px solid rgba($line_color, 0.5);
 						overflow-y: hidden;
+
 						&.unavailable {
 							background-color: $footer;
 							border-bottom: 1px solid lighten($line_color, 40%);
@@ -1825,6 +1835,8 @@ TUTOR PROFILE PAGE
 							background-color: $accents;
 							border-bottom: 1px solid lighten($line_color, 40%);
 							border-right: 1px solid lighten($line_color, 40%);
+							position: relative;
+
 							.current_date {
 								color: $white;
 							}
@@ -1832,6 +1844,8 @@ TUTOR PROFILE PAGE
 								position: absolute;
 								width: 100%;
 								height: 100%;
+								height: 100%;
+								// z-index: 200;
 								top: 0;
 								left: 0;
 								padding: 35px 10px 10px 10px;
@@ -1844,6 +1858,7 @@ TUTOR PROFILE PAGE
 									content: "";
 									width: 100%;
 									height: 100%;
+									z-index: 200;
 									background: linear-gradient(
 										to top,
 										$accents,
@@ -1852,6 +1867,20 @@ TUTOR PROFILE PAGE
 									position: absolute;
 									top: 0;
 									left: 0;
+								}
+							}
+						}
+						&.open_date {
+							overflow-y: visible;
+
+							.date_agenda {
+								padding: 10px 10px 10px 10px !important;
+								background: $accents;
+								height: auto;
+								box-shadow: 0 0 5px 0 rgba($footer, 0.7);
+								top: 28px;
+								&::after {
+									display: none;
 								}
 							}
 						}
@@ -2026,6 +2055,11 @@ TUTOR PROFILE PAGE
 
 			> p {
 				margin-bottom: 30px;
+			}
+			a {
+				@include btn-primary($footer, 1rem);
+				padding: 10px 30px;
+				border-radius: 4px;
 			}
 		}
 	}
@@ -2329,16 +2363,15 @@ TUTOR PROFILE PAGE
 ******************/
 .tutor_details_header {
 	@extend .tutor_profile_header;
+	margin-bottom: 250px;
 	.tutor-profile {
 		.container {
 			.tutor-profile-view {
 				.tutor-profile-card {
-					.tutor-img {
-					}
 					.tutor-content {
 						.my_profile {
 							@include flex(flex-start, space-between, wrap, row);
-							button {
+							a {
 								@include btn-primary($footer, 0.9rem);
 								padding: 10px 30px;
 								border-radius: 4px;
@@ -2348,11 +2381,11 @@ TUTOR PROFILE PAGE
 								}
 							}
 							> div {
-								.rate {
-									margin-top: 15px;
-									img {
-										width: 23px;
-										height: 23px;
+								.tutor_rate {
+									justify-content: flex-end;
+									svg {
+										width: 25px;
+										height: 25px;
 									}
 								}
 								.views {
@@ -2385,6 +2418,7 @@ TUTOR PROFILE PAGE
 		}
 	}
 }
+// pricing students
 
 .pricing_students {
 	.container {
@@ -2409,10 +2443,12 @@ TUTOR PROFILE PAGE
 			}
 			.pricing_btns {
 				@include flex(flex-end, flex-end, wrap, column);
-				button {
+				a {
+					@include btn-primary($footer, 1rem);
 					width: 260px;
 					padding: 10px 0;
 					margin-bottom: 15px;
+					text-align: center;
 					&:nth-child(2) {
 						background-color: $white;
 						border: 1px solid rgba($line_color, 0.5);
@@ -2484,8 +2520,12 @@ TUTOR PROFILE PAGE
 .apps_students {
 	@extend .specialities_students;
 }
-
+// .padding-section {
+// 	padding: 50px 0;
+// 	border: 1px solid black;
+// }
 .booking {
+	padding-top: 40px;
 	@extend .my_calendar;
 	.container {
 		.wrapper {
@@ -2715,20 +2755,23 @@ TUTOR PROFILE PAGE
 		}
 	}
 }
+
 .details {
 	.container {
 		.wrapper {
 			form {
-				border: 1px solid black;
+				// border: 1px solid black;
 				@include flex(flex-start, center, wrap, column);
 				.row {
 					@include flex(center, flex-start, wrap, row);
 					margin: 8px 0;
 					// border: 1px solid black;
-					width: 60%;
+					width: 72%;
+					min-width: 600px;
 					label {
 						width: 40%;
 						min-width: 230px;
+						// border: 1px solid black;
 					}
 					button {
 						background: $white;
@@ -2786,9 +2829,48 @@ TUTOR PROFILE PAGE
 							pointer-events: none;
 						}
 					}
-
+					textarea {
+						width: 60%;
+						border: 1px solid rgba($line_color, 0.5);
+						padding: 10px;
+						font-family: $font_family;
+						color: $line_color;
+						::placeholder {
+							font-family: $font_family;
+						}
+					}
 					&:first-child {
 						margin-bottom: 30px;
+					}
+					.lead {
+						font-style: italic;
+						margin: 30px 0;
+					}
+					&:nth-child(9) {
+						align-items: flex-start;
+					}
+				}
+				> button {
+					width: 170px;
+					margin-top: 30px;
+				}
+			}
+		}
+	}
+}
+
+.tutor_lesson_header {
+	@extend .tutor_details_header;
+	margin-bottom: 100px;
+	.tutor-profile {
+		.container {
+			top: 40%;
+			.tutor-profile-view {
+				.tutor-profile-card {
+					.tutor-content {
+						.my_profile {
+							justify-content: flex-end;
+						}
 					}
 				}
 			}
@@ -2805,6 +2887,24 @@ TUTOR PROFILE PAGE
 					line-height: 3;
 				}
 			}
+		}
+	}
+}
+.faq-page {
+	.header-faq {
+		width: 100%;
+		height: 350px;
+		background-image: url(/img/search_opt/search_opt_bg.png);
+		background-position: right;
+		background-size: cover;
+	}
+	@extend .faq;
+	.container {
+		margin-top: -200px;
+		.wrapper {
+			background-color: $white;
+			border-bottom-left-radius: 10px;
+			border-bottom-right-radius: 10px;
 		}
 	}
 }

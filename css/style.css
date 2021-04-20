@@ -64,6 +64,39 @@ a {
     padding: 20px 0;
     color: black; }
 
+.tutor_rate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-direction: row; }
+  .tutor_rate svg {
+    margin-top: 5px;
+    width: 15px;
+    height: 15px; }
+    .tutor_rate svg path {
+      fill: #e5e5e5; }
+    .tutor_rate svg.rate_5 path {
+      fill: #efa650; }
+    .tutor_rate svg.rate_4 path {
+      fill: #efa650; }
+    .tutor_rate svg.rate_4:last-child path {
+      fill: #e5e5e5; }
+    .tutor_rate svg.rate_3 path {
+      fill: #efa650; }
+    .tutor_rate svg.rate_3:nth-child(5) path, .tutor_rate svg.rate_3:nth-child(4) path {
+      fill: #e5e5e5; }
+    .tutor_rate svg.rate_2 path {
+      fill: #efa650; }
+    .tutor_rate svg.rate_2:nth-child(5) path, .tutor_rate svg.rate_2:nth-child(4) path, .tutor_rate svg.rate_2:nth-child(3) path {
+      fill: #e5e5e5; }
+    .tutor_rate svg.rate_1 path {
+      fill: #e5e5e5; }
+    .tutor_rate svg.rate_1:nth-child(1) path {
+      fill: #efa650; }
+    .tutor_rate svg.rate_0 path {
+      fill: #e5e5e5; }
+
 body {
   background: #eeeeee;
   font-family: "Roboto", sans-serif;
@@ -156,47 +189,50 @@ h2 {
   100% {
     opacity: 1;
     transform: scale(1); } }
-.card-text {
+.card .card-text {
   display: flex;
   align-items: start;
   justify-content: start;
   flex-wrap: wrap;
   flex-direction: row;
   background: #fff;
-  padding: 20px;
+  padding: 15px;
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px; }
-  .card-text .text-left {
+  .card .card-text .tutor_headline {
     display: flex;
-    align-items: start;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-    flex: 0 0 75%; }
-    .card-text .text-left .tutor {
-      font-size: 1.5rem; }
-    .card-text .text-left .tutor-lang {
-      display: flex;
-      align-items: center;
-      justify-content: start;
-      flex-wrap: wrap;
-      flex-direction: row;
-      width: 100%;
-      margin: 10px 0; }
-      .card-text .text-left .tutor-lang img {
-        width: 10px;
-        height: 10px; }
-      .card-text .text-left .tutor-lang p {
-        padding-left: 10px; }
-  .card-text .text-rigth {
-    display: flex;
-    align-items: start;
-    justify-content: start;
+    align-items: flex-start;
+    justify-content: space-between;
     flex-wrap: wrap;
     flex-direction: row;
-    flex: 0 0 25%; }
-    .card-text .text-rigth .rate {
-      flex: 0 0 15%; }
+    width: 100%; }
+    .card .card-text .tutor_headline .tutor_description {
+      width: 60%; }
+      .card .card-text .tutor_headline .tutor_description .tutor_name {
+        width: 100%;
+        font-size: 1.4rem; }
+      .card .card-text .tutor_headline .tutor_description .tutor_lang {
+        margin: 10px 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 100%; }
+        .card .card-text .tutor_headline .tutor_description .tutor_lang img {
+          width: 18px;
+          height: 18px;
+          margin-right: 10px; }
+    .card .card-text .tutor_headline .left {
+      width: 40%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: nowrap;
+      flex-direction: column; }
+      .card .card-text .tutor_headline .left .price {
+        color: #b497cf;
+        font-size: 1.3rem; }
 
 /********************
 		NAV
@@ -533,7 +569,7 @@ header {
         display: inline-block;
         margin-right: 20px;
         margin-top: 10px; }
-      .how .container .decription-btns .faq {
+      .how .container .decription-btns .faq, .how .container .decription-btns .faq-page {
         color: #b497cf;
         line-height: 0;
         font-size: 1rem;
@@ -544,7 +580,7 @@ header {
         justify-content: center;
         flex-wrap: nowrap;
         flex-direction: row; }
-        .how .container .decription-btns .faq img {
+        .how .container .decription-btns .faq img, .how .container .decription-btns .faq-page img {
           height: 20px;
           width: 20px;
           display: block;
@@ -621,7 +657,7 @@ header {
             display: inline-block;
             margin-right: 20px;
             margin-top: 10px; }
-          .become_tutor .container .row .rigth .decription-btns .faq {
+          .become_tutor .container .row .rigth .decription-btns .faq, .become_tutor .container .row .rigth .decription-btns .faq-page {
             color: #b497cf;
             line-height: 0;
             font-size: 1rem;
@@ -632,7 +668,7 @@ header {
             justify-content: center;
             flex-wrap: wrap;
             flex-direction: row; }
-            .become_tutor .container .row .rigth .decription-btns .faq img {
+            .become_tutor .container .row .rigth .decription-btns .faq img, .become_tutor .container .row .rigth .decription-btns .faq-page img {
               height: 20px;
               width: 20px;
               display: block;
@@ -1240,40 +1276,40 @@ Becom a tutor
               width: 75%;
               margin: 0 auto; }
 
-.faq {
+.faq, .faq-page {
   padding-bottom: 80px; }
-  .faq .container {
+  .faq .container, .faq-page .container {
     background-color: #fff;
     border-radius: 10px; }
-    .faq .container h2 {
+    .faq .container h2, .faq-page .container h2 {
       font-size: 2rem;
       font-weight: 400;
       color: #b497cf;
       padding: 20px 30px; }
-    .faq .container hr {
+    .faq .container hr, .faq-page .container hr {
       border-right: 0;
       border-left: 0;
       border-top: 0;
       border-bottom: 1px solid #5a6d73; }
-    .faq .container .wrapper {
+    .faq .container .wrapper, .faq-page .container .wrapper {
       padding: 0 50px 50px 50px; }
-      .faq .container .wrapper article {
+      .faq .container .wrapper article, .faq-page .container .wrapper article {
         margin: 40px 0; }
-        .faq .container .wrapper article p {
+        .faq .container .wrapper article p, .faq-page .container .wrapper article p {
           font-size: 1rem;
           line-height: 1.5;
           color: #414e52; }
-        .faq .container .wrapper article .lead {
+        .faq .container .wrapper article .lead, .faq-page .container .wrapper article .lead {
           margin-bottom: 20px;
           font-size: 1.2rem;
           font-weight: 700; }
-      .faq .container .wrapper .faq-buttons {
+      .faq .container .wrapper .faq-buttons, .faq-page .container .wrapper .faq-buttons {
         display: flex;
         align-items: center;
         justify-content: flex-start;
         flex-wrap: wrap;
         flex-direction: row; }
-        .faq .container .wrapper .faq-buttons button {
+        .faq .container .wrapper .faq-buttons button, .faq-page .container .wrapper .faq-buttons button {
           color: #414e52;
           background: #fedc40;
           font-size: 1.1rem;
@@ -1284,34 +1320,34 @@ Becom a tutor
           border-radius: 6px;
           margin-right: 30px;
           margin-top: 20px; }
-        .faq .container .wrapper .faq-buttons .faq-socials {
+        .faq .container .wrapper .faq-buttons .faq-socials, .faq-page .container .wrapper .faq-buttons .faq-socials {
           margin-top: 20px; }
-          .faq .container .wrapper .faq-buttons .faq-socials img {
+          .faq .container .wrapper .faq-buttons .faq-socials img, .faq-page .container .wrapper .faq-buttons .faq-socials img {
             margin-right: 10px;
             height: 35px; }
 
 /*******************
 TUTOR PROFILE PAGE
 *******************/
-.tutor_profile_header, .tutor_details_header {
+.tutor_profile_header, .tutor_details_header, .tutor_lesson_header {
   padding-bottom: 50px;
-  margin-bottom: 280px;
+  margin-bottom: 150px;
   background-image: url(/img/search_opt/search_opt_bg.png);
   background-position: center;
   background-size: cover;
-  height: 35vh;
+  height: 350px;
   position: relative; }
-  .tutor_profile_header .container, .tutor_details_header .container {
+  .tutor_profile_header .container, .tutor_details_header .container, .tutor_lesson_header .container {
     position: absolute;
     border-radius: 10px;
     left: 50%;
     transform: translateX(-50%);
-    top: 30%; }
-    .tutor_profile_header .container .tutor-profile-view, .tutor_details_header .container .tutor-profile-view {
+    top: 20%; }
+    .tutor_profile_header .container .tutor-profile-view, .tutor_details_header .container .tutor-profile-view, .tutor_lesson_header .container .tutor-profile-view {
       width: 100%;
       background-color: #b497cf;
       border-radius: 10px; }
-      .tutor_profile_header .container .tutor-profile-view .tutor-profile-card, .tutor_details_header .container .tutor-profile-view .tutor-profile-card {
+      .tutor_profile_header .container .tutor-profile-view .tutor-profile-card, .tutor_details_header .container .tutor-profile-view .tutor-profile-card, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card {
         background: #fff;
         border-radius: 10px;
         display: flex;
@@ -1319,17 +1355,17 @@ TUTOR PROFILE PAGE
         justify-content: space-between;
         flex-wrap: wrap;
         flex-direction: row; }
-        .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-img, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-img {
+        .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-img, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-img, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-img {
           width: 20%;
           position: relative; }
-          .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-img img, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-img img {
+          .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-img img, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-img img, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-img img {
             height: 100%;
             width: 100%;
             object-fit: cover;
             object-position: center;
             display: block;
             border-radius: 10px; }
-          .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-img .upload, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-img .upload {
+          .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-img .upload, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-img .upload, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-img .upload {
             width: 25px;
             height: 25px;
             position: absolute;
@@ -1339,10 +1375,10 @@ TUTOR PROFILE PAGE
             border-radius: 50%;
             transition: 0.3s all ease;
             cursor: pointer; }
-            .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-img .upload:hover, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-img .upload:hover {
+            .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-img .upload:hover, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-img .upload:hover, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-img .upload:hover {
               opacity: 1;
               transform: scale(1.2); }
-        .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content {
+        .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-content {
           width: 80%;
           padding: 30px 20px 30px 20px;
           display: flex;
@@ -1350,27 +1386,22 @@ TUTOR PROFILE PAGE
           justify-content: space-between;
           flex-wrap: wrap;
           flex-direction: row; }
-          .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile {
+          .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile {
             width: 100%;
             text-align: right;
             margin-bottom: 30px;
             font-size: 1.1rem;
             letter-spacing: 1.2px; }
-          .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline {
+          .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline {
             width: 26%;
             position: relative;
             padding-right: 15px; }
-            .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline h3, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline h3 {
+            .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline h3, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline h3, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline h3 {
               font-size: 2.4rem;
               font-weight: 400; }
-            .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline .rate, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline .rate {
-              margin: 15px 0; }
-              .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline .rate img, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline .rate img {
-                width: 15px;
-                height: 15px; }
-            .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline .availability, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline .availability {
+            .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline .availability, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline .availability, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline .availability {
               font-size: 0.9rem; }
-            .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline::after, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline::after {
+            .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline::after, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline::after, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline::after {
               width: 1px;
               height: 70%;
               display: inline-block;
@@ -1379,9 +1410,9 @@ TUTOR PROFILE PAGE
               background-color: #5a6d73;
               top: 15%;
               right: 0; }
-          .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-img-mob, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-img-mob {
+          .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-img-mob, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-img-mob, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-img-mob {
             display: none; }
-          .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description {
+          .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description {
             position: relative;
             width: 70%;
             display: flex;
@@ -1390,7 +1421,7 @@ TUTOR PROFILE PAGE
             flex-wrap: wrap;
             flex-direction: row;
             padding-left: 20px; }
-            .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div {
+            .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div {
               display: flex;
               align-items: center;
               justify-content: flex-start;
@@ -1398,39 +1429,39 @@ TUTOR PROFILE PAGE
               flex-direction: row;
               margin-right: 50px;
               margin-bottom: 20px; }
-              .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div img, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div img {
+              .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div img, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div img, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div img {
                 margin-left: 15px;
                 width: 15px;
                 height: 15px; }
-      .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav, .tutor_details_header .container .tutor-profile-view .tutor-profile-nav {
+      .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav, .tutor_details_header .container .tutor-profile-view .tutor-profile-nav, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-nav {
         display: flex;
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
         flex-direction: row;
         padding: 20px 40px 10px 40px; }
-        .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav .tutor-nav-toggle, .tutor_details_header .container .tutor-profile-view .tutor-profile-nav .tutor-nav-toggle {
+        .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav .tutor-nav-toggle, .tutor_details_header .container .tutor-profile-view .tutor-profile-nav .tutor-nav-toggle, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-nav .tutor-nav-toggle {
           margin: 0 auto;
           display: none;
           pointer-events: none; }
-          .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav .tutor-nav-toggle span, .tutor_details_header .container .tutor-profile-view .tutor-profile-nav .tutor-nav-toggle span {
+          .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav .tutor-nav-toggle span, .tutor_details_header .container .tutor-profile-view .tutor-profile-nav .tutor-nav-toggle span, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-nav .tutor-nav-toggle span {
             border-top: 10px solid #fff;
             border-bottom: none;
             border-left: 10px solid transparent;
             border-right: 10px solid transparent;
             margin: 0 auto;
             display: inline-block; }
-        .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav ul, .tutor_details_header .container .tutor-profile-view .tutor-profile-nav ul {
+        .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav ul, .tutor_details_header .container .tutor-profile-view .tutor-profile-nav ul, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-nav ul {
           width: 100%;
           display: flex;
           align-items: flex-start;
           justify-content: space-between;
           flex-wrap: wrap;
           flex-direction: row; }
-          .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav ul li, .tutor_details_header .container .tutor-profile-view .tutor-profile-nav ul li {
+          .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav ul li, .tutor_details_header .container .tutor-profile-view .tutor-profile-nav ul li, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-nav ul li {
             width: 14.28%;
             margin-bottom: 10px; }
-            .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav ul li a, .tutor_details_header .container .tutor-profile-view .tutor-profile-nav ul li a {
+            .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav ul li a, .tutor_details_header .container .tutor-profile-view .tutor-profile-nav ul li a, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-nav ul li a {
               color: #fff; }
 
 .tutor_section {
@@ -1775,7 +1806,7 @@ TUTOR PROFILE PAGE
         .my_calendar .container .wrapper .calendar_view .dates .date, .booking .container .wrapper .calendar_view .dates .date {
           width: calc(100% / 7);
           overflow-y: hidden;
-          position: relative;
+          position: static;
           padding: 10px;
           border-bottom: 1px solid rgba(90, 109, 115, 0.5);
           border-right: 1px solid rgba(90, 109, 115, 0.5);
@@ -1789,12 +1820,14 @@ TUTOR PROFILE PAGE
           .my_calendar .container .wrapper .calendar_view .dates .date.booked, .booking .container .wrapper .calendar_view .dates .date.booked {
             background-color: #b497cf;
             border-bottom: 1px solid #c6d0d3;
-            border-right: 1px solid #c6d0d3; }
+            border-right: 1px solid #c6d0d3;
+            position: relative; }
             .my_calendar .container .wrapper .calendar_view .dates .date.booked .current_date, .booking .container .wrapper .calendar_view .dates .date.booked .current_date {
               color: #fff; }
             .my_calendar .container .wrapper .calendar_view .dates .date.booked .date_agenda, .booking .container .wrapper .calendar_view .dates .date.booked .date_agenda {
               position: absolute;
               width: 100%;
+              height: 100%;
               height: 100%;
               top: 0;
               left: 0;
@@ -1806,10 +1839,21 @@ TUTOR PROFILE PAGE
                 content: "";
                 width: 100%;
                 height: 100%;
+                z-index: 200;
                 background: linear-gradient(to top, #b497cf, rgba(0, 0, 0, 0) 60%);
                 position: absolute;
                 top: 0;
                 left: 0; }
+          .my_calendar .container .wrapper .calendar_view .dates .date.open_date, .booking .container .wrapper .calendar_view .dates .date.open_date {
+            overflow-y: visible; }
+            .my_calendar .container .wrapper .calendar_view .dates .date.open_date .date_agenda, .booking .container .wrapper .calendar_view .dates .date.open_date .date_agenda {
+              padding: 10px 10px 10px 10px !important;
+              background: #b497cf;
+              height: auto;
+              box-shadow: 0 0 5px 0 rgba(65, 78, 82, 0.7);
+              top: 28px; }
+              .my_calendar .container .wrapper .calendar_view .dates .date.open_date .date_agenda::after, .booking .container .wrapper .calendar_view .dates .date.open_date .date_agenda::after {
+                display: none; }
           .my_calendar .container .wrapper .calendar_view .dates .date:nth-child(7), .booking .container .wrapper .calendar_view .dates .date:nth-child(7), .my_calendar .container .wrapper .calendar_view .dates .date:nth-child(14), .booking .container .wrapper .calendar_view .dates .date:nth-child(14), .my_calendar .container .wrapper .calendar_view .dates .date:nth-child(21), .booking .container .wrapper .calendar_view .dates .date:nth-child(21), .my_calendar .container .wrapper .calendar_view .dates .date:nth-child(28), .booking .container .wrapper .calendar_view .dates .date:nth-child(28), .my_calendar .container .wrapper .calendar_view .dates .date:last-child, .booking .container .wrapper .calendar_view .dates .date:last-child {
             border-right: none; }
           .my_calendar .container .wrapper .calendar_view .dates .date:nth-child(29), .booking .container .wrapper .calendar_view .dates .date:nth-child(29), .my_calendar .container .wrapper .calendar_view .dates .date:nth-child(30), .booking .container .wrapper .calendar_view .dates .date:nth-child(30), .my_calendar .container .wrapper .calendar_view .dates .date:nth-child(31), .booking .container .wrapper .calendar_view .dates .date:nth-child(31), .my_calendar .container .wrapper .calendar_view .dates .date:nth-child(32), .booking .container .wrapper .calendar_view .dates .date:nth-child(32), .my_calendar .container .wrapper .calendar_view .dates .date:nth-child(33), .booking .container .wrapper .calendar_view .dates .date:nth-child(33), .my_calendar .container .wrapper .calendar_view .dates .date:nth-child(34), .booking .container .wrapper .calendar_view .dates .date:nth-child(34), .my_calendar .container .wrapper .calendar_view .dates .date:nth-child(35), .booking .container .wrapper .calendar_view .dates .date:nth-child(35) {
@@ -1924,6 +1968,15 @@ TUTOR PROFILE PAGE
         background-color: #fff; }
   .my_classes .container .wrapper > p {
     margin-bottom: 30px; }
+  .my_classes .container .wrapper a {
+    color: #414e52;
+    background: #fedc40;
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 4px; }
 
 .featuring .container .wrapper button {
   margin: 50px 0;
@@ -2157,47 +2210,49 @@ TUTOR PROFILE PAGE
 /******************
  TUTOR DETAILS
 ******************/
-.tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  flex-direction: row; }
-  .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile button {
-    color: #414e52;
-    background: #fedc40;
-    font-size: 0.9rem;
-    font-family: "Roboto", sans-serif;
-    border-radius: 10px;
-    border: none;
-    padding: 10px 30px;
-    border-radius: 4px; }
-    .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile button span {
-      font-weight: 600; }
-  .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile > div .rate {
-    margin-top: 15px; }
-    .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile > div .rate img {
-      width: 23px;
-      height: 23px; }
-  .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile > div .views {
-    color: rgba(90, 109, 115, 0.5);
-    font-size: 0.9rem; }
-.tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline {
-  display: flex;
-  align-items: stretch;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  flex-direction: column; }
-  .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline .tutor_for {
-    font-size: 1.25em;
-    margin: 10px 0 20px 0;
-    align-self: flex-start; }
-.tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-nav ul {
-  justify-content: center; }
-  .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-nav ul li {
-    width: 12.5%;
-    text-align: center;
-    min-width: 150px; }
+.tutor_details_header, .tutor_lesson_header {
+  margin-bottom: 250px; }
+  .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile, .tutor_lesson_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row; }
+    .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile a, .tutor_lesson_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile a {
+      color: #414e52;
+      background: #fedc40;
+      font-size: 0.9rem;
+      font-family: "Roboto", sans-serif;
+      border-radius: 10px;
+      border: none;
+      padding: 10px 30px;
+      border-radius: 4px; }
+      .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile a span, .tutor_lesson_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile a span {
+        font-weight: 600; }
+    .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile > div .tutor_rate, .tutor_lesson_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile > div .tutor_rate {
+      justify-content: flex-end; }
+      .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile > div .tutor_rate svg, .tutor_lesson_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile > div .tutor_rate svg {
+        width: 25px;
+        height: 25px; }
+    .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile > div .views, .tutor_lesson_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile > div .views {
+      color: rgba(90, 109, 115, 0.5);
+      font-size: 0.9rem; }
+  .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline, .tutor_lesson_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column; }
+    .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline .tutor_for, .tutor_lesson_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline .tutor_for {
+      font-size: 1.25em;
+      margin: 10px 0 20px 0;
+      align-self: flex-start; }
+  .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-nav ul, .tutor_lesson_header .tutor-profile .container .tutor-profile-view .tutor-profile-nav ul {
+    justify-content: center; }
+    .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-nav ul li, .tutor_lesson_header .tutor-profile .container .tutor-profile-view .tutor-profile-nav ul li {
+      width: 12.5%;
+      text-align: center;
+      min-width: 150px; }
 
 .pricing_students .container .wrapper {
   display: flex;
@@ -2228,14 +2283,21 @@ TUTOR PROFILE PAGE
     justify-content: flex-end;
     flex-wrap: wrap;
     flex-direction: column; }
-    .pricing_students .container .wrapper .pricing_btns button {
+    .pricing_students .container .wrapper .pricing_btns a {
+      color: #414e52;
+      background: #fedc40;
+      font-size: 1rem;
+      font-family: "Roboto", sans-serif;
+      border-radius: 10px;
+      border: none;
       width: 260px;
       padding: 10px 0;
-      margin-bottom: 15px; }
-      .pricing_students .container .wrapper .pricing_btns button:nth-child(2) {
+      margin-bottom: 15px;
+      text-align: center; }
+      .pricing_students .container .wrapper .pricing_btns a:nth-child(2) {
         background-color: #fff;
         border: 1px solid rgba(90, 109, 115, 0.5); }
-      .pricing_students .container .wrapper .pricing_btns button:last-child {
+      .pricing_students .container .wrapper .pricing_btns a:last-child {
         margin-bottom: 0;
         background-color: #fff;
         border: 1px solid rgba(90, 109, 115, 0.5); }
@@ -2271,97 +2333,99 @@ TUTOR PROFILE PAGE
       margin-bottom: 30px;
       display: inline-block; }
 
-.booking .container .wrapper {
-  padding-bottom: 10px; }
-  .booking .container .wrapper .calendar_panel {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    flex-direction: column; }
-    .booking .container .wrapper .calendar_panel > div {
-      width: 100%; }
-    .booking .container .wrapper .calendar_panel .reservations {
-      border: none;
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      flex-direction: column; }
-      .booking .container .wrapper .calendar_panel .reservations p {
-        margin-bottom: 30px; }
-    .booking .container .wrapper .calendar_panel .local_time {
-      border: none;
-      margin-top: auto; }
-      .booking .container .wrapper .calendar_panel .local_time p {
-        color: rgba(90, 109, 115, 0.7); }
-        .booking .container .wrapper .calendar_panel .local_time p span {
-          color: inherit;
-          font-weight: 400;
-          font-style: italic;
-          font-size: 0.95rem; }
-    .booking .container .wrapper .calendar_panel .legend {
-      border-top: 1px solid rgba(90, 109, 115, 0.5); }
-      .booking .container .wrapper .calendar_panel .legend > div p span {
-        background-color: #fedc40; }
-      .booking .container .wrapper .calendar_panel .legend > div p:last-child span {
-        background-color: #b497cf; }
-  .booking .container .wrapper .calendar_view {
-    overflow-x: auto; }
-    .booking .container .wrapper .calendar_view .calendar_slider {
-      padding: 5px 0;
-      min-width: 480px; }
-    .booking .container .wrapper .calendar_view .days {
-      display: flex;
-      align-items: stretch;
-      justify-content: stretch;
-      flex-wrap: nowrap;
-      flex-direction: row;
-      min-width: 480px; }
-      .booking .container .wrapper .calendar_view .days .time {
-        align-self: stretch;
-        width: 10%;
-        min-height: 100% !important;
-        position: sticky;
-        left: 0;
-        background-color: white;
-        border-bottom: 1px solid #d9d9d9 !important;
-        border-right: 1px solid #d9d9d9 !important; }
-        .booking .container .wrapper .calendar_view .days .time p {
-          visibility: hidden; }
-      .booking .container .wrapper .calendar_view .days .current_day {
-        width: 12.857% !important;
-        border-bottom: 1px solid #d9d9d9 !important;
-        border-right: 1px solid #d9d9d9 !important; }
-        .booking .container .wrapper .calendar_view .days .current_day:first-child {
-          border-left: 1px solid #d9d9d9 !important; }
-    .booking .container .wrapper .calendar_view .times_table {
-      width: 100%;
-      min-width: 480px;
+.booking {
+  padding-top: 40px; }
+  .booking .container .wrapper {
+    padding-bottom: 10px; }
+    .booking .container .wrapper .calendar_panel {
       display: flex;
       align-items: center;
       justify-content: space-between;
       flex-wrap: nowrap;
-      flex-direction: row; }
-      .booking .container .wrapper .calendar_view .times_table .time {
-        width: 10%;
-        text-align: center;
-        border-bottom: 1px solid #d9d9d9;
-        border-right: 1px solid #d9d9d9;
-        padding: 5px 0;
-        position: sticky;
-        left: 0;
-        background-color: white; }
-      .booking .container .wrapper .calendar_view .times_table .book_time {
-        width: 12.857%;
-        border-bottom: 1px solid #d9d9d9;
-        border-right: 1px solid #d9d9d9;
-        padding: 5px 0;
-        text-align: center;
-        background-color: #b497cf;
-        cursor: pointer; }
-        .booking .container .wrapper .calendar_view .times_table .book_time.booked_time {
+      flex-direction: column; }
+      .booking .container .wrapper .calendar_panel > div {
+        width: 100%; }
+      .booking .container .wrapper .calendar_panel .reservations {
+        border: none;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-direction: column; }
+        .booking .container .wrapper .calendar_panel .reservations p {
+          margin-bottom: 30px; }
+      .booking .container .wrapper .calendar_panel .local_time {
+        border: none;
+        margin-top: auto; }
+        .booking .container .wrapper .calendar_panel .local_time p {
+          color: rgba(90, 109, 115, 0.7); }
+          .booking .container .wrapper .calendar_panel .local_time p span {
+            color: inherit;
+            font-weight: 400;
+            font-style: italic;
+            font-size: 0.95rem; }
+      .booking .container .wrapper .calendar_panel .legend {
+        border-top: 1px solid rgba(90, 109, 115, 0.5); }
+        .booking .container .wrapper .calendar_panel .legend > div p span {
           background-color: #fedc40; }
+        .booking .container .wrapper .calendar_panel .legend > div p:last-child span {
+          background-color: #b497cf; }
+    .booking .container .wrapper .calendar_view {
+      overflow-x: auto; }
+      .booking .container .wrapper .calendar_view .calendar_slider {
+        padding: 5px 0;
+        min-width: 480px; }
+      .booking .container .wrapper .calendar_view .days {
+        display: flex;
+        align-items: stretch;
+        justify-content: stretch;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        min-width: 480px; }
+        .booking .container .wrapper .calendar_view .days .time {
+          align-self: stretch;
+          width: 10%;
+          min-height: 100% !important;
+          position: sticky;
+          left: 0;
+          background-color: white;
+          border-bottom: 1px solid #d9d9d9 !important;
+          border-right: 1px solid #d9d9d9 !important; }
+          .booking .container .wrapper .calendar_view .days .time p {
+            visibility: hidden; }
+        .booking .container .wrapper .calendar_view .days .current_day {
+          width: 12.857% !important;
+          border-bottom: 1px solid #d9d9d9 !important;
+          border-right: 1px solid #d9d9d9 !important; }
+          .booking .container .wrapper .calendar_view .days .current_day:first-child {
+            border-left: 1px solid #d9d9d9 !important; }
+      .booking .container .wrapper .calendar_view .times_table {
+        width: 100%;
+        min-width: 480px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        flex-direction: row; }
+        .booking .container .wrapper .calendar_view .times_table .time {
+          width: 10%;
+          text-align: center;
+          border-bottom: 1px solid #d9d9d9;
+          border-right: 1px solid #d9d9d9;
+          padding: 5px 0;
+          position: sticky;
+          left: 0;
+          background-color: white; }
+        .booking .container .wrapper .calendar_view .times_table .book_time {
+          width: 12.857%;
+          border-bottom: 1px solid #d9d9d9;
+          border-right: 1px solid #d9d9d9;
+          padding: 5px 0;
+          text-align: center;
+          background-color: #b497cf;
+          cursor: pointer; }
+          .booking .container .wrapper .calendar_view .times_table .book_time.booked_time {
+            background-color: #fedc40; }
 
 .payment .container .wrapper {
   display: flex;
@@ -2459,7 +2523,6 @@ TUTOR PROFILE PAGE
   margin-top: 40px; }
 
 .details .container .wrapper form {
-  border: 1px solid black;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -2472,7 +2535,8 @@ TUTOR PROFILE PAGE
     flex-wrap: wrap;
     flex-direction: row;
     margin: 8px 0;
-    width: 60%; }
+    width: 72%;
+    min-width: 600px; }
     .details .container .wrapper form .row label {
       width: 40%;
       min-width: 230px; }
@@ -2521,11 +2585,47 @@ TUTOR PROFILE PAGE
         border-right: 8px solid transparent;
         border-left: 8px solid transparent;
         pointer-events: none; }
+    .details .container .wrapper form .row textarea {
+      width: 60%;
+      border: 1px solid rgba(90, 109, 115, 0.5);
+      padding: 10px;
+      font-family: "Roboto", sans-serif;
+      color: #5a6d73; }
+      .details .container .wrapper form .row textarea ::placeholder {
+        font-family: "Roboto", sans-serif; }
     .details .container .wrapper form .row:first-child {
       margin-bottom: 30px; }
+    .details .container .wrapper form .row .lead {
+      font-style: italic;
+      margin: 30px 0; }
+    .details .container .wrapper form .row:nth-child(9) {
+      align-items: flex-start; }
+  .details .container .wrapper form > button {
+    width: 170px;
+    margin-top: 30px; }
 
-.faq .container .wrapper article .book_a_lesson {
+.tutor_lesson_header {
+  margin-bottom: 100px; }
+  .tutor_lesson_header .tutor-profile .container {
+    top: 40%; }
+    .tutor_lesson_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile {
+      justify-content: flex-end; }
+
+.faq .container .wrapper article .book_a_lesson, .faq-page .container .wrapper article .book_a_lesson {
   line-height: 3; }
+
+.faq-page .header-faq {
+  width: 100%;
+  height: 350px;
+  background-image: url(/img/search_opt/search_opt_bg.png);
+  background-position: right;
+  background-size: cover; }
+.faq-page .container {
+  margin-top: -200px; }
+  .faq-page .container .wrapper {
+    background-color: #fff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; }
 
 /*******************
     RESPONSIVE
@@ -2581,7 +2681,7 @@ TUTOR PROFILE PAGE
         border-radius: 10px;
         border: none;
         padding: 15px 35px; }
-      .become_tutor .container .row .rigth .decription-btns .faq {
+      .become_tutor .container .row .rigth .decription-btns .faq, .become_tutor .container .row .rigth .decription-btns .faq-page {
         font-size: 0.95rem; }
 
   .find_your_tutor .container .input_search .search-term {
@@ -2643,15 +2743,15 @@ TUTOR PROFILE PAGE
   /*******************
   TUTOR PROFILE PAGE
   *******************/
-  .tutor_profile_header .container .tutor-profile-view .tutor-profile-card, .tutor_details_header .container .tutor-profile-view .tutor-profile-card {
+  .tutor_profile_header .container .tutor-profile-view .tutor-profile-card, .tutor_details_header .container .tutor-profile-view .tutor-profile-card, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card {
     display: flex;
     align-items: stretch;
     justify-content: space-between;
     flex-wrap: wrap;
     flex-direction: row; }
-    .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-img, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-img {
+    .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-img, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-img, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-img {
       width: 20%; }
-    .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content {
+    .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-content {
       width: 80%;
       padding: 30px 20px 30px 20px;
       display: flex;
@@ -2659,16 +2759,16 @@ TUTOR PROFILE PAGE
       justify-content: space-between;
       flex-wrap: wrap;
       flex-direction: row; }
-      .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile {
+      .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile {
         font-size: 0.95rem; }
-      .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline {
+      .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline {
         width: 26%;
         position: relative;
         padding-right: 15px; }
-        .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline h3, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline h3 {
+        .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline h3, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline h3, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline h3 {
           font-size: 2.1rem;
           font-weight: 400; }
-      .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description {
+      .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description {
         position: relative;
         width: 70%;
         display: flex;
@@ -2677,7 +2777,7 @@ TUTOR PROFILE PAGE
         flex-wrap: wrap;
         flex-direction: row;
         padding-left: 20px; }
-        .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div {
+        .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div {
           display: flex;
           align-items: center;
           justify-content: flex-start;
@@ -2685,21 +2785,21 @@ TUTOR PROFILE PAGE
           flex-direction: row;
           margin-right: 50px;
           margin-bottom: 20px; }
-          .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div p, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div p {
+          .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div p, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div p, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div p {
             font-size: 0.9rem; }
-          .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div img, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div img {
+          .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div img, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div img, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div img {
             margin-left: 15px;
             width: 15px;
             height: 15px; }
-  .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav, .tutor_details_header .container .tutor-profile-view .tutor-profile-nav {
+  .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav, .tutor_details_header .container .tutor-profile-view .tutor-profile-nav, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-nav {
     padding: 15px 40px; }
-    .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav ul, .tutor_details_header .container .tutor-profile-view .tutor-profile-nav ul {
+    .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav ul, .tutor_details_header .container .tutor-profile-view .tutor-profile-nav ul, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-nav ul {
       width: 100%; }
-      .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav ul li, .tutor_details_header .container .tutor-profile-view .tutor-profile-nav ul li {
+      .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav ul li, .tutor_details_header .container .tutor-profile-view .tutor-profile-nav ul li, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-nav ul li {
         width: 14.28%; }
-        .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav ul li a, .tutor_details_header .container .tutor-profile-view .tutor-profile-nav ul li a {
+        .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav ul li a, .tutor_details_header .container .tutor-profile-view .tutor-profile-nav ul li a, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-nav ul li a {
           font-size: 0.9rem; }
-      .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav ul:first-child, .tutor_details_header .container .tutor-profile-view .tutor-profile-nav ul:first-child {
+      .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav ul:first-child, .tutor_details_header .container .tutor-profile-view .tutor-profile-nav ul:first-child, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-nav ul:first-child {
         margin-bottom: 15px; }
 
   .certificate .container .wrapper {
@@ -2757,7 +2857,7 @@ TUTOR PROFILE PAGE
       font-family: "Roboto", sans-serif;
       border-radius: 10px;
       border: none; }
-    .become_tutor .container .row .rigth .decription-btns .faq {
+    .become_tutor .container .row .rigth .decription-btns .faq, .become_tutor .container .row .rigth .decription-btns .faq-page {
       font-size: 0.9rem;
       margin-top: 15px; }
 
@@ -2861,7 +2961,13 @@ TUTOR PROFILE PAGE
       border-right: 1px solid #d9d9d9;
       align-self: stretch; }
     .booking .container .wrapper .calendar_panel .legend {
-      border-top: none; } }
+      border-top: none; }
+
+  .tutor_details_header, .tutor_lesson_header {
+    margin-bottom: 300px; }
+
+  .tutor_lesson_header {
+    margin-bottom: 140px; } }
 @media (max-width: 1050px) {
   .featured-banner {
     background-color: #b497cf;
@@ -2942,7 +3048,7 @@ TUTOR PROFILE PAGE
       padding: 15px 40px;
       display: inline-block;
       margin-right: 20px; }
-    .how .container .decription-btns .faq {
+    .how .container .decription-btns .faq, .how .container .decription-btns .faq-page {
       color: #b497cf;
       line-height: 0;
       font-size: 1rem;
@@ -2951,7 +3057,7 @@ TUTOR PROFILE PAGE
       justify-content: center;
       flex-wrap: nowrap;
       flex-direction: row; }
-      .how .container .decription-btns .faq img {
+      .how .container .decription-btns .faq img, .how .container .decription-btns .faq-page img {
         height: 20px;
         width: 20px;
         display: block;
@@ -3109,26 +3215,26 @@ TUTOR PROFILE PAGE
         flex-wrap: nowrap;
         flex-direction: row; }
 
-  .tutor_profile_header, .tutor_details_header {
-    margin-bottom: 400px; }
-    .tutor_profile_header .container .tutor-profile-view .tutor-profile-card, .tutor_details_header .container .tutor-profile-view .tutor-profile-card {
+  .tutor_profile_header, .tutor_details_header, .tutor_lesson_header {
+    margin-bottom: 200px; }
+    .tutor_profile_header .container .tutor-profile-view .tutor-profile-card, .tutor_details_header .container .tutor-profile-view .tutor-profile-card, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card {
       display: flex;
       align-items: stretch;
       justify-content: space-between;
       flex-wrap: wrap;
       flex-direction: row; }
-      .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-img, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-img {
+      .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-img, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-img, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-img {
         width: 25%; }
-      .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content {
+      .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-content {
         width: 75%;
         padding: 30px 10px 20px 20px; }
-        .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile {
+        .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile {
           font-size: 0.9rem; }
-        .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline {
+        .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline {
           width: 35%; }
-          .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline h3, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline h3 {
+          .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline h3, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline h3, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline h3 {
             font-size: 1.9rem; }
-        .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description {
+        .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description {
           position: relative;
           width: 65%;
           display: flex;
@@ -3137,7 +3243,7 @@ TUTOR PROFILE PAGE
           flex-wrap: wrap;
           flex-direction: row;
           padding-left: 20px; }
-          .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div {
+          .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div {
             display: flex;
             align-items: center;
             justify-content: flex-start;
@@ -3145,29 +3251,29 @@ TUTOR PROFILE PAGE
             flex-direction: row;
             margin-right: 30px;
             margin-bottom: 20px; }
-            .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div p, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div p {
+            .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div p, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div p, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div p {
               font-size: 0.9rem; }
-            .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div img, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div img {
+            .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div img, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div img, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div img {
               margin-left: 15px;
               width: 15px;
               height: 15px; }
-    .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav, .tutor_details_header .container .tutor-profile-view .tutor-profile-nav {
+    .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav, .tutor_details_header .container .tutor-profile-view .tutor-profile-nav, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-nav {
       display: flex;
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
       flex-direction: row;
       padding: 20px 50px; }
-      .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav ul, .tutor_details_header .container .tutor-profile-view .tutor-profile-nav ul {
+      .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav ul, .tutor_details_header .container .tutor-profile-view .tutor-profile-nav ul, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-nav ul {
         width: 100%;
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
         flex-wrap: wrap;
         flex-direction: row; }
-        .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav ul li, .tutor_details_header .container .tutor-profile-view .tutor-profile-nav ul li {
+        .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav ul li, .tutor_details_header .container .tutor-profile-view .tutor-profile-nav ul li, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-nav ul li {
           width: 28.5%; }
-          .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav ul li a, .tutor_details_header .container .tutor-profile-view .tutor-profile-nav ul li a {
+          .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav ul li a, .tutor_details_header .container .tutor-profile-view .tutor-profile-nav ul li a, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-nav ul li a {
             color: #fff; }
 
   .apps .container .wrapper p,
@@ -3178,6 +3284,12 @@ TUTOR PROFILE PAGE
   .apps .container .wrapper textarea,
   .expert .container .wrapper textarea {
     width: 70%; }
+
+  .tutor_details_header, .tutor_lesson_header {
+    margin-bottom: 300px; }
+
+  .tutor_lesson_header {
+    margin-bottom: 120px; }
 
   .payment_method .container .wrapper .inputs {
     width: 100%; }
@@ -3191,7 +3303,15 @@ TUTOR PROFILE PAGE
       display: none; }
   .payment_method .container .wrapper .request_review {
     width: 25%;
-    min-width: 180px; } }
+    min-width: 180px; }
+
+  .details .container .wrapper form .row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%; } }
 @media (max-width: 860px) {
   	/******************** 
       NAV
@@ -3314,7 +3434,7 @@ TUTOR PROFILE PAGE
           border-radius: 10px;
           border: none;
           margin-top: 10px; }
-        .become_tutor .container .row .rigth .becom_tutor_stats .decription-btns .faq {
+        .become_tutor .container .row .rigth .becom_tutor_stats .decription-btns .faq, .become_tutor .container .row .rigth .becom_tutor_stats .decription-btns .faq-page {
           font-size: 0.9rem;
           margin-top: 10px;
           padding-bottom: 0; }
@@ -3341,7 +3461,7 @@ TUTOR PROFILE PAGE
           border-radius: 10px;
           border: none;
           margin-top: 10px; }
-        .become_tutor .container .row .rigth .becom_tutor_stats .decription-btns .faq {
+        .become_tutor .container .row .rigth .becom_tutor_stats .decription-btns .faq, .become_tutor .container .row .rigth .becom_tutor_stats .decription-btns .faq-page {
           font-size: 0.9rem;
           margin-top: 10px;
           padding-bottom: 0; }
@@ -3356,22 +3476,22 @@ TUTOR PROFILE PAGE
     width: 60%;
     margin: 30px auto; }
 
-  .tutor_profile_header, .tutor_details_header {
+  .tutor_profile_header, .tutor_details_header, .tutor_lesson_header {
     padding-bottom: 50px;
-    margin-bottom: 400px;
+    margin-bottom: 250px;
     background-image: url(/img/search_opt/search_opt_bg.png);
     background-position: center;
     background-size: cover;
     position: relative; }
-    .tutor_profile_header .container, .tutor_details_header .container {
+    .tutor_profile_header .container, .tutor_details_header .container, .tutor_lesson_header .container {
       position: absolute;
       border-radius: 10px;
       left: 50%;
       transform: translateX(-50%);
       bottom: -60%; }
-      .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-img, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-img {
+      .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-img, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-img, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-img {
         display: none; }
-      .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content {
+      .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-content {
         display: flex;
         align-items: stretch;
         justify-content: flex-start;
@@ -3379,18 +3499,18 @@ TUTOR PROFILE PAGE
         flex-direction: row;
         width: 100%;
         padding: 25px; }
-        .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile {
+        .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile {
           font-size: 1rem;
           margin-bottom: -1rem; }
-        .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline {
+        .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline {
           width: 100%;
           margin-bottom: 0px;
           margin-left: 0px;
           text-align: left;
           padding-right: 0; }
-          .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline h3, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline h3 {
+          .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline h3, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline h3, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline h3 {
             font-size: 1.8rem; }
-          .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline::after, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline::after {
+          .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline::after, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline::after, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline::after {
             width: 100%;
             height: 1px;
             display: inline-block;
@@ -3400,18 +3520,18 @@ TUTOR PROFILE PAGE
             top: unset;
             display: none;
             right: 0; }
-          .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline .availability, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline .availability {
+          .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline .availability, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline .availability, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline .availability {
             margin-bottom: 10px; }
-        .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-img-mob, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-img-mob {
+        .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-img-mob, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-img-mob, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-img-mob {
           display: block;
           margin-bottom: 10px;
           position: relative; }
-          .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-img-mob img, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-img-mob img {
+          .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-img-mob img, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-img-mob img, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-img-mob img {
             width: 150px;
             height: auto;
             border-radius: 10px;
             display: block; }
-            .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-img-mob img:nth-child(2), .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-img-mob img:nth-child(2) {
+            .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-img-mob img:nth-child(2), .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-img-mob img:nth-child(2), .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-img-mob img:nth-child(2) {
               position: absolute;
               width: 25px;
               height: 25px;
@@ -3420,10 +3540,10 @@ TUTOR PROFILE PAGE
               cursor: pointer;
               transition: 0.4s ease-in-out;
               border: 1px solid transparent; }
-              .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-img-mob img:nth-child(2):hover, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-img-mob img:nth-child(2):hover {
+              .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-img-mob img:nth-child(2):hover, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-img-mob img:nth-child(2):hover, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-img-mob img:nth-child(2):hover {
                 transform: scale(1.1);
                 border: 1px solid #b497cf; }
-        .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description {
+        .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description {
           position: relative;
           width: 100%;
           display: flex;
@@ -3432,7 +3552,7 @@ TUTOR PROFILE PAGE
           flex-wrap: wrap;
           flex-direction: row;
           padding-left: 0px; }
-          .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div {
+          .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div {
             display: flex;
             align-items: center;
             justify-content: flex-start;
@@ -3440,20 +3560,20 @@ TUTOR PROFILE PAGE
             flex-direction: row;
             margin-right: 15px;
             margin-bottom: 10px; }
-            .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div p, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div p {
+            .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div p, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div p, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div p {
               font-size: 0.9rem; }
-            .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div img, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div img {
+            .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div img, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div img, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description div img {
               margin-left: 5px;
               width: 15px;
               height: 15px; }
-          .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description::before, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description::before {
+          .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description::before, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description::before, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description::before {
             content: "";
             display: block;
             width: 100%;
             height: 1px;
             background-color: #5a6d73;
             margin-bottom: 10px; }
-      .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav, .tutor_details_header .container .tutor-profile-view .tutor-profile-nav {
+      .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav, .tutor_details_header .container .tutor-profile-view .tutor-profile-nav, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-nav {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -3461,19 +3581,19 @@ TUTOR PROFILE PAGE
         flex-direction: row;
         padding: 10px 50px;
         position: relative; }
-        .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav .tutor-nav-toggle, .tutor_details_header .container .tutor-profile-view .tutor-profile-nav .tutor-nav-toggle {
+        .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav .tutor-nav-toggle, .tutor_details_header .container .tutor-profile-view .tutor-profile-nav .tutor-nav-toggle, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-nav .tutor-nav-toggle {
           margin: 0 auto;
           display: block;
           cursor: pointer;
           pointer-events: all; }
-          .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav .tutor-nav-toggle span, .tutor_details_header .container .tutor-profile-view .tutor-profile-nav .tutor-nav-toggle span {
+          .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav .tutor-nav-toggle span, .tutor_details_header .container .tutor-profile-view .tutor-profile-nav .tutor-nav-toggle span, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-nav .tutor-nav-toggle span {
             border-top: 10px solid #fff;
             border-bottom: none;
             border-left: 10px solid transparent;
             border-right: 10px solid transparent;
             margin: 0 auto;
             display: inline-block; }
-        .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav ul, .tutor_details_header .container .tutor-profile-view .tutor-profile-nav ul {
+        .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav ul, .tutor_details_header .container .tutor-profile-view .tutor-profile-nav ul, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-nav ul {
           background-color: #b497cf;
           max-height: 0;
           overflow-y: hidden;
@@ -3490,17 +3610,20 @@ TUTOR PROFILE PAGE
           padding: 0px 20px;
           border-bottom-left-radius: 10px;
           border-bottom-right-radius: 10px; }
-          .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav ul li, .tutor_details_header .container .tutor-profile-view .tutor-profile-nav ul li {
+          .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav ul li, .tutor_details_header .container .tutor-profile-view .tutor-profile-nav ul li, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-nav ul li {
             width: 45%;
             opacity: 0;
             transition: 0.4s ease-in-out; }
-            .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav ul li a, .tutor_details_header .container .tutor-profile-view .tutor-profile-nav ul li a {
+            .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav ul li a, .tutor_details_header .container .tutor-profile-view .tutor-profile-nav ul li a, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-nav ul li a {
               color: #fff; }
-            .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav ul li.show, .tutor_details_header .container .tutor-profile-view .tutor-profile-nav ul li.show {
+            .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav ul li.show, .tutor_details_header .container .tutor-profile-view .tutor-profile-nav ul li.show, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-nav ul li.show {
               opacity: 1; }
-          .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav ul.active-tutor-nav, .tutor_details_header .container .tutor-profile-view .tutor-profile-nav ul.active-tutor-nav {
+          .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav ul.active-tutor-nav, .tutor_details_header .container .tutor-profile-view .tutor-profile-nav ul.active-tutor-nav, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-nav ul.active-tutor-nav {
             max-height: 300px;
             padding: 30px 20px 20px 20px; }
+
+  .tutor_details_header, .tutor_lesson_header {
+    margin-bottom: 330px; }
 
   .my_messages .container .wrapper .mail_panel {
     min-width: unset;
@@ -3551,41 +3674,44 @@ TUTOR PROFILE PAGE
         .payment_method .container .wrapper .preffered_paymet span.preffered_payment_active {
           color: #b497cf; }
 
-  .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content {
+  .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content, .tutor_lesson_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content {
     justify-content: space-between; }
-    .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile {
+    .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile, .tutor_lesson_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile {
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-end;
       order: 2;
       width: 65%; }
-      .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile button {
+      .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile button, .tutor_lesson_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile button {
         margin-bottom: 15px; }
-        .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile button span {
+        .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile button span, .tutor_lesson_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile button span {
           font-weight: 600; }
-      .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile > div .rate {
+      .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile > div .rate, .tutor_lesson_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile > div .rate {
         margin-top: 15px; }
-        .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile > div .rate img {
+        .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile > div .rate img, .tutor_lesson_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile > div .rate img {
           width: 23px;
           height: 23px; }
-      .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile > div .views {
+      .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile > div .views, .tutor_lesson_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile > div .views {
         color: rgba(90, 109, 115, 0.5);
         font-size: 0.9rem; }
-    .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline {
+    .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline, .tutor_lesson_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline {
       order: 3;
       display: flex;
       align-items: stretch;
       justify-content: space-between;
       flex-wrap: wrap;
       flex-direction: column; }
-      .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline .tutor_for {
+      .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline .tutor_for, .tutor_lesson_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline .tutor_for {
         font-size: 1.25em;
         margin: 10px 0 20px 0;
         align-self: flex-start; }
-    .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-img-mob {
+    .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-img-mob, .tutor_lesson_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-img-mob {
       order: 1; }
-    .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description {
-      order: 4; } }
+    .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description, .tutor_lesson_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description {
+      order: 4; }
+
+  .tutor_lesson_header {
+    margin-bottom: 200px; } }
 @media (max-width: 768px) {
   .map-section .map-container .map-wrapper .map-box .map-marker {
     transform: scale(0.75); }
@@ -3630,7 +3756,7 @@ TUTOR PROFILE PAGE
       display: inline-block;
       margin-right: 20px;
       margin-bottom: 20px; }
-    .how .container .decription-btns .faq {
+    .how .container .decription-btns .faq, .how .container .decription-btns .faq-page {
       color: #b497cf;
       margin-right: 20px;
       line-height: 0;
@@ -3640,7 +3766,7 @@ TUTOR PROFILE PAGE
       justify-content: center;
       flex-wrap: nowrap;
       flex-direction: row; }
-      .how .container .decription-btns .faq img {
+      .how .container .decription-btns .faq img, .how .container .decription-btns .faq-page img {
         height: 20px;
         width: 20px;
         display: block;
@@ -3727,9 +3853,9 @@ TUTOR PROFILE PAGE
   	/******************
    TUTOR DETAILS
   ******************/
-  .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-nav ul {
+  .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-nav ul, .tutor_lesson_header .tutor-profile .container .tutor-profile-view .tutor-profile-nav ul {
     justify-content: space-between; }
-    .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-nav ul li {
+    .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-nav ul li, .tutor_lesson_header .tutor-profile .container .tutor-profile-view .tutor-profile-nav ul li {
       width: 33%;
       text-align: left; }
 
@@ -4063,7 +4189,94 @@ TUTOR PROFILE PAGE
       text-align: center;
       padding-left: 0px;
       margin: 10px 0;
-      color: #b497cf; } }
+      color: #b497cf; }
+
+  .details .container .wrapper form {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column; }
+    .details .container .wrapper form .row {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      flex-direction: row;
+      width: 100%;
+      min-width: unset; }
+      .details .container .wrapper form .row label {
+        width: 100%;
+        min-width: 230px;
+        margin-bottom: 20px; }
+      .details .container .wrapper form .row button {
+        background: #fff;
+        border: 1px solid rgba(90, 109, 115, 0.5);
+        padding: 10px 0; }
+        .details .container .wrapper form .row button.active_button {
+          background: #fedc40;
+          border: none; }
+      .details .container .wrapper form .row button,
+      .details .container .wrapper form .row input,
+      .details .container .wrapper form .row .select-box {
+        width: 49%;
+        min-width: unset; }
+      .details .container .wrapper form .row .lesson {
+        margin-right: 2%;
+        font-size: 0.85rem; }
+      .details .container .wrapper form .row input,
+      .details .container .wrapper form .row select {
+        padding: 5px 10px;
+        border: 1px solid rgba(90, 109, 115, 0.5);
+        border-radius: 3px; }
+      .details .container .wrapper form .row input {
+        font-family: "Roboto", sans-serif;
+        font-size: 0.95rem; }
+        .details .container .wrapper form .row input:focus {
+          outline: none;
+          border: 1px solid #b497cf; }
+      .details .container .wrapper form .row .select-box {
+        position: relative;
+        margin-right: 2%; }
+        .details .container .wrapper form .row .select-box select {
+          width: 100%;
+          color: #5a6d73;
+          appearance: none;
+          -moz-appearance: none;
+          -webkit-appearance: none; }
+          .details .container .wrapper form .row .select-box select option {
+            color: #5a6d73; }
+        .details .container .wrapper form .row .select-box span {
+          position: absolute;
+          right: 10px;
+          top: 50%;
+          transform: translateY(-50%);
+          border-bottom: none;
+          border-top: 8px solid rgba(90, 109, 115, 0.5);
+          border-right: 8px solid transparent;
+          border-left: 8px solid transparent;
+          pointer-events: none; }
+      .details .container .wrapper form .row textarea {
+        width: 100%;
+        border: 1px solid rgba(90, 109, 115, 0.5);
+        padding: 10px;
+        font-family: "Roboto", sans-serif;
+        color: #5a6d73; }
+        .details .container .wrapper form .row textarea ::placeholder {
+          font-family: "Roboto", sans-serif; }
+      .details .container .wrapper form .row:first-child {
+        margin-bottom: 30px; }
+      .details .container .wrapper form .row .lead {
+        font-style: italic;
+        margin: 30px 0; }
+      .details .container .wrapper form .row:nth-child(9) {
+        align-items: flex-start; }
+    .details .container .wrapper form > button {
+      width: 170px;
+      margin-top: 30px; }
+
+  .tutor_lesson_header {
+    margin-bottom: 250px !important; } }
 @media (max-width: 590px) {
   header {
     padding: 50px 10px;
@@ -4113,17 +4326,17 @@ TUTOR PROFILE PAGE
           border-top-left-radius: 0;
           border-bottom-left-radius: 0; }
 
-  .faq {
+  .faq, .faq-page {
     padding-bottom: 80px; }
-    .faq .container .wrapper {
+    .faq .container .wrapper, .faq-page .container .wrapper {
       padding: 0px 20px 30px 20px; }
-      .faq .container .wrapper .faq-buttons {
+      .faq .container .wrapper .faq-buttons, .faq-page .container .wrapper .faq-buttons {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
         flex-direction: column; }
-        .faq .container .wrapper .faq-buttons button {
+        .faq .container .wrapper .faq-buttons button, .faq-page .container .wrapper .faq-buttons button {
           color: #414e52;
           background: #fedc40;
           font-size: 1.1rem;
@@ -4134,12 +4347,12 @@ TUTOR PROFILE PAGE
           border-radius: 6px;
           margin-right: 0px;
           margin-top: 20px; }
-        .faq .container .wrapper .faq-buttons .faq-socials {
+        .faq .container .wrapper .faq-buttons .faq-socials, .faq-page .container .wrapper .faq-buttons .faq-socials {
           margin-top: 20px; }
-          .faq .container .wrapper .faq-buttons .faq-socials img {
+          .faq .container .wrapper .faq-buttons .faq-socials img, .faq-page .container .wrapper .faq-buttons .faq-socials img {
             margin-right: 20px;
             height: 35px; }
-            .faq .container .wrapper .faq-buttons .faq-socials img:last-child {
+            .faq .container .wrapper .faq-buttons .faq-socials img:last-child, .faq-page .container .wrapper .faq-buttons .faq-socials img:last-child {
               margin-right: 0; }
 
   .find_your_tutor .container .search_options .filter_opt {
@@ -4160,7 +4373,7 @@ TUTOR PROFILE PAGE
       margin-top: 20px;
       padding: 0; }
 
-  .tutor_profile_header .container, .tutor_details_header .container {
+  .tutor_profile_header .container, .tutor_details_header .container, .tutor_lesson_header .container {
     width: 95%; }
 
   .tutor_section .container {
@@ -4182,45 +4395,45 @@ TUTOR PROFILE PAGE
       .my_classes .container .wrapper .calendar_table table tr:last-child {
         border-bottom: 1px solid rgba(90, 109, 115, 0.3); }
 
-  .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content {
+  .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content, .tutor_lesson_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content {
     justify-content: space-between;
     padding: 10px; }
-    .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile {
+    .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile, .tutor_lesson_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile {
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-end;
       order: 2;
       width: 50%; }
-      .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile button {
+      .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile button, .tutor_lesson_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile button {
         font-size: 0.85rem;
         line-height: 1.5;
         margin-bottom: 15px; }
-        .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile button span {
+        .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile button span, .tutor_lesson_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile button span {
           font-weight: 600; }
-      .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile > div .rate {
+      .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile > div .rate, .tutor_lesson_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile > div .rate {
         margin: 5px 0; }
-        .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile > div .rate img {
+        .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile > div .rate img, .tutor_lesson_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile > div .rate img {
           width: 18px;
           height: 18px; }
-      .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile > div .views {
+      .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile > div .views, .tutor_lesson_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .my_profile > div .views {
         color: rgba(90, 109, 115, 0.5);
         font-size: 0.85rem; }
-    .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline {
+    .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline, .tutor_lesson_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline {
       order: 3;
       display: flex;
       align-items: stretch;
       justify-content: space-between;
       flex-wrap: wrap;
       flex-direction: column; }
-      .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline h3 {
+      .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline h3, .tutor_lesson_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline h3 {
         font-size: 1.5rem; }
-      .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline .tutor_for {
+      .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline .tutor_for, .tutor_lesson_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-headline .tutor_for {
         font-size: 1.1em;
         margin: 10px 0 20px 0;
         align-self: flex-start; }
-    .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-img-mob {
+    .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-img-mob, .tutor_lesson_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-img-mob {
       order: 1; }
-    .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description {
+    .tutor_details_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description, .tutor_lesson_header .tutor-profile .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description {
       order: 4; } }
 @media (max-width: 460px) {
   .map-section .map-container .map-wrapper .map-box .map-marker {
@@ -4261,8 +4474,13 @@ TUTOR PROFILE PAGE
         margin-left: 0px;
         margin-bottom: 10px; }
 
-  .tutor_profile_header .container, .tutor_details_header .container {
-    bottom: -70%; }
+  .tutor_profile_header, .tutor_details_header, .tutor_lesson_header {
+    margin-bottom: 330px; }
+    .tutor_profile_header .container, .tutor_details_header .container, .tutor_lesson_header .container {
+      bottom: -70%; }
+
+  .tutor_lesson_header {
+    margin-bottom: 250px !important; }
 
   .pricing .container .wrapper .row {
     display: flex;

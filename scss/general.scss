@@ -59,6 +59,72 @@ a {
 	}
 }
 
+.tutor_rate {
+	@include flex(center, center, nowrap, row);
+
+	svg {
+		margin-top: 5px;
+		width: 15px;
+		height: 15px;
+		path {
+			fill: $star_gray;
+		}
+		&.rate_5 {
+			path {
+				fill: $star_yellow;
+			}
+		}
+		&.rate_4 {
+			path {
+				fill: $star_yellow;
+			}
+			&:last-child {
+				path {
+					fill: $star_gray;
+				}
+			}
+		}
+		&.rate_3 {
+			path {
+				fill: $star_yellow;
+			}
+			&:nth-child(5),
+			&:nth-child(4) {
+				path {
+					fill: $star_gray;
+				}
+			}
+		}
+		&.rate_2 {
+			path {
+				fill: $star_yellow;
+			}
+			&:nth-child(5),
+			&:nth-child(4),
+			&:nth-child(3) {
+				path {
+					fill: $star_gray;
+				}
+			}
+		}
+		&.rate_1 {
+			path {
+				fill: $star_gray;
+			}
+			&:nth-child(1) {
+				path {
+					fill: $star_yellow;
+				}
+			}
+		}
+		&.rate_0 {
+			path {
+				fill: $star_gray;
+			}
+		}
+	}
+}
+
 body {
 	background: $backgorund-primary;
 	font-family: $font_family;

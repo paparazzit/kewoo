@@ -13,10 +13,10 @@ toggleBar.addEventListener("click", () => {
 });
 
 $("#tutors").owlCarousel({
-	loop: true,
+	loop: false,
 	margin: 50,
 	autoWidth: true,
-	center: true,
+	center: false,
 	nav: true,
 	dots: false,
 	responsive: {
@@ -48,6 +48,54 @@ $("#testimonials").owlCarousel({
 			items: 1,
 		},
 	},
+});
+// tutor rate in carousel
+var tutor_rate = document.querySelectorAll(".tutor_rate");
+tutor_rate.forEach((single_tutor_rate) => {
+	var get_rate = single_tutor_rate.getAttribute("data-rate");
+	var stars = single_tutor_rate.children;
+	console.log(
+		get_rate
+	); /*  take data-rate from the DIV tutor-rate, find all svg and add the class rate_(rate) */
+	if (get_rate === "5") {
+		for (var i = 0; i < stars.length; i++) {
+			var star = stars[i];
+			star.classList.add("rate_5");
+		}
+	}
+
+	if (get_rate === "4") {
+		for (var i = 0; i < stars.length; i++) {
+			var star = stars[i];
+			star.classList.add("rate_4");
+		}
+	}
+
+	if (get_rate === "3") {
+		for (var i = 0; i < stars.length; i++) {
+			var star = stars[i];
+			star.classList.add("rate_3");
+		}
+	}
+	if (get_rate === "2") {
+		for (var i = 0; i < stars.length; i++) {
+			var star = stars[i];
+			star.classList.add("rate_2");
+		}
+	}
+	if (get_rate === "1") {
+		for (var i = 0; i < stars.length; i++) {
+			var star = stars[i];
+			star.classList.add("rate_1");
+		}
+	}
+
+	if (get_rate === "0") {
+		for (var i = 0; i < stars.length; i++) {
+			var star = stars[i];
+			star.classList.add("rate_0");
+		}
+	}
 });
 
 // Map marker vertical and horizontal ajustments using data-atributes
@@ -156,21 +204,23 @@ var tutorNavUl = document.querySelector(".tutor-profile-nav ul");
 var tutorNavLinks = document.querySelectorAll(".tutor-profile-nav ul li");
 var tutorProfileView = document.querySelector(".tutor-profile-view");
 
-tutorNavToggle.addEventListener("click", () => {
-	tutorNavUl.classList.toggle("active-tutor-nav");
+if (tutorNavToggle) {
+	tutorNavToggle.addEventListener("click", () => {
+		tutorNavUl.classList.toggle("active-tutor-nav");
 
-	tutorNavLinks.forEach(function (l) {
-		l.classList.toggle("show");
-		l.addEventListener("click", () => {
-			event.preventDefault();
+		tutorNavLinks.forEach(function (l) {
+			l.classList.toggle("show");
+			l.addEventListener("click", () => {
+				event.preventDefault();
 
-			tutorNavLinks.forEach(function (el) {
-				el.classList.remove("show");
+				tutorNavLinks.forEach(function (el) {
+					el.classList.remove("show");
+				});
+				tutorNavUl.classList.remove("active-tutor-nav");
 			});
-			tutorNavUl.classList.remove("active-tutor-nav");
 		});
 	});
-});
+}
 
 // ABOUT ME
 
@@ -215,9 +265,12 @@ function removePaymentActive() {
 
 // MY MESSAGES
 // Mail nav panel
+
+var tutor_navigation = document.querySelector(".tutor-profile-nav");
+// mail nav buttons
+
 var mail_nav = document.querySelectorAll(".mail_nav ul li a");
 var mail_view_all = document.querySelectorAll(".box_view");
-// mail nav buttons
 mail_nav.forEach((button) => {
 	button.addEventListener("click", (e) => {
 		hideMailViews();
@@ -266,8 +319,21 @@ book_time.forEach((time) => {
 		time.classList.toggle("booked_time");
 		if (time.classList.contains("booked_time")) {
 			time.innerHTML = "Booked";
+			console.log("kliknuo sam");
 		} else {
 			time.innerHTML = "Book";
+		}
+	});
+});
+
+// CALENDAR
+
+var calendar_dates = document.querySelectorAll(".date");
+
+calendar_dates.forEach((calendar_date) => {
+	calendar_date.addEventListener("click", () => {
+		if (calendar_date.classList.contains("booked")) {
+			calendar_date.classList.toggle("open_date");
 		}
 	});
 });
