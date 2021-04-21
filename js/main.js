@@ -143,8 +143,7 @@ selected.forEach(function (s) {
 		});
 
 		s.previousElementSibling.classList.toggle("active");
-		console.log(s.previousElementSibling);
-		console.log(s);
+
 		// s.focus();
 	});
 });
@@ -159,6 +158,82 @@ optionsList.forEach((o) => {
 	});
 });
 
+// PRICE RANGE SLIDER  OBRATI PAZNJU neznam kako da se ne deaktivira posle svakog klika
+
+var inputLeft = document.querySelector("#input-left");
+var inputRight = document.querySelector("#input-right");
+
+var thumbLeft = document.querySelector(".slider > .thumb.left");
+var thumbRight = document.querySelector(".slider > .thumb.right");
+var range = document.querySelector(".slider > .range");
+var from = document.querySelector(".from");
+var to = document.querySelector(".to");
+var tutor_search = document.querySelectorAll("#tutor_search");
+
+window.addEventListener("load", () => {
+	var page_name = location.pathname.substring(1);
+	if (page_name === "tutors.html" || page_name === "tutors.php") {
+		console.log("imam tutore");
+		setLeftValue();
+		setRightValue();
+		inputLeft.addEventListener("input", setLeftValue);
+		inputRight.addEventListener("input", setRightValue);
+
+		inputLeft.addEventListener("mouseover", function () {
+			thumbLeft.classList.add("hover");
+		});
+
+		inputLeft.addEventListener("mouseout", function () {
+			thumbLeft.classList.remove("hover");
+		});
+
+		inputRight.addEventListener("mouseover", function () {
+			thumbRight.classList.add("hover");
+		});
+
+		inputRight.addEventListener("mouseout", function () {
+			thumbRight.classList.remove("hover");
+		});
+
+		inputLeft.addEventListener("mousedown", function () {
+			thumbLeft.classList.add("active");
+		});
+		inputLeft.addEventListener("mouseup", function () {
+			thumbLeft.classList.remove("active");
+		});
+
+		inputRight.addEventListener("mousedown", function () {
+			thumbRight.classList.add("active");
+		});
+		inputRight.addEventListener("mouseup", function () {
+			thumbRight.classList.remove("active");
+		});
+	}
+});
+
+function setLeftValue() {
+	var _this = inputLeft;
+	min = parseInt(_this.min);
+	max = parseInt(_this.max);
+	_this.value = Math.min(parseInt(_this.value), parseInt(inputRight.value) - 1);
+	var percent = ((_this.value - min) / (max - min)) * 100;
+	thumbLeft.style.left = percent + "%";
+	range.style.left = percent + "%";
+	// console.log(` LEFTt: ${_this.value}`);
+	from.innerHTML = `$${inputLeft.value}`;
+}
+
+function setRightValue() {
+	var _this = inputRight;
+	min = parseInt(_this.min);
+	max = parseInt(_this.max);
+	_this.value = Math.max(parseInt(_this.value), parseInt(inputLeft.value) + 1);
+	var percent = ((_this.value - min) / (max - min)) * 100;
+	thumbRight.style.right = 100 - percent + "%";
+	range.style.right = 100 - percent + "%";
+	to.innerHTML = `$${inputRight.value}`;
+}
+
 // Izgasi opcije na search parametrima za tutore
 window.addEventListener("click", function (event) {
 	optionsContainer.forEach(function (c) {
@@ -170,9 +245,12 @@ window.addEventListener("click", function (event) {
 
 window.addEventListener("load", () => {
 	var page_name = location.pathname.substring(1);
-	console.log(page_name);
 
-	if (page_name === "index.html" || page_name === "index.html") {
+	if (
+		page_name === "index.html" ||
+		page_name === "index.php" ||
+		page_name === ""
+	) {
 		const intersect = document.querySelector("#moja_mapa");
 		const options = {
 			root: null,
@@ -319,7 +397,6 @@ book_time.forEach((time) => {
 		time.classList.toggle("booked_time");
 		if (time.classList.contains("booked_time")) {
 			time.innerHTML = "Booked";
-			console.log("kliknuo sam");
 		} else {
 			time.innerHTML = "Book";
 		}
