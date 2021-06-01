@@ -2172,7 +2172,7 @@ TUTOR PROFILE PAGE
   .review_section .leave_review .expert .container .wrapper .review__wrapper .star-widget form .review_name input,
   .expert .review_section .leave_review .container .review__wrapper .star-widget form .review_name .wrapper input,
   .review_section .leave_review .expert .container .review__wrapper .star-widget form .review_name .wrapper input {
-    border-radius: 8px;
+    border-radius: 5px;
     border: 1px solid rgba(90, 109, 115, 0.5);
     width: 50%;
     min-width: 350px;
@@ -2308,7 +2308,8 @@ TUTOR PROFILE PAGE
       border: 1px solid rgba(90, 109, 115, 0.5);
       padding: 20px;
       font-family: "Roboto", sans-serif;
-      color: rgba(90, 109, 115, 0.8); }
+      color: rgba(90, 109, 115, 0.8);
+      border-radius: 5px; }
       .about_me .container .wrapper .about_me_content textarea::placeholder, .about_me_students .container .wrapper .about_me_content textarea::placeholder, .about_me .review_section .leave_review .container .wrapper .about_me_content .review__wrapper .star-widget form .review_name input::placeholder, .review_section .leave_review .about_me .container .wrapper .about_me_content .review__wrapper .star-widget form .review_name input::placeholder, .about_me .review_section .leave_review .container .review__wrapper .star-widget form .review_name .wrapper .about_me_content input::placeholder, .review_section .leave_review .about_me .container .review__wrapper .star-widget form .review_name .wrapper .about_me_content input::placeholder, .about_me_students .review_section .leave_review .container .wrapper .about_me_content .review__wrapper .star-widget form .review_name input::placeholder, .review_section .leave_review .about_me_students .container .wrapper .about_me_content .review__wrapper .star-widget form .review_name input::placeholder, .about_me_students .review_section .leave_review .container .review__wrapper .star-widget form .review_name .wrapper .about_me_content input::placeholder, .review_section .leave_review .about_me_students .container .review__wrapper .star-widget form .review_name .wrapper .about_me_content input::placeholder {
         font-family: "Roboto", sans-serif;
         font-size: 0.95rem;

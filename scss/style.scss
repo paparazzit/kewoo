@@ -2221,7 +2221,7 @@ TUTOR PROFILE PAGE
 				margin-right: 40px;
 			}
 			textarea {
-				border-radius: 8px;
+				border-radius: 5px;
 				border: 1px solid rgba($line_color, 0.5);
 				width: 50%;
 				min-width: 350px;
@@ -2386,6 +2386,7 @@ TUTOR PROFILE PAGE
 					padding: 20px;
 					font-family: $font_family;
 					color: rgba($line_color, 0.8);
+					border-radius: 5px;
 
 					&::placeholder {
 						font-family: $font_family;
