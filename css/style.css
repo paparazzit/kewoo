@@ -2275,6 +2275,57 @@ TUTOR PROFILE PAGE
   margin-bottom: 40px;
   padding-bottom: 0px; }
 
+.teach_langs .container .wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: row;
+  flex-direction: wrap; }
+  .teach_langs .container .wrapper > p {
+    width: 25%;
+    min-width: 350px; }
+  .teach_langs .container .wrapper .lang_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 50%;
+    min-width: 350px; }
+    .teach_langs .container .wrapper .lang_wrapper .choose_lng {
+      display: inline-block;
+      position: relative;
+      width: 48%;
+      min-width: 150px;
+      margin-bottom: 15px; }
+      .teach_langs .container .wrapper .lang_wrapper .choose_lng .select_lang {
+        display: inline-block;
+        color: #414e52;
+        background: #fedc40;
+        font-size: 1rem;
+        font-family: "Roboto", sans-serif;
+        border-radius: 10px;
+        border: none;
+        background-color: #fff;
+        width: 100%;
+        min-width: 150px;
+        padding: 10px 30px;
+        text-align: center;
+        border: 1px solid rgba(90, 109, 115, 0.5); }
+      .teach_langs .container .wrapper .lang_wrapper .choose_lng .lang_input {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0; }
+        .teach_langs .container .wrapper .lang_wrapper .choose_lng .lang_input:checked ~ .select_lang {
+          background-color: #fedc40;
+          border: 1px solid #fedc40; }
+
 .about_me .container .wrapper, .about_me_students .container .wrapper {
   width: 70%;
   display: flex;

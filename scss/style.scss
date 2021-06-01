@@ -2352,6 +2352,58 @@ TUTOR PROFILE PAGE
 		}
 	}
 }
+// TEACH LANG
+
+.teach_langs {
+	.container {
+		.wrapper {
+			@include flex(flex-start, flex-start, row, wrap);
+			> p {
+				width: 25%;
+				min-width: 350px;
+			}
+			.lang_wrapper {
+				// border: 2px solid red;
+				@include flex(center, space-between, wrap, row);
+				width: 50%;
+				min-width: 350px;
+				.choose_lng {
+					display: inline-block;
+					position: relative;
+					width: 48%;
+					min-width: 150px;
+					margin-bottom: 15px;
+					.select_lang {
+						display: inline-block;
+						@include btn-primary($footer, 1rem);
+						background-color: $white;
+						width: 100%;
+						min-width: 150px;
+						padding: 10px 30px;
+						text-align: center;
+						border: 1px solid rgba($line_color, 0.5);
+					}
+					.lang_input {
+						position: absolute;
+						z-index: 10;
+						top: 0;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						width: 100%;
+						height: 100%;
+						opacity: 0;
+
+						&:checked ~ .select_lang {
+							background-color: $btn-primary;
+							border: 1px solid $btn-primary;
+						}
+					}
+				}
+			}
+		}
+	}
+}
 
 // ABOUT ME
 
