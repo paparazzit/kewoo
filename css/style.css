@@ -164,7 +164,7 @@ h2 {
           margin-bottom: 15px; }
         .custom-select .select-box .options-container .price .middle .multirange-slider input[type="range"] {
           position: absolute;
-          z-index: 2;
+          z-index: 5;
           width: 100%;
           height: 10px;
           opacity: 0;
@@ -172,6 +172,15 @@ h2 {
           appearance: none;
           pointer-events: none; }
           .custom-select .select-box .options-container .price .middle .multirange-slider input[type="range"]::-moz-range-thumb {
+            -webkit-appearance: none;
+            pointer-events: none;
+            appearance: none;
+            width: 30px;
+            height: 30px;
+            border: 0 none;
+            border-radius: 0;
+            pointer-events: all; }
+          .custom-select .select-box .options-container .price .middle .multirange-slider input[type="range"]::-webkit-slider-thumb {
             -webkit-appearance: none;
             pointer-events: none;
             appearance: none;
@@ -758,17 +767,16 @@ header {
       justify-content: center;
       flex-wrap: nowrap;
       flex-direction: row;
-      height: 100%; }
+      height: 100%;
+      padding: 20px 40px; }
       .testimonials .container .owl-carousel .item .item_left {
         width: 35%; }
         .testimonials .container .owl-carousel .item .item_left img {
           width: 100%;
           display: block; }
       .testimonials .container .owl-carousel .item .item_right {
+        width: 100%;
         height: 100%;
-        width: 65%;
-        height: 100%;
-        padding-left: 80px;
         position: relative;
         align-self: center;
         height: auto; }
@@ -785,8 +793,8 @@ header {
           .testimonials .container .owl-carousel .item .item_right .wrapper .item-header .item-header-text {
             margin-left: 15px; }
         .testimonials .container .owl-carousel .item .item_right .wrapper .item-text {
-          width: 80%;
-          margin-top: 50px; }
+          width: 100%;
+          margin: 20px auto 20px auto; }
   .testimonials .row {
     display: flex;
     align-items: center;
@@ -1671,7 +1679,7 @@ TUTOR PROFILE PAGE
       width: 100%;
       padding: 10px 20px;
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
       flex-direction: row; }
@@ -1683,7 +1691,8 @@ TUTOR PROFILE PAGE
         justify-content: flex-start;
         flex-wrap: nowrap;
         flex-direction: row;
-        width: 50%; }
+        width: 50%;
+        padding: 10px; }
         .my_messages .container .wrapper .mail__box .single_mail .sender input, .my_messages .container .wrapper .sent__box .single_mail .sender input, .my_messages .container .wrapper .bin__box .single_mail .sender input {
           margin-right: 20px; }
         .my_messages .container .wrapper .mail__box .single_mail .sender .sender_name, .my_messages .container .wrapper .sent__box .single_mail .sender .sender_name, .my_messages .container .wrapper .bin__box .single_mail .sender .sender_name {
@@ -1695,13 +1704,26 @@ TUTOR PROFILE PAGE
         color: rgba(90, 109, 115, 0.5);
         font-size: 0.9rem;
         display: flex;
-        align-items: flex-end;
+        align-items: center;
         justify-content: flex-end;
         flex-wrap: nowrap;
         flex-direction: row; }
         .my_messages .container .wrapper .mail__box .single_mail .mail_time_options .mail_options, .my_messages .container .wrapper .sent__box .single_mail .mail_time_options .mail_options, .my_messages .container .wrapper .bin__box .single_mail .mail_time_options .mail_options {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: nowrap;
+          flex-direction: column;
           margin-left: 15px;
-          display: none; }
+          display: none;
+          padding: 10px;
+          width: 35px;
+          height: auto;
+          text-align: center;
+          cursor: pointer;
+          pointer-events: none;
+          z-index: 10;
+          position: relative; }
           .my_messages .container .wrapper .mail__box .single_mail .mail_time_options .mail_options span, .my_messages .container .wrapper .sent__box .single_mail .mail_time_options .mail_options span, .my_messages .container .wrapper .bin__box .single_mail .mail_time_options .mail_options span {
             width: 4px;
             height: 4px;
@@ -1711,11 +1733,15 @@ TUTOR PROFILE PAGE
             .my_messages .container .wrapper .mail__box .single_mail .mail_time_options .mail_options span:nth-child(2), .my_messages .container .wrapper .sent__box .single_mail .mail_time_options .mail_options span:nth-child(2), .my_messages .container .wrapper .bin__box .single_mail .mail_time_options .mail_options span:nth-child(2) {
               margin: 2px 0; }
           .my_messages .container .wrapper .mail__box .single_mail .mail_time_options .mail_options.show_options, .my_messages .container .wrapper .sent__box .single_mail .mail_time_options .mail_options.show_options, .my_messages .container .wrapper .bin__box .single_mail .mail_time_options .mail_options.show_options {
-            display: block; }
+            display: flex;
+            pointer-events: all; }
+          .my_messages .container .wrapper .mail__box .single_mail .mail_time_options .mail_options:hover, .my_messages .container .wrapper .sent__box .single_mail .mail_time_options .mail_options:hover, .my_messages .container .wrapper .bin__box .single_mail .mail_time_options .mail_options:hover {
+            background: #eeeeee; }
       .my_messages .container .wrapper .mail__box .single_mail .mail_view, .my_messages .container .wrapper .sent__box .single_mail .mail_view, .my_messages .container .wrapper .bin__box .single_mail .mail_view {
         width: 100%;
         overflow-y: hidden;
-        max-height: 0; }
+        max-height: 0;
+        position: relative; }
         .my_messages .container .wrapper .mail__box .single_mail .mail_view .mail_content .mail_body, .my_messages .container .wrapper .sent__box .single_mail .mail_view .mail_content .mail_body, .my_messages .container .wrapper .bin__box .single_mail .mail_view .mail_content .mail_body {
           margin: 30px 0; }
         .my_messages .container .wrapper .mail__box .single_mail .mail_view button, .my_messages .container .wrapper .sent__box .single_mail .mail_view button, .my_messages .container .wrapper .bin__box .single_mail .mail_view button {
@@ -1726,6 +1752,72 @@ TUTOR PROFILE PAGE
           padding: 40px 30px 20px 35px;
           border-top: 1px solid rgba(90, 109, 115, 0.5);
           margin-top: 20px; }
+        .my_messages .container .wrapper .mail__box .single_mail .mail_view .editing_options, .my_messages .container .wrapper .sent__box .single_mail .mail_view .editing_options, .my_messages .container .wrapper .bin__box .single_mail .mail_view .editing_options {
+          position: absolute;
+          box-shadow: 3px 3px 3px 0px rgba(65, 78, 82, 0.3);
+          top: 3px;
+          right: 3px;
+          background: #fff;
+          padding: 10px 0;
+          display: none;
+          flex-direction: column; }
+          .my_messages .container .wrapper .mail__box .single_mail .mail_view .editing_options a, .my_messages .container .wrapper .sent__box .single_mail .mail_view .editing_options a, .my_messages .container .wrapper .bin__box .single_mail .mail_view .editing_options a {
+            display: inline;
+            font-size: 0.95rem;
+            padding: 5px 25px; }
+            .my_messages .container .wrapper .mail__box .single_mail .mail_view .editing_options a img, .my_messages .container .wrapper .sent__box .single_mail .mail_view .editing_options a img, .my_messages .container .wrapper .bin__box .single_mail .mail_view .editing_options a img {
+              width: 10px;
+              height: 10px;
+              margin-right: 5px; }
+            .my_messages .container .wrapper .mail__box .single_mail .mail_view .editing_options a:nth-child(1), .my_messages .container .wrapper .sent__box .single_mail .mail_view .editing_options a:nth-child(1), .my_messages .container .wrapper .bin__box .single_mail .mail_view .editing_options a:nth-child(1), .my_messages .container .wrapper .mail__box .single_mail .mail_view .editing_options a:nth-child(2), .my_messages .container .wrapper .sent__box .single_mail .mail_view .editing_options a:nth-child(2), .my_messages .container .wrapper .bin__box .single_mail .mail_view .editing_options a:nth-child(2) {
+              padding: 5px 15px 5px 25px; }
+            .my_messages .container .wrapper .mail__box .single_mail .mail_view .editing_options a:hover, .my_messages .container .wrapper .sent__box .single_mail .mail_view .editing_options a:hover, .my_messages .container .wrapper .bin__box .single_mail .mail_view .editing_options a:hover {
+              background-color: #fedc40; }
+          .my_messages .container .wrapper .mail__box .single_mail .mail_view .editing_options.open_options, .my_messages .container .wrapper .sent__box .single_mail .mail_view .editing_options.open_options, .my_messages .container .wrapper .bin__box .single_mail .mail_view .editing_options.open_options {
+            display: flex; }
+    .my_messages .container .wrapper .mail__box .batch_operations, .my_messages .container .wrapper .sent__box .batch_operations, .my_messages .container .wrapper .bin__box .batch_operations {
+      justify-content: flex-start;
+      align-items: center;
+      position: relative; }
+      .my_messages .container .wrapper .mail__box .batch_operations .batch_check, .my_messages .container .wrapper .sent__box .batch_operations .batch_check, .my_messages .container .wrapper .bin__box .batch_operations .batch_check {
+        padding: 10px;
+        display: flex;
+        align-items: center; }
+        .my_messages .container .wrapper .mail__box .batch_operations .batch_check input, .my_messages .container .wrapper .sent__box .batch_operations .batch_check input, .my_messages .container .wrapper .bin__box .batch_operations .batch_check input {
+          margin-right: 10px; }
+        .my_messages .container .wrapper .mail__box .batch_operations .batch_check span, .my_messages .container .wrapper .sent__box .batch_operations .batch_check span, .my_messages .container .wrapper .bin__box .batch_operations .batch_check span {
+          display: block;
+          border-top: 5px solid #414e52;
+          border-right: 5px solid transparent;
+          border-left: 5px solid transparent;
+          border-bottom: none; }
+        .my_messages .container .wrapper .mail__box .batch_operations .batch_check:hover, .my_messages .container .wrapper .sent__box .batch_operations .batch_check:hover, .my_messages .container .wrapper .bin__box .batch_operations .batch_check:hover {
+          background: #eeeeee; }
+      .my_messages .container .wrapper .mail__box .batch_operations .refresh_view, .my_messages .container .wrapper .sent__box .batch_operations .refresh_view, .my_messages .container .wrapper .bin__box .batch_operations .refresh_view {
+        padding: 10px;
+        margin-top: 2px; }
+        .my_messages .container .wrapper .mail__box .batch_operations .refresh_view img, .my_messages .container .wrapper .sent__box .batch_operations .refresh_view img, .my_messages .container .wrapper .bin__box .batch_operations .refresh_view img {
+          width: 14px;
+          height: 14px; }
+        .my_messages .container .wrapper .mail__box .batch_operations .refresh_view:hover, .my_messages .container .wrapper .sent__box .batch_operations .refresh_view:hover, .my_messages .container .wrapper .bin__box .batch_operations .refresh_view:hover {
+          background-color: #eeeeee; }
+      .my_messages .container .wrapper .mail__box .batch_operations .batch_check_options, .my_messages .container .wrapper .sent__box .batch_operations .batch_check_options, .my_messages .container .wrapper .bin__box .batch_operations .batch_check_options {
+        box-shadow: 3px 3px 3px 0px rgba(65, 78, 82, 0.3);
+        position: absolute;
+        background: #fff;
+        display: none;
+        flex-direction: column;
+        top: 80%;
+        left: 25px;
+        padding: 10px 0;
+        background-color: #fff;
+        z-index: 10; }
+        .my_messages .container .wrapper .mail__box .batch_operations .batch_check_options a, .my_messages .container .wrapper .sent__box .batch_operations .batch_check_options a, .my_messages .container .wrapper .bin__box .batch_operations .batch_check_options a {
+          padding: 5px 30px; }
+          .my_messages .container .wrapper .mail__box .batch_operations .batch_check_options a:hover, .my_messages .container .wrapper .sent__box .batch_operations .batch_check_options a:hover, .my_messages .container .wrapper .bin__box .batch_operations .batch_check_options a:hover {
+            background-color: #fedc40; }
+        .my_messages .container .wrapper .mail__box .batch_operations .batch_check_options.open_options, .my_messages .container .wrapper .sent__box .batch_operations .batch_check_options.open_options, .my_messages .container .wrapper .bin__box .batch_operations .batch_check_options.open_options {
+          display: flex; }
   .my_messages .container .wrapper .hide {
     display: none !important; }
 
@@ -2073,16 +2165,24 @@ TUTOR PROFILE PAGE
     min-width: 300px;
     margin-bottom: 30px;
     margin-right: 40px; }
-  .apps .container .wrapper textarea,
-  .expert .container .wrapper textarea {
+  .apps .container .wrapper textarea, .apps .review_section .leave_review .container .wrapper .review__wrapper .star-widget form .review_name input, .review_section .leave_review .apps .container .wrapper .review__wrapper .star-widget form .review_name input, .apps .review_section .leave_review .container .review__wrapper .star-widget form .review_name .wrapper input, .review_section .leave_review .apps .container .review__wrapper .star-widget form .review_name .wrapper input,
+  .expert .container .wrapper textarea,
+  .expert .review_section .leave_review .container .wrapper .review__wrapper .star-widget form .review_name input,
+  .review_section .leave_review .expert .container .wrapper .review__wrapper .star-widget form .review_name input,
+  .expert .review_section .leave_review .container .review__wrapper .star-widget form .review_name .wrapper input,
+  .review_section .leave_review .expert .container .review__wrapper .star-widget form .review_name .wrapper input {
     border-radius: 8px;
     border: 1px solid rgba(90, 109, 115, 0.5);
     width: 50%;
     min-width: 350px;
     height: 150px;
     padding: 20px; }
-    .apps .container .wrapper textarea::placeholder,
-    .expert .container .wrapper textarea::placeholder {
+    .apps .container .wrapper textarea::placeholder, .apps .review_section .leave_review .container .wrapper .review__wrapper .star-widget form .review_name input::placeholder, .review_section .leave_review .apps .container .wrapper .review__wrapper .star-widget form .review_name input::placeholder, .apps .review_section .leave_review .container .review__wrapper .star-widget form .review_name .wrapper input::placeholder, .review_section .leave_review .apps .container .review__wrapper .star-widget form .review_name .wrapper input::placeholder,
+    .expert .container .wrapper textarea::placeholder,
+    .expert .review_section .leave_review .container .wrapper .review__wrapper .star-widget form .review_name input::placeholder,
+    .review_section .leave_review .expert .container .wrapper .review__wrapper .star-widget form .review_name input::placeholder,
+    .expert .review_section .leave_review .container .review__wrapper .star-widget form .review_name .wrapper input::placeholder,
+    .review_section .leave_review .expert .container .review__wrapper .star-widget form .review_name .wrapper input::placeholder {
       font-family: "Roboto", sans-serif;
       color: rgba(0, 0, 0, 0.5); }
 
@@ -2201,14 +2301,14 @@ TUTOR PROFILE PAGE
         color: #5a6d73; }
   .about_me .container .wrapper .about_me_content, .about_me_students .container .wrapper .about_me_content {
     width: 100%; }
-    .about_me .container .wrapper .about_me_content textarea, .about_me_students .container .wrapper .about_me_content textarea {
+    .about_me .container .wrapper .about_me_content textarea, .about_me_students .container .wrapper .about_me_content textarea, .about_me .review_section .leave_review .container .wrapper .about_me_content .review__wrapper .star-widget form .review_name input, .review_section .leave_review .about_me .container .wrapper .about_me_content .review__wrapper .star-widget form .review_name input, .about_me .review_section .leave_review .container .review__wrapper .star-widget form .review_name .wrapper .about_me_content input, .review_section .leave_review .about_me .container .review__wrapper .star-widget form .review_name .wrapper .about_me_content input, .about_me_students .review_section .leave_review .container .wrapper .about_me_content .review__wrapper .star-widget form .review_name input, .review_section .leave_review .about_me_students .container .wrapper .about_me_content .review__wrapper .star-widget form .review_name input, .about_me_students .review_section .leave_review .container .review__wrapper .star-widget form .review_name .wrapper .about_me_content input, .review_section .leave_review .about_me_students .container .review__wrapper .star-widget form .review_name .wrapper .about_me_content input {
       appearance: none;
       width: 100%;
       border: 1px solid rgba(90, 109, 115, 0.5);
       padding: 20px;
       font-family: "Roboto", sans-serif;
       color: rgba(90, 109, 115, 0.8); }
-      .about_me .container .wrapper .about_me_content textarea::placeholder, .about_me_students .container .wrapper .about_me_content textarea::placeholder {
+      .about_me .container .wrapper .about_me_content textarea::placeholder, .about_me_students .container .wrapper .about_me_content textarea::placeholder, .about_me .review_section .leave_review .container .wrapper .about_me_content .review__wrapper .star-widget form .review_name input::placeholder, .review_section .leave_review .about_me .container .wrapper .about_me_content .review__wrapper .star-widget form .review_name input::placeholder, .about_me .review_section .leave_review .container .review__wrapper .star-widget form .review_name .wrapper .about_me_content input::placeholder, .review_section .leave_review .about_me .container .review__wrapper .star-widget form .review_name .wrapper .about_me_content input::placeholder, .about_me_students .review_section .leave_review .container .wrapper .about_me_content .review__wrapper .star-widget form .review_name input::placeholder, .review_section .leave_review .about_me_students .container .wrapper .about_me_content .review__wrapper .star-widget form .review_name input::placeholder, .about_me_students .review_section .leave_review .container .review__wrapper .star-widget form .review_name .wrapper .about_me_content input::placeholder, .review_section .leave_review .about_me_students .container .review__wrapper .star-widget form .review_name .wrapper .about_me_content input::placeholder {
         font-family: "Roboto", sans-serif;
         font-size: 0.95rem;
         color: rgba(90, 109, 115, 0.7);
@@ -2650,13 +2750,13 @@ TUTOR PROFILE PAGE
         border-right: 8px solid transparent;
         border-left: 8px solid transparent;
         pointer-events: none; }
-    .details .container .wrapper form .row textarea {
+    .details .container .wrapper form .row textarea, .details .review_section .leave_review .container .wrapper .review__wrapper .star-widget form .row .review_name input, .review_section .leave_review .details .container .wrapper .review__wrapper .star-widget form .row .review_name input, .details .review_section .leave_review .container .review__wrapper .star-widget .wrapper form .row .review_name input, .review_section .leave_review .details .container .review__wrapper .star-widget .wrapper form .row .review_name input, .details .review_section .leave_review .container .wrapper .review__wrapper .star-widget form .review_name .row input, .review_section .leave_review .details .container .wrapper .review__wrapper .star-widget form .review_name .row input, .details .review_section .leave_review .container .review__wrapper .star-widget .wrapper form .review_name .row input, .review_section .leave_review .details .container .review__wrapper .star-widget .wrapper form .review_name .row input {
       width: 60%;
       border: 1px solid rgba(90, 109, 115, 0.5);
       padding: 10px;
       font-family: "Roboto", sans-serif;
       color: #5a6d73; }
-      .details .container .wrapper form .row textarea ::placeholder {
+      .details .container .wrapper form .row textarea ::placeholder, .details .review_section .leave_review .container .wrapper .review__wrapper .star-widget form .row .review_name input ::placeholder, .review_section .leave_review .details .container .wrapper .review__wrapper .star-widget form .row .review_name input ::placeholder, .details .review_section .leave_review .container .review__wrapper .star-widget .wrapper form .row .review_name input ::placeholder, .review_section .leave_review .details .container .review__wrapper .star-widget .wrapper form .row .review_name input ::placeholder, .details .review_section .leave_review .container .wrapper .review__wrapper .star-widget form .review_name .row input ::placeholder, .review_section .leave_review .details .container .wrapper .review__wrapper .star-widget form .review_name .row input ::placeholder, .details .review_section .leave_review .container .review__wrapper .star-widget .wrapper form .review_name .row input ::placeholder, .review_section .leave_review .details .container .review__wrapper .star-widget .wrapper form .review_name .row input ::placeholder {
         font-family: "Roboto", sans-serif; }
     .details .container .wrapper form .row:first-child {
       margin-bottom: 30px; }
@@ -2691,6 +2791,163 @@ TUTOR PROFILE PAGE
     background-color: #fff;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px; }
+
+/****************
+REVIEW 
+***************/
+.review_section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .review_section .leave_review {
+    width: 100%; }
+    .review_section .leave_review .container .review__wrapper {
+      text-align: center;
+      width: 50%;
+      min-width: 330px;
+      margin: 0 auto;
+      position: relative; }
+      .review_section .leave_review .container .review__wrapper .post {
+        display: none; }
+        .review_section .leave_review .container .review__wrapper .post .text {
+          font-size: 20px;
+          color: #414e52;
+          margin: 1rem 0; }
+        .review_section .leave_review .container .review__wrapper .post .your_review {
+          padding: 10px 20px;
+          border: 1px solid rgba(90, 109, 115, 0.7);
+          margin-bottom: 1rem;
+          color: #414e52;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: space-between; }
+          .review_section .leave_review .container .review__wrapper .post .your_review .review_img_out {
+            width: 80px;
+            height: 80px;
+            margin-right: 2%; }
+            .review_section .leave_review .container .review__wrapper .post .your_review .review_img_out img {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+              object-position: center;
+              display: block;
+              border-radius: 50%; }
+          .review_section .leave_review .container .review__wrapper .post .your_review .review_name_out {
+            margin-right: 2%; }
+          .review_section .leave_review .container .review__wrapper .post .your_review .review_content_out {
+            color: #b497cf;
+            flex: 0 0 50%;
+            min-width: 200px; }
+        .review_section .leave_review .container .review__wrapper .post .edit {
+          position: absolute;
+          top: 1em;
+          right: 0;
+          cursor: pointer;
+          color: rgba(65, 78, 82, 0.7); }
+          .review_section .leave_review .container .review__wrapper .post .edit:hover {
+            text-decoration: underline;
+            color: #414e52; }
+        .review_section .leave_review .container .review__wrapper .post .btn {
+          color: #414e52;
+          background: #fedc40;
+          font-size: 1rem;
+          font-family: "Roboto", sans-serif;
+          border-radius: 10px;
+          border: none;
+          padding: 0.9em 1.2em;
+          cursor: pointer; }
+      .review_section .leave_review .container .review__wrapper .star-widget {
+        padding: 40px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center; }
+        .review_section .leave_review .container .review__wrapper .star-widget h4 {
+          font-size: 1.5rem;
+          font-weight: 300;
+          color: #414e52;
+          margin-bottom: 20px; }
+        .review_section .leave_review .container .review__wrapper .star-widget .labels {
+          display: flex;
+          flex-direction: row-reverse; }
+          .review_section .leave_review .container .review__wrapper .star-widget .labels input {
+            display: none; }
+            .review_section .leave_review .container .review__wrapper .star-widget .labels input:not(checked) ~ label:hover svg path, .review_section .leave_review .container .review__wrapper .star-widget .labels input:not(checked) ~ label:hover ~ label svg path {
+              fill: #efa650; }
+            .review_section .leave_review .container .review__wrapper .star-widget .labels input:checked ~ label svg path {
+              fill: #efa650; }
+            .review_section .leave_review .container .review__wrapper .star-widget .labels input#rate-5:checked ~ label svg path {
+              fill: #efa650; }
+          .review_section .leave_review .container .review__wrapper .star-widget .labels label {
+            height: 20px;
+            line-height: 20px;
+            position: relative;
+            margin-right: 25px; }
+            .review_section .leave_review .container .review__wrapper .star-widget .labels label svg {
+              height: 20px;
+              position: absolute;
+              left: 0;
+              top: 0; }
+              .review_section .leave_review .container .review__wrapper .star-widget .labels label svg path {
+                fill: rgba(65, 78, 82, 0.7); }
+        .review_section .leave_review .container .review__wrapper .star-widget form {
+          display: none;
+          width: 80%; }
+          .review_section .leave_review .container .review__wrapper .star-widget form .textarea, .review_section .leave_review .container .review__wrapper .star-widget form .review_name {
+            width: 100%; }
+            .review_section .leave_review .container .review__wrapper .star-widget form .textarea textarea, .review_section .leave_review .container .review__wrapper .star-widget form .review_name textarea, .review_section .leave_review .container .review__wrapper .star-widget form .review_name input {
+              border: 1px solid rgba(90, 109, 115, 0.5);
+              padding: 10px;
+              width: 100%;
+              resize: none;
+              margin-top: 1.5rem;
+              border-radius: 0.5em;
+              font-family: "Roboto", sans-serif;
+              color: #5a6d73;
+              margin-bottom: 1.5rem; }
+              .review_section .leave_review .container .review__wrapper .star-widget form .textarea textarea:focus, .review_section .leave_review .container .review__wrapper .star-widget form .review_name textarea:focus, .review_section .leave_review .container .review__wrapper .star-widget form .review_name input:focus {
+                outline: none; }
+          .review_section .leave_review .container .review__wrapper .star-widget form .review_name input {
+            font-size: 1rem;
+            margin-bottom: 0; }
+          .review_section .leave_review .container .review__wrapper .star-widget form .btn {
+            color: #414e52;
+            background: #fedc40;
+            font-size: 1.2rem;
+            font-family: "Roboto", sans-serif;
+            border-radius: 10px;
+            border: none;
+            padding: 0.5em 1.4em;
+            border-radius: 0.5em;
+            cursor: pointer; }
+          .review_section .leave_review .container .review__wrapper .star-widget form .upload_img {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px auto;
+            position: relative;
+            padding: 5px; }
+            .review_section .leave_review .container .review__wrapper .star-widget form .upload_img .thumbnail_img {
+              background-color: #f6f6f6;
+              border-radius: 50%;
+              width: 90%;
+              height: 90%;
+              margin: 0 auto; }
+              .review_section .leave_review .container .review__wrapper .star-widget form .upload_img .thumbnail_img img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%; }
+            .review_section .leave_review .container .review__wrapper .star-widget form .upload_img .upload {
+              position: absolute;
+              width: 18px;
+              height: 18px;
+              top: 5px;
+              right: 5px;
+              transition: 0.4s ease-in-out; }
+              .review_section .leave_review .container .review__wrapper .star-widget form .upload_img .upload:hover {
+                transform: scale(1.2); }
 
 /*******************
     RESPONSIVE
@@ -2877,8 +3134,12 @@ TUTOR PROFILE PAGE
     width: 20%;
     margin-right: 40px;
     min-width: unset; }
-  .apps .container .wrapper textarea,
-  .expert .container .wrapper textarea {
+  .apps .container .wrapper textarea, .apps .review_section .leave_review .container .wrapper .review__wrapper .star-widget form .review_name input, .review_section .leave_review .apps .container .wrapper .review__wrapper .star-widget form .review_name input, .apps .review_section .leave_review .container .review__wrapper .star-widget form .review_name .wrapper input, .review_section .leave_review .apps .container .review__wrapper .star-widget form .review_name .wrapper input,
+  .expert .container .wrapper textarea,
+  .expert .review_section .leave_review .container .wrapper .review__wrapper .star-widget form .review_name input,
+  .review_section .leave_review .expert .container .wrapper .review__wrapper .star-widget form .review_name input,
+  .expert .review_section .leave_review .container .review__wrapper .star-widget form .review_name .wrapper input,
+  .review_section .leave_review .expert .container .review__wrapper .star-widget form .review_name .wrapper input {
     max-width: 50%; }
 
   .payment_method .container .wrapper .inputs {
@@ -3346,8 +3607,12 @@ TUTOR PROFILE PAGE
     width: 30%;
     margin-right: 40px;
     min-width: unset; }
-  .apps .container .wrapper textarea,
-  .expert .container .wrapper textarea {
+  .apps .container .wrapper textarea, .apps .review_section .leave_review .container .wrapper .review__wrapper .star-widget form .review_name input, .review_section .leave_review .apps .container .wrapper .review__wrapper .star-widget form .review_name input, .apps .review_section .leave_review .container .review__wrapper .star-widget form .review_name .wrapper input, .review_section .leave_review .apps .container .review__wrapper .star-widget form .review_name .wrapper input,
+  .expert .container .wrapper textarea,
+  .expert .review_section .leave_review .container .wrapper .review__wrapper .star-widget form .review_name input,
+  .review_section .leave_review .expert .container .wrapper .review__wrapper .star-widget form .review_name input,
+  .expert .review_section .leave_review .container .review__wrapper .star-widget form .review_name .wrapper input,
+  .review_section .leave_review .expert .container .review__wrapper .star-widget form .review_name .wrapper input {
     width: 70%; }
 
   .tutor_details_header, .tutor_lesson_header {
@@ -3776,7 +4041,90 @@ TUTOR PROFILE PAGE
       order: 4; }
 
   .tutor_lesson_header {
-    margin-bottom: 200px; } }
+    margin-bottom: 200px; }
+
+  .review_section .leave_review .container .review__wrapper .post {
+    display: none; }
+    .review_section .leave_review .container .review__wrapper .post .your_review {
+      padding: 10px 20px;
+      border: 1px solid rgba(90, 109, 115, 0.7);
+      margin-bottom: 1rem;
+      color: #414e52;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center; }
+      .review_section .leave_review .container .review__wrapper .post .your_review .review_img_out {
+        width: 80px;
+        height: 80px;
+        margin-right: 10%; }
+        .review_section .leave_review .container .review__wrapper .post .your_review .review_img_out img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          object-position: center;
+          display: block;
+          border-radius: 50%; }
+      .review_section .leave_review .container .review__wrapper .post .your_review .review_name_out {
+        margin-right: 0%; }
+      .review_section .leave_review .container .review__wrapper .post .your_review .review_content_out {
+        color: #b497cf;
+        margin-top: 10px;
+        flex: 0 0 100%;
+        min-width: 200px; }
+    .review_section .leave_review .container .review__wrapper .post .edit {
+      position: absolute;
+      top: 1em;
+      right: 0;
+      cursor: pointer;
+      color: rgba(65, 78, 82, 0.7); }
+      .review_section .leave_review .container .review__wrapper .post .edit:hover {
+        text-decoration: underline;
+        color: #414e52; }
+    .review_section .leave_review .container .review__wrapper .post .btn {
+      color: #414e52;
+      background: #fedc40;
+      font-size: 1rem;
+      font-family: "Roboto", sans-serif;
+      border-radius: 10px;
+      border: none;
+      padding: 0.9em 1.2em;
+      cursor: pointer; }
+  .review_section .leave_review .container .review__wrapper .star-widget {
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; }
+    .review_section .leave_review .container .review__wrapper .star-widget h4 {
+      font-size: 1.5rem;
+      font-weight: 300;
+      color: #414e52;
+      margin-bottom: 20px; }
+    .review_section .leave_review .container .review__wrapper .star-widget .labels {
+      display: flex;
+      flex-direction: row-reverse; }
+      .review_section .leave_review .container .review__wrapper .star-widget .labels input {
+        display: none; }
+        .review_section .leave_review .container .review__wrapper .star-widget .labels input:not(checked) ~ label:hover svg path, .review_section .leave_review .container .review__wrapper .star-widget .labels input:not(checked) ~ label:hover ~ label svg path {
+          fill: #efa650; }
+        .review_section .leave_review .container .review__wrapper .star-widget .labels input:checked ~ label svg path {
+          fill: #efa650; }
+        .review_section .leave_review .container .review__wrapper .star-widget .labels input#rate-5:checked ~ label svg path {
+          fill: #efa650; }
+      .review_section .leave_review .container .review__wrapper .star-widget .labels label {
+        height: 20px;
+        line-height: 20px;
+        position: relative;
+        margin-right: 25px; }
+        .review_section .leave_review .container .review__wrapper .star-widget .labels label svg {
+          height: 20px;
+          position: absolute;
+          left: 0;
+          top: 0; }
+          .review_section .leave_review .container .review__wrapper .star-widget .labels label svg path {
+            fill: rgba(65, 78, 82, 0.7); } }
 @media (max-width: 768px) {
   .map-section .map-container .map-wrapper .map-box .map-marker {
     transform: scale(0.75); }
@@ -4042,7 +4390,7 @@ TUTOR PROFILE PAGE
     padding: 20px; }
     .tutor_section .container .wrapper button {
       font-size: 0.9rem; }
-    .tutor_section .container .wrapper textarea {
+    .tutor_section .container .wrapper textarea, .tutor_section .review_section .leave_review .container .wrapper .review__wrapper .star-widget form .review_name input, .review_section .leave_review .tutor_section .container .wrapper .review__wrapper .star-widget form .review_name input, .tutor_section .review_section .leave_review .container .review__wrapper .star-widget form .review_name .wrapper input, .review_section .leave_review .tutor_section .container .review__wrapper .star-widget form .review_name .wrapper input {
       min-width: 100%; }
 
   .edit_my_profile .container form {
@@ -4321,13 +4669,13 @@ TUTOR PROFILE PAGE
           border-right: 8px solid transparent;
           border-left: 8px solid transparent;
           pointer-events: none; }
-      .details .container .wrapper form .row textarea {
+      .details .container .wrapper form .row textarea, .details .review_section .leave_review .container .wrapper .review__wrapper .star-widget form .row .review_name input, .review_section .leave_review .details .container .wrapper .review__wrapper .star-widget form .row .review_name input, .details .review_section .leave_review .container .review__wrapper .star-widget .wrapper form .row .review_name input, .review_section .leave_review .details .container .review__wrapper .star-widget .wrapper form .row .review_name input, .details .review_section .leave_review .container .wrapper .review__wrapper .star-widget form .review_name .row input, .review_section .leave_review .details .container .wrapper .review__wrapper .star-widget form .review_name .row input, .details .review_section .leave_review .container .review__wrapper .star-widget .wrapper form .review_name .row input, .review_section .leave_review .details .container .review__wrapper .star-widget .wrapper form .review_name .row input {
         width: 100%;
         border: 1px solid rgba(90, 109, 115, 0.5);
         padding: 10px;
         font-family: "Roboto", sans-serif;
         color: #5a6d73; }
-        .details .container .wrapper form .row textarea ::placeholder {
+        .details .container .wrapper form .row textarea ::placeholder, .details .review_section .leave_review .container .wrapper .review__wrapper .star-widget form .row .review_name input ::placeholder, .review_section .leave_review .details .container .wrapper .review__wrapper .star-widget form .row .review_name input ::placeholder, .details .review_section .leave_review .container .review__wrapper .star-widget .wrapper form .row .review_name input ::placeholder, .review_section .leave_review .details .container .review__wrapper .star-widget .wrapper form .row .review_name input ::placeholder, .details .review_section .leave_review .container .wrapper .review__wrapper .star-widget form .review_name .row input ::placeholder, .review_section .leave_review .details .container .wrapper .review__wrapper .star-widget form .review_name .row input ::placeholder, .details .review_section .leave_review .container .review__wrapper .star-widget .wrapper form .review_name .row input ::placeholder, .review_section .leave_review .details .container .review__wrapper .star-widget .wrapper form .review_name .row input ::placeholder {
           font-family: "Roboto", sans-serif; }
       .details .container .wrapper form .row:first-child {
         margin-bottom: 30px; }

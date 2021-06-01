@@ -590,6 +590,7 @@ header {
 			.item {
 				@include flex(start, center, nowrap, row);
 				height: 100%;
+				padding: 20px 40px;
 				.item_left {
 					width: 35%;
 					img {
@@ -598,10 +599,10 @@ header {
 					}
 				}
 				.item_right {
+					// border: 1px solid black;
+					width: 100%;
 					height: 100%;
-					width: 65%;
-					height: 100%;
-					padding-left: 80px;
+					// padding-left: 80px;
 					position: relative;
 
 					align-self: center;
@@ -620,8 +621,9 @@ header {
 							}
 						}
 						.item-text {
-							width: 80%;
-							margin-top: 50px;
+							width: 100%;
+							// margin-top: 50px;
+							margin: 20px auto 20px auto;
 						}
 					}
 				}
@@ -1574,7 +1576,7 @@ TUTOR PROFILE PAGE
 						width: 100%;
 
 						padding: 10px 20px;
-						@include flex(flex-start, space-between, wrap, row);
+						@include flex(center, space-between, wrap, row);
 						&:nth-child(odd) {
 							background-color: lighten($backgorund-primary, 3%);
 						}
@@ -1582,6 +1584,7 @@ TUTOR PROFILE PAGE
 							@include flex(center, flex-start, nowrap, row);
 							// border: 1px solid black;
 							width: 50%;
+							padding: 10px;
 
 							input {
 								margin-right: 20px;
@@ -1597,10 +1600,19 @@ TUTOR PROFILE PAGE
 							width: 50%;
 							color: rgba($line_color, 0.5);
 							font-size: 0.9rem;
-							@include flex(flex-end, flex-end, nowrap, row);
+							@include flex(center, flex-end, nowrap, row);
 							.mail_options {
+								@include flex(center, center, nowrap, column);
 								margin-left: 15px;
 								display: none;
+								padding: 10px;
+								width: 35px;
+								height: auto;
+								text-align: center;
+								cursor: pointer;
+								pointer-events: none;
+								z-index: 10;
+								position: relative;
 								span {
 									width: 4px;
 									height: 4px;
@@ -1612,7 +1624,11 @@ TUTOR PROFILE PAGE
 									}
 								}
 								&.show_options {
-									display: block;
+									display: flex;
+									pointer-events: all;
+								}
+								&:hover {
+									background: $backgorund-primary;
 								}
 							}
 						}
@@ -1621,6 +1637,7 @@ TUTOR PROFILE PAGE
 							width: 100%;
 							overflow-y: hidden;
 							max-height: 0;
+							position: relative;
 
 							.mail_content {
 								.mail_body {
@@ -1637,10 +1654,100 @@ TUTOR PROFILE PAGE
 								border-top: 1px solid rgba($line_color, 0.5);
 								margin-top: 20px;
 							}
+							.editing_options {
+								position: absolute;
+								box-shadow: 3px 3px 3px 0px rgba($footer, 0.3);
+								top: 3px;
+								right: 3px;
+								background: $white;
+								padding: 10px 0;
+								display: none;
+								flex-direction: column;
+								a {
+									display: inline;
+
+									font-size: 0.95rem;
+									// margin-left: 15px;
+									padding: 5px 25px;
+									img {
+										width: 10px;
+										height: 10px;
+										margin-right: 5px;
+									}
+									&:nth-child(1),
+									&:nth-child(2) {
+										padding: 5px 15px 5px 25px;
+									}
+									&:hover {
+										background-color: $btn-primary;
+									}
+								}
+
+								&.open_options {
+									display: flex;
+								}
+							}
+						}
+					}
+					.batch_operations {
+						justify-content: flex-start;
+						align-items: center;
+						position: relative;
+						.batch_check {
+							// background: $backgorund-primary;
+							padding: 10px;
+							display: flex;
+							align-items: center;
+							input {
+								margin-right: 10px;
+							}
+							span {
+								display: block;
+								border-top: 5px solid $footer;
+								border-right: 5px solid transparent;
+								border-left: 5px solid transparent;
+								border-bottom: none;
+							}
+							&:hover {
+								background: $backgorund-primary;
+							}
+						}
+						.refresh_view {
+							padding: 10px;
+							margin-top: 2px;
+							img {
+								width: 14px;
+								height: 14px;
+							}
+							&:hover {
+								background-color: $backgorund-primary;
+							}
+						}
+						.batch_check_options {
+							box-shadow: 3px 3px 3px 0px rgba($footer, 0.3);
+							position: absolute;
+							background: $white;
+							display: none;
+							flex-direction: column;
+							top: 80%;
+							left: 25px;
+							padding: 10px 0;
+							background-color: $white;
+							z-index: 10;
+							a {
+								padding: 5px 30px;
+								&:hover {
+									background-color: $btn-primary;
+								}
+							}
+							&.open_options {
+								display: flex;
+							}
 						}
 					}
 				}
 			}
+
 			.sent {
 				&__box {
 					@extend .mail__box;
@@ -2905,6 +3012,206 @@ TUTOR PROFILE PAGE
 			background-color: $white;
 			border-bottom-left-radius: 10px;
 			border-bottom-right-radius: 10px;
+		}
+	}
+}
+
+/****************
+REVIEW 
+***************/
+.review_section {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	.leave_review {
+		width: 100%;
+
+		.container {
+			.review__wrapper {
+				text-align: center;
+				// border: 1px solid green;
+				width: 50%;
+				min-width: 330px;
+				margin: 0 auto;
+				position: relative;
+				.post {
+					display: none;
+
+					.text {
+						font-size: 20px;
+						color: $footer;
+						margin: 1rem 0;
+					}
+					.your_review {
+						padding: 10px 20px;
+						border: 1px solid rgba($line_color, 0.7);
+						margin-bottom: 1rem;
+						color: $footer;
+						display: flex;
+						flex-wrap: wrap;
+						align-items: center;
+						justify-content: space-between;
+						.review_img_out {
+							width: 80px;
+							height: 80px;
+							margin-right: 2%;
+							img {
+								width: 100%;
+								height: 100%;
+								object-fit: contain;
+								object-position: center;
+								display: block;
+								border-radius: 50%;
+							}
+						}
+						.review_name_out {
+							margin-right: 2%;
+						}
+						.review_content_out {
+							color: $accents;
+							flex: 0 0 50%;
+							min-width: 200px;
+						}
+					}
+					.edit {
+						position: absolute;
+						top: 1em;
+						right: 0;
+						cursor: pointer;
+						color: rgba($footer, 0.7);
+						&:hover {
+							text-decoration: underline;
+							color: rgba($footer, 1);
+						}
+					}
+					.btn {
+						@include btn-primary($footer, 1rem);
+						padding: 0.9em 1.2em;
+						cursor: pointer;
+					}
+				}
+				.star-widget {
+					padding: 40px 0;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					text-align: center;
+					h4 {
+						font-size: 1.5rem;
+						font-weight: 300;
+						color: $footer;
+						margin-bottom: 20px;
+					}
+
+					.labels {
+						display: flex;
+						flex-direction: row-reverse;
+
+						input {
+							display: none;
+							&:not(checked) ~ label:hover svg path,
+							&:not(checked) ~ label:hover ~ label svg path {
+								fill: $star_yellow;
+							}
+							&:checked ~ label svg path {
+								fill: $star_yellow;
+							}
+							&#rate-5:checked ~ label svg path {
+								fill: $star_yellow;
+							}
+						}
+
+						label {
+							height: 20px;
+							line-height: 20px;
+							// border: 1px solid red;
+							position: relative;
+							margin-right: 25px;
+
+							svg {
+								height: 20px;
+								// border: 1px solid green;
+								position: absolute;
+								left: 0;
+								top: 0;
+								path {
+									fill: rgba($footer, 0.7);
+								}
+							}
+						}
+					}
+					form {
+						display: none;
+						width: 80%;
+						.textarea {
+							width: 100%;
+							textarea {
+								border: 1px solid rgba($line_color, 0.5);
+								padding: 10px;
+								width: 100%;
+								resize: none;
+								margin-top: 1.5rem;
+								border-radius: 0.5em;
+								font-family: $font_family;
+								color: $line_color;
+								margin-bottom: 1.5rem;
+								&:focus {
+									outline: none;
+								}
+							}
+						}
+						.review_name {
+							@extend .textarea;
+							input {
+								@extend textarea;
+								font-size: 1rem;
+								margin-bottom: 0;
+							}
+						}
+						.btn {
+							@include btn-primary($footer, 1.2rem);
+							padding: 0.5em 1.4em;
+							border-radius: 0.5em;
+							cursor: pointer;
+						}
+						.upload_img {
+							width: 120px;
+							height: 120px;
+							margin: 0 auto 20px auto;
+							// border: 1px solid rgba($line_color, 0.7);
+							position: relative;
+							padding: 5px;
+
+							.thumbnail_img {
+								background-color: lighten($backgorund-primary, 3%);
+								border-radius: 50%;
+								width: 90%;
+								height: 90%;
+								margin: 0 auto;
+								img {
+									width: 100%;
+									height: 100%;
+									border-radius: 50%;
+								}
+							}
+
+							.upload {
+								position: absolute;
+								width: 18px;
+								height: 18px;
+								top: 5px;
+								right: 5px;
+								transition: $transition;
+								&:hover {
+									transform: scale(1.2);
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }

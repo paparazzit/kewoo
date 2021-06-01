@@ -42,10 +42,10 @@ $("#testimonials").owlCarousel({
 			items: 1,
 		},
 		800: {
-			items: 1,
+			items: 3,
 		},
 		1000: {
-			items: 1,
+			items: 3,
 		},
 	},
 });
@@ -361,18 +361,43 @@ mail_nav.forEach((button) => {
 });
 
 // Open mail messages
-var single_mail = document.querySelectorAll(".single_mail");
+var single_mail = document.querySelectorAll(".sender");
 var current_mail = null;
 single_mail.forEach((mail) => {
 	mail.addEventListener("click", () => {
-		var my_mail = mail.childNodes[9];
-		var mail_options = mail.childNodes[7].childNodes[2];
+		var my_mail = mail.parentNode.childNodes[9];
+		var mail_options = mail.nextElementSibling.childNodes[2];
 		my_mail.classList.toggle("open");
 		mail_options.classList.toggle("show_options");
+		console.log(mail_options);
 	});
 });
 
 // Get mail_views
+
+var mail_options = document.querySelectorAll(".mail_options");
+var editing_optins;
+mail_options.forEach((mail_option) => {
+	mail_option.addEventListener("click", () => {
+		var editing_optins =
+			mail_option.parentElement.nextElementSibling.childNodes[5];
+		editing_optins.classList.toggle("open_options");
+		console.log(editing_optins);
+	});
+});
+
+// MAIL SELECT ALL SHOW AND HIDE
+
+var batch_options = document.querySelectorAll(".batch_check");
+
+// batch_options.addEventListener("click", () => {
+// 	batch_toggle.classList.toggle("open_options");
+// });
+batch_options.forEach((option) => {
+	option.addEventListener("click", () => {
+		option.parentNode.childNodes[5].classList.toggle("open_options");
+	});
+});
 
 function hideMailViews() {
 	mail_view_all.forEach((show_box) => {
@@ -385,6 +410,8 @@ function removeActivMailNav() {
 		b.parentElement.classList.remove("active");
 	});
 }
+
+// MAIL OPTIONS
 
 // STUDENT_TIME TABLE
 
