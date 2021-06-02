@@ -2357,10 +2357,12 @@ TUTOR PROFILE PAGE
 .teach_langs {
 	.container {
 		.wrapper {
-			@include flex(flex-start, flex-start, row, wrap);
+			@include flex(flex-start, flex-start, wrap, row);
 			> p {
 				width: 25%;
-				min-width: 350px;
+				min-width: 300px;
+				margin-bottom: 30px;
+				margin-right: 40px;
 			}
 			.lang_wrapper {
 				// border: 2px solid red;

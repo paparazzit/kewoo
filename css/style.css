@@ -2279,11 +2279,13 @@ TUTOR PROFILE PAGE
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  flex-wrap: row;
-  flex-direction: wrap; }
+  flex-wrap: wrap;
+  flex-direction: row; }
   .teach_langs .container .wrapper > p {
     width: 25%;
-    min-width: 350px; }
+    min-width: 300px;
+    margin-bottom: 30px;
+    margin-right: 40px; }
   .teach_langs .container .wrapper .lang_wrapper {
     display: flex;
     align-items: center;
@@ -4015,7 +4017,6 @@ REVIEW
       margin-right: 0; }
     .my_messages .container .wrapper .mail_panel .mail_slider .mail_count {
       font-size: 0.85rem;
-      border: 1px solid black;
       width: 100%; }
 
   .payment_method .container .wrapper {
@@ -4534,7 +4535,6 @@ REVIEW
         text-align: center; }
       .my_messages .container .wrapper .mail_panel .mail_slider .mail_count {
         font-size: 0.85rem;
-        border: 1px solid black;
         width: 100%; }
     .my_messages .container .wrapper .mail_box .single_mail {
       display: flex;
@@ -4853,11 +4853,13 @@ REVIEW
       justify-content: center;
       flex-wrap: wrap;
       flex-direction: column;
+      padding: 5px 0;
       border: 1px solid rgba(90, 109, 115, 0.3);
       border-bottom: none; }
       .my_classes .container .wrapper .calendar_table table tr td {
-        padding: 10px 7px;
-        font-size: 0.9rem; }
+        padding: 0px 0;
+        font-size: 0.9rem;
+        margin-bottom: 3px; }
       .my_classes .container .wrapper .calendar_table table tr:last-child {
         border-bottom: 1px solid rgba(90, 109, 115, 0.3); }
 

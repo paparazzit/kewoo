@@ -1276,7 +1276,7 @@
 					.mail_slider {
 						.mail_count {
 							font-size: 0.85rem;
-							border: 1px solid black;
+							// border: 1px solid black;
 							width: 100%;
 						}
 					}
@@ -1978,7 +1978,7 @@
 					.mail_slider {
 						.mail_count {
 							font-size: 0.85rem;
-							border: 1px solid black;
+							// border: 1px solid black;
 							width: 100%;
 						}
 					}
@@ -2391,9 +2391,11 @@
 					table {
 						tr {
 							@include flex(center, center, wrap, column);
+							padding: 5px 0;
 							td {
-								padding: 10px 7px;
+								padding: 0px 0;
 								font-size: 0.9rem;
+								margin-bottom: 3px;
 							}
 							border: 1px solid rgba($line_color, 0.3);
 							border-bottom: none;
