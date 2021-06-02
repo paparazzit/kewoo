@@ -328,7 +328,7 @@ nav {
   nav .container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: nowrap;
     flex-direction: row; }
     nav .container .logo {
@@ -360,11 +360,24 @@ nav {
           margin: 0 15px; }
       nav .container .drop-down hr {
         display: none; }
-      nav .container .drop-down .langs li::after {
-        content: "/";
-        margin: 0 5px; }
-      nav .container .drop-down .langs li:last-child::after {
-        display: none; }
+      nav .container .drop-down .langs li {
+        font-size: 0.9rem; }
+        nav .container .drop-down .langs li::after {
+          content: "/";
+          margin: 0 5px; }
+        nav .container .drop-down .langs li:last-child::after {
+          display: none; }
+      nav .container .drop-down .login {
+        margin-left: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        nav .container .drop-down .login img {
+          width: 20px;
+          height: 20px; }
+        nav .container .drop-down .login p {
+          margin-left: 10px;
+          font-size: 0.9rem; }
     nav .container .active {
       height: 40vh;
       padding: 20px 30px; }
@@ -3760,6 +3773,8 @@ REVIEW
           margin-top: 15px; }
           nav .container .drop-down .langs li:last-child::after {
             display: none; }
+        nav .container .drop-down .login {
+          margin-top: 10px; }
       nav .container .active {
         height: 40vh;
         padding: 20px 30px;
