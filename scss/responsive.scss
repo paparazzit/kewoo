@@ -975,6 +975,18 @@
 				padding: 20px 30px;
 				transition-delay: 0.4s;
 			}
+			.login {
+				margin-left: 30px;
+				position: absolute;
+				right: 80px;
+				top: 50%;
+				transform: translateY(-50%);
+
+				img {
+					width: 25px;
+					height: 25px;
+				}
+			}
 			.toggle-bar {
 				width: 20px;
 				height: 20px;

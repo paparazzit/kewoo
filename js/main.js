@@ -1,17 +1,3 @@
-// nav
-
-var toggleBar = document.querySelector(".toggle-bar");
-var dropDown = document.querySelector(".drop-down");
-var nav = document.querySelector("nav");
-
-toggleBar.addEventListener("click", () => {
-	console.log("klknuo sam");
-	dropDown.classList.toggle("active");
-	nav.classList.toggle("no-border");
-	toggleBar.classList.toggle("toggle-open");
-	console.log(nav);
-});
-
 $("#tutors").owlCarousel({
 	loop: false,
 	margin: 50,

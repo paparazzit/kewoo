@@ -31,6 +31,14 @@
 		transform: scale(1);
 	}
 }
+@keyframes login_anim {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
 
 // ELEMENTS
 .card {
@@ -75,133 +83,14 @@
 		}
 	}
 }
+.btn {
+	cursor: pointer;
+}
 
 /********************
 		NAV
 *********************/
-.nav {
-	background: linear-gradient(
-		to right,
-		rgba($accents, 0.8),
-		rgba($accents, 0.6)
-	);
-}
-nav {
-	position: relative;
-	top: 0;
-	width: 100%;
-	background-color: $backgorund-primary;
-
-	padding: 15px 0;
-	border-bottom-left-radius: 10px;
-	border-bottom-right-radius: 10px;
-	box-shadow: 0 0 8px rgba(0, 0, 0, 0.418);
-	z-index: 110;
-	transition-delay: 0.4s;
-
-	.container {
-		@include flex(center, space-between, nowrap, row);
-
-		.logo {
-			width: 86px;
-
-			img {
-				width: 100%;
-				display: block;
-			}
-		}
-		.drop-down {
-			@include flex(center, space-between, nowrap, row);
-
-			width: 90%;
-			ul {
-				@include flex(center, space-between, nowrap, row);
-			}
-			.nav-links {
-				width: 100%;
-				@include flex(center, center, nowrap, row);
-				li {
-					margin: 0 15px;
-				}
-			}
-			hr {
-				display: none;
-			}
-			.langs {
-				li {
-					font-size: 0.9rem;
-					&::after {
-						content: "/";
-						margin: 0 5px;
-					}
-					&:last-child {
-						&::after {
-							display: none;
-						}
-					}
-				}
-			}
-			.login {
-				margin-left: 30px;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				img {
-					width: 20px;
-					height: 20px;
-				}
-				p {
-					margin-left: 10px;
-					font-size: 0.9rem;
-				}
-			}
-		}
-		.active {
-			height: 40vh;
-			padding: 20px 30px;
-		}
-
-		.toggle-bar {
-			width: 20px;
-			height: 20px;
-			cursor: pointer;
-			transition: 0.4s all ease-in-out;
-			display: none;
-			overflow-x: hidden;
-			// border: 1px solid black;
-			position: relative;
-			span {
-				position: absolute;
-				width: 18px;
-				height: 2px;
-				display: block;
-				background-color: $footer;
-				transition: 0.4s all ease-in-out;
-				border-radius: 5px;
-				&:nth-child(1) {
-					transform: translateY(1px);
-				}
-				&:nth-child(2) {
-					transform: translateY(7px);
-				}
-				&:nth-child(3) {
-					transform: translateY(13px);
-				}
-			}
-			&.toggle-open {
-				span:nth-child(2) {
-					transform: translateX(-50px);
-				}
-				span:nth-child(1) {
-					transform: rotate(45deg) translate(5px, 5px);
-				}
-				span:nth-child(3) {
-					transform: rotate(-45deg) translate(-5px, 5px);
-				}
-			}
-		}
-	}
-}
+@import "navigation";
 .no-border {
 	border-bottom-left-radius: 0px !important;
 	border-bottom-right-radius: 0px !important;
