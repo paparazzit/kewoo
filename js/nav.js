@@ -18,9 +18,14 @@ toggleBar.addEventListener("click", () => {
 });
 
 // SING UP LOGIN
-
 login.addEventListener("click", () => {
 	login_drop.classList.toggle("show_login");
+});
+document.addEventListener("click", (e) => {
+	if (!e.target.classList.contains("my_log_in")) {
+		login_drop.classList.remove("show_login");
+		console.log(e.target.classList);
+	}
 });
 
 login_btns.forEach((login_btn) => {
@@ -35,10 +40,6 @@ login_btns.forEach((login_btn) => {
 	});
 });
 
-forgot_pass.addEventListener("click", () => {
-	hide_login_form();
-});
-
 function removeActive_btn() {
 	login_btns.forEach((login_btn) => {
 		login_btn.classList.remove("active_btn");
@@ -50,3 +51,15 @@ function hide_login_form() {
 		opt.classList.remove("show_form");
 	});
 }
+
+// document.addEventListener("click", (e) => {
+// 	console.log(e.target);
+// 	var imam_log = e.target.classList.contains("show_login");
+// 	if (imam_log) {
+// 		console.log("IMAM LOG");
+// 	}
+// });
+
+forgot_pass.addEventListener("click", () => {
+	hide_login_form();
+});

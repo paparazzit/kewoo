@@ -33,53 +33,53 @@
 						</ul>
 					</div>
 					<div class="login">
-						<div class="login_icon">
+						<div class="login_icon my_log_in" id="login_icon">
 							<svg viewBox="0 0 34 34"><path d="M17 2.83301C13.0942 2.83301 9.91667 6.01059 9.91667 9.91634C9.91667 13.8221 13.0942 16.9997 17 16.9997C20.9058 16.9997 24.0833 13.8221 24.0833 9.91634C24.0833 6.01059 20.9058 2.83301 17 2.83301ZM17 14.1663C14.6568 14.1663 12.75 12.2595 12.75 9.91634C12.75 7.57317 14.6568 5.66634 17 5.66634C19.3432 5.66634 21.25 7.57317 21.25 9.91634C21.25 12.2595 19.3432 14.1663 17 14.1663ZM29.75 29.7497V28.333C29.75 22.8661 25.3002 18.4163 19.8333 18.4163H14.1667C8.69833 18.4163 4.25 22.8661 4.25 28.333V29.7497H7.08333V28.333C7.08333 24.4273 10.2609 21.2497 14.1667 21.2497H19.8333C23.7391 21.2497 26.9167 24.4273 26.9167 28.333V29.7497H29.75Z"></path></svg>
 						</div>
-						<div class="login-drop">
-							<div class="arrow_login_wrapper">
-								<div class="arrow_login"></div>
+						<div class="login-drop my_log_in" id="login_drop">
+							<div class="arrow_login_wrapper my_log_in">
+								<div class="arrow_login my_log_in"></div>
 							</div>
-							<div class="login_wrapper">
-								<div class="form_btns">
-									<button class="form_btn login_btn active_btn" data-form="login_form">Login</button>
-									<button class="form_btn singUp_btn" data-form="singUp_form">Sing up</button>
+							<div class="login_wrapper my_log_in">
+								<div class="form_btns my_log_in">
+									<button class="form_btn login_btn active_btn my_log_in" data-form="login_form ">Login</button>
+									<button class="form_btn singUp_btn my_log_in" data-form="singUp_form">Sing up</button>
 								</div>
-								<form action="" class="login_form show_form">
-									<label for="email" >E-mail</label>
-									<input type="email" name="email" required />
-									<label for="password">Password
+								<form action="" class="login_form show_form my_log_in">
+									<label for="email" class="my_log_in">E-mail</label>
+									<input type="email" name="email" class="my_log_in" required />
+									<label for="password"class="my_log_in">Password
 									</label>
-									<input type="password" name="password"  required/>
+									<input type="password" name="password" class="my_log_in"  required/>
 									<!-- ERROR MSGs su saktivene, prikazuju se na show_msg klasu -->
-									<p class="error_msg msg_one ">Please enter a correct user name and password</p>
-									<p class="error_msg msg_two">Email and password fields are required</p>
-									<button type="submit">Send</button>
-									<a href="#" class="form_btn" data-form="forgot_pass">forgot your password?</a>
+									<p class="error_msg msg_one my_log_in">Please enter a correct user name and password</p>
+									<p class="error_msg msg_two my_log_in">Email and password fields are required</p>
+									<button type="submit" class="my_log_in">Send</button>
+									<a href="#" class="form_btn my_log_in" data-form="forgot_pass">forgot your password?</a>
 								</form>
-								<form action="" class="singUp_form ">
+								<form action="" class="singUp_form my_log_in">
 									<label for="name">Name and lastname</label>
-									<input type="text" name="name" required></input>
+									<input type="text" name="name" class="my_log_in" required></input>
 
 									<label for="email">E-mail</label>
-									<input type="email" name="email" required></input>
+									<input type="email" name="email" class="my_log_in" required></input>
 
 									<label for="password">Password</label>
-									<input type="password" name="password" required></input>
+									<input type="password" name="password" class="my_log_in" required></input>
 
 									<label for="password">Confirm password</label>
-									<input type="password" name="password" required></input>
+									<input type="password" name="password" class="my_log_in" required></input>
 									<p>By submiting your request you agree to our <a href="">terms of service</a></p>
-									<button type="submit" class="btn">Send</button> 
+									<button type="submit" class="btn my_log_in">Send</button> 
 								</form>
-								<form action="" class="forgot_pass">
-									<h4>Forgot your password?</h4>
-									<p>Enter your e-mail and we will send <br> you 
+								<form action="" class="forgot_pass my_log_in">
+									<h4 class="my_log_in">Forgot your password?</h4>
+									<p class="my_log_in">Enter your e-mail and we will send <br> you 
 										a link to reset your password.
 									</p>
 									<label for="email">E-MAIL</label>
-									<input type="email" required>
-									<button type="submit" class="btn">send link to reset my passowrd</button>
+									<input type="email" required class="my_log_in">
+									<button type="submit" class="btn my_log_in">send link to reset my passowrd</button>
 
 								</form>
 							</div>
