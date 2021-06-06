@@ -1703,35 +1703,35 @@ TUTOR PROFILE PAGE
         padding: 10px 30px;
         border-radius: 6px; }
 
-.edit_my_profile .container form {
+.edit_my_profile .container .edit_prof_form {
   padding: 40px 40px 20px 40px;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   flex-wrap: wrap;
   flex-direction: column; }
-  .edit_my_profile .container form div {
+  .edit_my_profile .container .edit_prof_form div {
     margin-bottom: 20px; }
-    .edit_my_profile .container form div label {
+    .edit_my_profile .container .edit_prof_form div label {
       font-weight: 300;
       width: 250px;
       display: inline-block; }
-    .edit_my_profile .container form div input {
+    .edit_my_profile .container .edit_prof_form div input {
       font-weight: 300;
       padding: 5px 20px;
       border: 1px solid rgba(90, 109, 115, 0.5);
       border-radius: 4px; }
-      .edit_my_profile .container form div input:focus {
+      .edit_my_profile .container .edit_prof_form div input:focus {
         border: 1px solid #b497cf;
         outline: none; }
-    .edit_my_profile .container form div a {
+    .edit_my_profile .container .edit_prof_form div a {
       margin-left: 30px; }
-  .edit_my_profile .container form > a {
+  .edit_my_profile .container .edit_prof_form > a {
     font-weight: 300;
     margin-bottom: 20px;
     color: #b497cf;
     text-decoration: underline; }
-  .edit_my_profile .container form button {
+  .edit_my_profile .container .edit_prof_form button {
     align-self: flex-end;
     color: black;
     background: #fedc40;
@@ -2882,13 +2882,13 @@ TUTOR PROFILE PAGE
 .review .container .wrapper button {
   margin-top: 40px; }
 
-.details .container .wrapper form {
+.details .container .wrapper .details_form {
   display: flex;
   align-items: flex-start;
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: column; }
-  .details .container .wrapper form .row {
+  .details .container .wrapper .details_form .row {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -2897,45 +2897,45 @@ TUTOR PROFILE PAGE
     margin: 8px 0;
     width: 72%;
     min-width: 600px; }
-    .details .container .wrapper form .row label {
+    .details .container .wrapper .details_form .row label {
       width: 40%;
       min-width: 230px; }
-    .details .container .wrapper form .row button {
+    .details .container .wrapper .details_form .row button {
       background: #fff;
       border: 1px solid rgba(90, 109, 115, 0.5); }
-      .details .container .wrapper form .row button.active_button {
+      .details .container .wrapper .details_form .row button.active_button {
         background: #fedc40;
         border: none; }
-    .details .container .wrapper form .row button,
-    .details .container .wrapper form .row input,
-    .details .container .wrapper form .row .select-box {
+    .details .container .wrapper .details_form .row button,
+    .details .container .wrapper .details_form .row input,
+    .details .container .wrapper .details_form .row .select-box {
       width: 28%;
       min-width: 170px; }
-    .details .container .wrapper form .row .lesson {
+    .details .container .wrapper .details_form .row .lesson {
       margin-right: 4%; }
-    .details .container .wrapper form .row input,
-    .details .container .wrapper form .row select {
+    .details .container .wrapper .details_form .row input,
+    .details .container .wrapper .details_form .row select {
       padding: 5px 20px;
       border: 1px solid rgba(90, 109, 115, 0.5);
       border-radius: 3px; }
-    .details .container .wrapper form .row input {
+    .details .container .wrapper .details_form .row input {
       font-family: "Roboto", sans-serif;
       font-size: 0.95rem; }
-      .details .container .wrapper form .row input:focus {
+      .details .container .wrapper .details_form .row input:focus {
         outline: none;
         border: 1px solid #b497cf; }
-    .details .container .wrapper form .row .select-box {
+    .details .container .wrapper .details_form .row .select-box {
       position: relative;
       margin-right: 4%; }
-      .details .container .wrapper form .row .select-box select {
+      .details .container .wrapper .details_form .row .select-box select {
         width: 100%;
         color: #5a6d73;
         appearance: none;
         -moz-appearance: none;
         -webkit-appearance: none; }
-        .details .container .wrapper form .row .select-box select option {
+        .details .container .wrapper .details_form .row .select-box select option {
           color: #5a6d73; }
-      .details .container .wrapper form .row .select-box span {
+      .details .container .wrapper .details_form .row .select-box span {
         position: absolute;
         right: 10px;
         top: 50%;
@@ -2945,22 +2945,22 @@ TUTOR PROFILE PAGE
         border-right: 8px solid transparent;
         border-left: 8px solid transparent;
         pointer-events: none; }
-    .details .container .wrapper form .row textarea, .details .review_section .leave_review .container .wrapper .review__wrapper .star-widget form .row .review_name input, .review_section .leave_review .details .container .wrapper .review__wrapper .star-widget form .row .review_name input, .details .review_section .leave_review .container .review__wrapper .star-widget .wrapper form .row .review_name input, .review_section .leave_review .details .container .review__wrapper .star-widget .wrapper form .row .review_name input, .details .review_section .leave_review .container .wrapper .review__wrapper .star-widget form .review_name .row input, .review_section .leave_review .details .container .wrapper .review__wrapper .star-widget form .review_name .row input, .details .review_section .leave_review .container .review__wrapper .star-widget .wrapper form .review_name .row input, .review_section .leave_review .details .container .review__wrapper .star-widget .wrapper form .review_name .row input {
+    .details .container .wrapper .details_form .row textarea, .details .review_section .leave_review .container .wrapper .details_form .row .review__wrapper .star-widget form .review_name input, .review_section .leave_review .details .container .wrapper .details_form .row .review__wrapper .star-widget form .review_name input, .details .review_section .leave_review .container .review__wrapper .star-widget form .review_name .wrapper .details_form .row input, .review_section .leave_review .details .container .review__wrapper .star-widget form .review_name .wrapper .details_form .row input {
       width: 60%;
       border: 1px solid rgba(90, 109, 115, 0.5);
       padding: 10px;
       font-family: "Roboto", sans-serif;
       color: #5a6d73; }
-      .details .container .wrapper form .row textarea ::placeholder, .details .review_section .leave_review .container .wrapper .review__wrapper .star-widget form .row .review_name input ::placeholder, .review_section .leave_review .details .container .wrapper .review__wrapper .star-widget form .row .review_name input ::placeholder, .details .review_section .leave_review .container .review__wrapper .star-widget .wrapper form .row .review_name input ::placeholder, .review_section .leave_review .details .container .review__wrapper .star-widget .wrapper form .row .review_name input ::placeholder, .details .review_section .leave_review .container .wrapper .review__wrapper .star-widget form .review_name .row input ::placeholder, .review_section .leave_review .details .container .wrapper .review__wrapper .star-widget form .review_name .row input ::placeholder, .details .review_section .leave_review .container .review__wrapper .star-widget .wrapper form .review_name .row input ::placeholder, .review_section .leave_review .details .container .review__wrapper .star-widget .wrapper form .review_name .row input ::placeholder {
+      .details .container .wrapper .details_form .row textarea ::placeholder, .details .review_section .leave_review .container .wrapper .details_form .row .review__wrapper .star-widget form .review_name input ::placeholder, .review_section .leave_review .details .container .wrapper .details_form .row .review__wrapper .star-widget form .review_name input ::placeholder, .details .review_section .leave_review .container .review__wrapper .star-widget form .review_name .wrapper .details_form .row input ::placeholder, .review_section .leave_review .details .container .review__wrapper .star-widget form .review_name .wrapper .details_form .row input ::placeholder {
         font-family: "Roboto", sans-serif; }
-    .details .container .wrapper form .row:first-child {
+    .details .container .wrapper .details_form .row:first-child {
       margin-bottom: 30px; }
-    .details .container .wrapper form .row .lead {
+    .details .container .wrapper .details_form .row .lead {
       font-style: italic;
       margin: 30px 0; }
-    .details .container .wrapper form .row:nth-child(9) {
+    .details .container .wrapper .details_form .row:nth-child(9) {
       align-items: flex-start; }
-  .details .container .wrapper form > button {
+  .details .container .wrapper .details_form > button {
     width: 170px;
     margin-top: 30px; }
 

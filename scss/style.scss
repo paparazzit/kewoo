@@ -1366,7 +1366,7 @@ TUTOR PROFILE PAGE
 
 .edit_my_profile {
 	.container {
-		form {
+		.edit_prof_form {
 			padding: 40px 40px 20px 40px;
 			@include flex(flex-start, space-between, wrap, column);
 			div {
@@ -2825,7 +2825,7 @@ TUTOR PROFILE PAGE
 .details {
 	.container {
 		.wrapper {
-			form {
+			.details_form {
 				// border: 1px solid black;
 				@include flex(flex-start, center, wrap, column);
 				.row {
