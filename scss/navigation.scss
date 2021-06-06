@@ -129,7 +129,7 @@ nav {
 							}
 						}
 					}
-					form {
+					.form_ctrl {
 						@include flex(flex-start, flex-start, nowrap, column);
 						padding: 15px;
 

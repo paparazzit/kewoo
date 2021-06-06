@@ -6,7 +6,7 @@ var nav = document.querySelector("nav");
 var login = document.querySelector(".login .login_icon");
 var login_drop = document.querySelector(".login-drop");
 var login_btns = document.querySelectorAll(".form_btn");
-var user_opt = document.querySelectorAll(".login_wrapper form");
+var user_opt = document.querySelectorAll(".login_wrapper .form_ctrl");
 var forgot_pass = document.querySelector(".forgot_pass_btn");
 
 toggleBar.addEventListener("click", () => {

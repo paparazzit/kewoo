@@ -429,58 +429,58 @@ nav {
               nav .container .login .login-drop .login_wrapper .form_btns .form_btn.active_btn {
                 border-bottom: 2px solid #414e52;
                 color: #414e52; }
-          nav .container .login .login-drop .login_wrapper form {
+          nav .container .login .login-drop .login_wrapper .form_ctrl {
             display: flex;
             align-items: flex-start;
             justify-content: flex-start;
             flex-wrap: nowrap;
             flex-direction: column;
             padding: 15px; }
-            nav .container .login .login-drop .login_wrapper form label {
+            nav .container .login .login-drop .login_wrapper .form_ctrl label {
               font-size: 0.8rem;
               color: #414e52; }
-            nav .container .login .login-drop .login_wrapper form input {
+            nav .container .login .login-drop .login_wrapper .form_ctrl input {
               margin-bottom: 10px;
               width: 100%;
               padding: 5px 10px;
               border: 1px solid #414e52; }
-              nav .container .login .login-drop .login_wrapper form input:focus {
+              nav .container .login .login-drop .login_wrapper .form_ctrl input:focus {
                 outline: 2px solid #fedc40; }
-            nav .container .login .login-drop .login_wrapper form a,
-            nav .container .login .login-drop .login_wrapper form p {
+            nav .container .login .login-drop .login_wrapper .form_ctrl a,
+            nav .container .login .login-drop .login_wrapper .form_ctrl p {
               margin-bottom: 10px;
               color: #414e52; }
-            nav .container .login .login-drop .login_wrapper form p {
+            nav .container .login .login-drop .login_wrapper .form_ctrl p {
               font-size: 0.95rem; }
-              nav .container .login .login-drop .login_wrapper form p a {
+              nav .container .login .login-drop .login_wrapper .form_ctrl p a {
                 color: #b497cf; }
-                nav .container .login .login-drop .login_wrapper form p a:hover {
+                nav .container .login .login-drop .login_wrapper .form_ctrl p a:hover {
                   color: #414e52; }
-            nav .container .login .login-drop .login_wrapper form h4 {
+            nav .container .login .login-drop .login_wrapper .form_ctrl h4 {
               font-size: 1.2rem;
               font-size: 300;
               color: #414e52;
               margin-bottom: 20px; }
-            nav .container .login .login-drop .login_wrapper form button {
+            nav .container .login .login-drop .login_wrapper .form_ctrl button {
               margin-bottom: 10px;
               background: #fedc40;
               border: none;
               padding: 5px 20px;
               color: #414e52;
               cursor: pointer; }
-            nav .container .login .login-drop .login_wrapper form.login_form {
+            nav .container .login .login-drop .login_wrapper .form_ctrl.login_form {
               display: none; }
-            nav .container .login .login-drop .login_wrapper form.singUp_form {
+            nav .container .login .login-drop .login_wrapper .form_ctrl.singUp_form {
               display: none; }
-            nav .container .login .login-drop .login_wrapper form.forgot_pass {
+            nav .container .login .login-drop .login_wrapper .form_ctrl.forgot_pass {
               display: none; }
-            nav .container .login .login-drop .login_wrapper form.show_form {
+            nav .container .login .login-drop .login_wrapper .form_ctrl.show_form {
               display: flex; }
-            nav .container .login .login-drop .login_wrapper form .error_msg {
+            nav .container .login .login-drop .login_wrapper .form_ctrl .error_msg {
               display: none; }
-              nav .container .login .login-drop .login_wrapper form .error_msg.show_msg {
+              nav .container .login .login-drop .login_wrapper .form_ctrl .error_msg.show_msg {
                 display: inline-block; }
-            nav .container .login .login-drop .login_wrapper form .forgot_pass:hover {
+            nav .container .login .login-drop .login_wrapper .form_ctrl .forgot_pass:hover {
               text-decoration: underline; }
         nav .container .login .login-drop .arrow_login_wrapper .arrow_login {
           height: 20px;
