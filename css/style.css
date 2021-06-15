@@ -1748,6 +1748,11 @@ TUTOR PROFILE PAGE
     cursor: pointer;
     padding: 10px 30px;
     border-radius: 6px; }
+.edit_my_profile .container .flag-form .it-flag-form button.add {
+  margin-top: 2.5px;
+  width: 23px;
+  height: 23px;
+  border: 2px solid rgba(90, 109, 115, 0.5); }
 
 .my_messages .container .wrapper {
   padding: 0px 0;
