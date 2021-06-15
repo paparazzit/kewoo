@@ -1293,6 +1293,11 @@ TUTOR PROFILE PAGE
 								height: 15px;
 							}
 						}
+						.tutor-card-text {
+							flex: 0 0 100%;
+							width: 100%;
+							margin: 0;
+						}
 					}
 				}
 			}
@@ -3174,6 +3179,80 @@ REVIEW
 		}
 	}
 }
+
+/***************
+   AKTIVATE
+***************/
+.activate {
+	margin: 100px 0;
+	.container {
+		.wrapper {
+			.login-form {
+				.input-group {
+					display: inline-block;
+					// border: 1px solid black;
+					margin-right: 15px;
+					.label,
+					.input {
+						display: inline-block;
+					}
+					.label {
+						min-width: 55px;
+					}
+				}
+
+				#login-form-report {
+					margin-bottom: 15px;
+				}
+				@media (max-width: $breakPoint_6_b) {
+					.input-group {
+						margin-bottom: 20px;
+					}
+				}
+			}
+		}
+	}
+}
+
+/*******************
+    PASS RESET
+********************/
+.pass-reset {
+	margin: 80px 0;
+	.container {
+		.wrapper {
+			.login-form {
+				p {
+					padding-bottom: 15px;
+				}
+				form {
+					.input-group {
+						display: inline-block;
+						margin-right: 15px;
+						.label,
+						.input {
+							display: inline-block;
+						}
+						.label {
+							min-width: 100px;
+						}
+					}
+					button {
+						display: block;
+						margin: 20px 0;
+					}
+
+					@media (max-width: 640px) {
+						.input-group {
+							margin-bottom: 20px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 /*******************
     RESPONSIVE
 ********************/

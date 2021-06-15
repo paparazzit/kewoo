@@ -368,13 +368,15 @@ nav {
           margin: 0 15px; }
       nav .container .drop-down hr {
         display: none; }
-      nav .container .drop-down .langs li {
-        font-size: 0.9rem; }
-        nav .container .drop-down .langs li::after {
-          content: "/";
-          margin: 0 5px; }
-        nav .container .drop-down .langs li:last-child::after {
-          display: none; }
+      nav .container .drop-down .langs {
+        min-width: 168px; }
+        nav .container .drop-down .langs li {
+          font-size: 0.9rem; }
+          nav .container .drop-down .langs li::after {
+            content: "/";
+            margin: 0 5px; }
+          nav .container .drop-down .langs li:last-child::after {
+            display: none; }
     nav .container .active {
       height: 40vh;
       padding: 20px 30px; }
@@ -1640,6 +1642,10 @@ TUTOR PROFILE PAGE
                 margin-left: 15px;
                 width: 15px;
                 height: 15px; }
+            .tutor_profile_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description .tutor-card-text, .tutor_details_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description .tutor-card-text, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-card .tutor-content .tutor-card-description .tutor-card-text {
+              flex: 0 0 100%;
+              width: 100%;
+              margin: 0; }
       .tutor_profile_header .container .tutor-profile-view .tutor-profile-nav, .tutor_details_header .container .tutor-profile-view .tutor-profile-nav, .tutor_lesson_header .container .tutor-profile-view .tutor-profile-nav {
         display: flex;
         align-items: center;
@@ -3145,6 +3151,47 @@ REVIEW
               transition: 0.4s ease-in-out; }
               .review_section .leave_review .container .review__wrapper .star-widget form .upload_img .upload:hover {
                 transform: scale(1.2); }
+
+/***************
+   AKTIVATE
+***************/
+.activate {
+  margin: 100px 0; }
+  .activate .container .wrapper .login-form .input-group {
+    display: inline-block;
+    margin-right: 15px; }
+    .activate .container .wrapper .login-form .input-group .label,
+    .activate .container .wrapper .login-form .input-group .input {
+      display: inline-block; }
+    .activate .container .wrapper .login-form .input-group .label {
+      min-width: 55px; }
+  .activate .container .wrapper .login-form #login-form-report {
+    margin-bottom: 15px; }
+  @media (max-width: 590px) {
+    .activate .container .wrapper .login-form .input-group {
+      margin-bottom: 20px; } }
+
+/*******************
+    PASS RESET
+********************/
+.pass-reset {
+  margin: 80px 0; }
+  .pass-reset .container .wrapper .login-form p {
+    padding-bottom: 15px; }
+  .pass-reset .container .wrapper .login-form form .input-group {
+    display: inline-block;
+    margin-right: 15px; }
+    .pass-reset .container .wrapper .login-form form .input-group .label,
+    .pass-reset .container .wrapper .login-form form .input-group .input {
+      display: inline-block; }
+    .pass-reset .container .wrapper .login-form form .input-group .label {
+      min-width: 100px; }
+  .pass-reset .container .wrapper .login-form form button {
+    display: block;
+    margin: 20px 0; }
+  @media (max-width: 640px) {
+    .pass-reset .container .wrapper .login-form form .input-group {
+      margin-bottom: 20px; } }
 
 /*******************
     RESPONSIVE

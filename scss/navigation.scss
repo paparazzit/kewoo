@@ -47,6 +47,8 @@ nav {
 				display: none;
 			}
 			.langs {
+				min-width: 168px;
+
 				li {
 					font-size: 0.9rem;
 					&::after {
